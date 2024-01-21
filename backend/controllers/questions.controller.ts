@@ -8,13 +8,13 @@ import getSelectedQuestions from '../utils/getSelectedQuestions.js'
 import { Categories } from '../utils/categories.js'
 
 
-const randomQuestions = async(category: string) =>{
+const randomQuestions = async(category: string, mcqCount: number) =>{
     try {
         const questions: MCQ[] =  await getAllQuestions(Categories[category as keyof typeof Categories]);
         
         let selectedQuestions: MCQ[]  = [];
         let usedIndices: number[] = [];
-        for(let i = 0; i < 10; i++){
+        for(let i = 0; i < mcqCount; i++){
             usedIndices.push(getRandomIndex(usedIndices, questions.length));
         }
         while(usedIndices.length) {
@@ -30,9 +30,9 @@ const randomQuestions = async(category: string) =>{
 }
 
 export const getQuestions = async(req: Request, res: Response, next: NextFunction ) => {
-    const {category} = req.body;
+    const {category, mcqCount} = req.body;
     try {
-        const selectedQuestions: MCQ[] = await randomQuestions(category);
+        const selectedQuestions: MCQ[] = await randomQuestions(category, mcqCount);
         console.log(selectedQuestions);
         try {
             const msg = await saveSelectedQuestions(selectedQuestions);

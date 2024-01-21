@@ -3,7 +3,7 @@ import { checkAnswers, getQuestions } from "../controllers/questions.controller.
 
 const router = Router();
 
-router.get('/questions', getQuestions);
+router.post('/questions', getQuestions);
 router.get('/questions/check', checkAnswers);
 
 export default router;

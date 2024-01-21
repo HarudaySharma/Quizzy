@@ -5,7 +5,7 @@
         "B": "Germany",
         "C": "Brazil",
         "D": "Argentina",
-        "answer": "A",
+       "answer": "A"
 
     },
     {
@@ -14,8 +14,7 @@
         "B": "Lionel Messi",
         "C": "Cristiano Ronaldo",
         "D": "Miroslav Klose",
-        "answer": "D",
-
+        "answer": "D"
     },
     {
         "question": "In which year did England win the FIFA World Cup?",
@@ -23,7 +22,7 @@
         "B": "1974",
         "C": "1982",
         "D": "1990",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -32,7 +31,7 @@
         "B": "Pele",
         "C": "Zinedine Zidane",
         "D": "Ronaldinho",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -41,7 +40,7 @@
         "B": "Barcelona",
         "C": "Bayern Munich",
         "D": "AC Milan",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -50,7 +49,7 @@
         "B": "Thierry Henry",
         "C": "Wayne Rooney",
         "D": "Andy Cole",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -59,7 +58,7 @@
         "B": "Cristiano Ronaldo",
         "C": "Pele",
         "D": "Diego Maradona",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -68,7 +67,7 @@
         "B": "Brazil",
         "C": "Uruguay",
         "D": "Germany",
-        "answer": "C",
+        "answer": "C"
 
     },
     {
@@ -77,7 +76,7 @@
         "B": "Pep Guardiola",
         "C": "Zinedine Zidane",
         "D": "Carlo Ancelotti",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -86,7 +85,7 @@
         "B": "Luis Suarez",
         "C": "Thierry Henry",
         "D": "Mohamed Salah",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -95,7 +94,7 @@
         "B": "Germany",
         "C": "Spain",
         "D": "England",
-        "answer": "C",
+        "answer": "C"
 
     },
     {
@@ -104,7 +103,7 @@
         "B": "Cesc Fabregas",
         "C": "Carlos Tevez",
         "D": "Ciro Immobile",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -113,7 +112,7 @@
         "B": "Pele",
         "C": "Zico",
         "D": "Romario",
-        "answer": "B",
+        "answer": "B"
 
     },
     {
@@ -122,7 +121,7 @@
         "B": "David De Gea",
         "C": "Thibaut Courtois",
         "D": "Alisson Becker",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -131,7 +130,7 @@
         "B": "Cristiano Ronaldo",
         "C": "Raul",
         "D": "Robert Lewandowski",
-        "answer": "B",
+        "answer": "B"
 
     },
     {
@@ -140,7 +139,7 @@
         "B": "Cameroon",
         "C": "Egypt",
         "D": "Ghana",
-        "answer": "C",
+        "answer": "C"
 
     },
     {
@@ -149,7 +148,7 @@
         "B": "Sadio Mane",
         "C": "Mohamed Elneny",
         "D": "Ahmed Hegazi",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -158,7 +157,7 @@
         "B": "2009",
         "C": "2010",
         "D": "2011",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -167,7 +166,7 @@
         "B": "Anfield",
         "C": "Old Trafford",
         "D": "Santiago Bernabeu",
-        "answer": "C",
+        "answer": "C"
 
     },
     {
@@ -176,7 +175,7 @@
         "B": "Sergio Aguero",
         "C": "Paulo Dybala",
         "D": "Angel Di Maria",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -185,7 +184,7 @@
         "B": "Manchester United",
         "C": "Liverpool",
         "D": "Arsenal",
-        "answer": "B",
+        "answer": "B"
 
     },
     {
@@ -194,7 +193,7 @@
         "B": "Harry Kane",
         "C": "Antoine Griezmann",
         "D": "Luka Modric",
-        "answer": "B",
+        "answer": "B"
 
     },
     {
@@ -203,7 +202,7 @@
         "B": "Inter Milan",
         "C": "AS Roma",
         "D": "Juventus",
-        "answer": "D",
+        "answer": "D"
 
     },
     {
@@ -212,7 +211,7 @@
         "B": "Pep Guardiola",
         "C": "Xavi Hernandez",
         "D": "Luis Enrique",
-        "answer": "C",
+        "answer": "C"
 
     },
     {
@@ -221,7 +220,7 @@
         "B": "Manchester United",
         "C": "Arsenal",
         "D": "Liverpool",
-        "answer": "C",
+        "answer": "C"
 
     },
     {
@@ -230,7 +229,7 @@
         "B": "Aritz Aduriz",
         "C": "Eden Hazard",
         "D": "Antoine Griezmann",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -239,7 +238,7 @@
         "B": "Roberto Firmino",
         "C": "Philippe Coutinho",
         "D": "Gabriel Jesus",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -248,7 +247,7 @@
         "B": "France",
         "C": "Brazil",
         "D": "Germany",
-        "answer": "C",
+        "answer": "C"
 
     },
     {
@@ -257,7 +256,7 @@
         "B": "2005",
         "C": "2007",
         "D": "2009",
-        "answer": "B",
+        "answer": "B"
 
     },
     {
@@ -266,7 +265,7 @@
         "B": "Thomas Muller",
         "C": "Mario Gomez",
         "D": "Jurgen Klinsmann",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -275,7 +274,7 @@
         "B": "Berlin",
         "C": "Hamburg",
         "D": "Dortmund",
-        "answer": "D",
+        "answer": "D"
 
     },
     {
@@ -284,7 +283,7 @@
         "B": "Diogo Jota",
         "C": "Cristiano Ronaldo",
         "D": "Bernardo Silva",
-        "answer": "C",
+        "answer": "C"
 
     },
     {
@@ -293,7 +292,7 @@
         "B": "Frank Lampard",
         "C": "David Beckham",
         "D": "Wayne Rooney",
-        "answer": "C",
+        "answer": "C"
 
     },
     {
@@ -302,7 +301,7 @@
         "B": "Michel Platini",
         "C": "Thierry Henry",
         "D": "Karim Benzema",
-        "answer": "C",
+        "answer": "C"
 
     },
     {
@@ -311,7 +310,7 @@
         "B": "China",
         "C": "USA",
         "D": "Norway",
-        "answer": "B",
+        "answer": "B"
 
     },
     {
@@ -320,7 +319,7 @@
         "B": "James Rodriguez",
         "C": "Lionel Messi",
         "D": "Neymar",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -329,7 +328,7 @@
         "B": "Chelsea",
         "C": "Arsenal",
         "D": "Liverpool",
-        "answer": "B",
+        "answer": "B"
 
     },
     {
@@ -338,7 +337,7 @@
         "B": "Carlo Ancelotti",
         "C": "Mauricio Pochettino",
         "D": "Jose Mourinho",
-        "answer": "C",
+        "answer": "C"
 
     },
     {
@@ -347,7 +346,7 @@
         "B": "Sadio Mane",
         "C": "Mohamed Elneny",
         "D": "Ahmed Hegazi",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -356,7 +355,7 @@
         "B": "Zlatan Ibrahimovic",
         "C": "Mohamed Salah",
         "D": "Daniel Zsori",
-        "answer": "D",
+        "answer": "D"
 
     },
     {
@@ -365,7 +364,7 @@
         "B": "Rome",
         "C": "Turin",
         "D": "Naples",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -374,7 +373,7 @@
         "B": "David Villa",
         "C": "Fernando Hierro",
         "D": "Raul",
-        "answer": "D",
+        "answer": "D"
 
     },
     {
@@ -383,7 +382,7 @@
         "B": "Roberto Firmino",
         "C": "Philippe Coutinho",
         "D": "Marcelo",
-        "answer": "B",
+        "answer": "B"
 
     },
     {
@@ -392,7 +391,7 @@
         "B": "Cristiano Ronaldo",
         "C": "Robert Lewandowski",
         "D": "Mohamed Salah",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -401,7 +400,7 @@
         "B": "Brazil",
         "C": "Argentina",
         "D": "Italy",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -410,7 +409,7 @@
         "B": "Michel Platini",
         "C": "Alan Shearer",
         "D": "Thierry Henry",
-        "answer": "A",
+        "answer": "A"
 
     },
     {
@@ -419,8 +418,7 @@
         "B": "SL Benfica",
         "C": "FC Porto",
         "D": "Vitoria de Guimaraes",
-        "answer": "C",
-
+        "answer": "C"
     }
 ]
 

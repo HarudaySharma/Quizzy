@@ -16,5 +16,5 @@ app.listen(PORT, () => {
 
 app.use(express.json());
 
-app.use('/api/', questionRoute);
-app.use('*', errorMiddleware);
+app.use('/api/' , questionRoute);
+app.use(errorMiddleware);
