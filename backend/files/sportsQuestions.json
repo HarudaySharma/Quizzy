@@ -1,0 +1,930 @@
+[
+    {
+        "question": "Which country won the FIFA World Cup in 2018?",
+        "A": "France",
+        "B": "Germany",
+        "C": "Brazil",
+        "D": "Argentina",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the all-time leading goal scorer in FIFA World Cup history?",
+        "A": "Pele",
+        "B": "Lionel Messi",
+        "C": "Cristiano Ronaldo",
+        "D": "Miroslav Klose",
+        "answer": "D",
+
+    },
+    {
+        "question": "In which year did England win the FIFA World Cup?",
+        "A": "1966",
+        "B": "1974",
+        "C": "1982",
+        "D": "1990",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is known as the 'Hand of God' for his controversial goal in the 1986 World Cup?",
+        "A": "Diego Maradona",
+        "B": "Pele",
+        "C": "Zinedine Zidane",
+        "D": "Ronaldinho",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which club has won the most UEFA Champions League titles?",
+        "A": "Real Madrid",
+        "B": "Barcelona",
+        "C": "Bayern Munich",
+        "D": "AC Milan",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the top scorer in the history of the English Premier League?",
+        "A": "Alan Shearer",
+        "B": "Thierry Henry",
+        "C": "Wayne Rooney",
+        "D": "Andy Cole",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which player has won the FIFA Ballon d'Or the most times?",
+        "A": "Lionel Messi",
+        "B": "Cristiano Ronaldo",
+        "C": "Pele",
+        "D": "Diego Maradona",
+        "answer": "A",
+
+    },
+    {
+        "question": "In which country did the first official international football match take place?",
+        "A": "England",
+        "B": "Brazil",
+        "C": "Uruguay",
+        "D": "Germany",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who is the manager of Liverpool FC as of 2024?",
+        "A": "Jurgen Klopp",
+        "B": "Pep Guardiola",
+        "C": "Zinedine Zidane",
+        "D": "Carlo Ancelotti",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which player holds the record for the most goals in a single Premier League season?",
+        "A": "Alan Shearer",
+        "B": "Luis Suarez",
+        "C": "Thierry Henry",
+        "D": "Mohamed Salah",
+        "answer": "A",
+
+    },
+    {
+        "question": "In which country is the famous football club Barcelona located?",
+        "A": "Italy",
+        "B": "Germany",
+        "C": "Spain",
+        "D": "England",
+        "answer": "C",
+
+    },
+    {
+        "question": "Which player is often referred to as 'CR7'?",
+        "A": "Cristiano Ronaldo",
+        "B": "Cesc Fabregas",
+        "C": "Carlos Tevez",
+        "D": "Ciro Immobile",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the all-time leading goal scorer for the Brazil national football team?",
+        "A": "Ronaldo Nazario",
+        "B": "Pele",
+        "C": "Zico",
+        "D": "Romario",
+        "answer": "B",
+
+    },
+    {
+        "question": "Which goalkeeper is known for his 'Sweeper Keeper' style of play?",
+        "A": "Manuel Neuer",
+        "B": "David De Gea",
+        "C": "Thibaut Courtois",
+        "D": "Alisson Becker",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the all-time leading goal scorer in the UEFA Champions League?",
+        "A": "Lionel Messi",
+        "B": "Cristiano Ronaldo",
+        "C": "Raul",
+        "D": "Robert Lewandowski",
+        "answer": "B",
+
+    },
+    {
+        "question": "Which African country has won the Africa Cup of Nations the most times?",
+        "A": "Nigeria",
+        "B": "Cameroon",
+        "C": "Egypt",
+        "D": "Ghana",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who is known as the 'Egyptian King' in football?",
+        "A": "Mohamed Salah",
+        "B": "Sadio Mane",
+        "C": "Mohamed Elneny",
+        "D": "Ahmed Hegazi",
+        "answer": "A",
+
+    },
+    {
+        "question": "In which year did Cristiano Ronaldo win his first FIFA Ballon d'Or?",
+        "A": "2008",
+        "B": "2009",
+        "C": "2010",
+        "D": "2011",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which stadium is known as the 'Theatre of Dreams'?",
+        "A": "Camp Nou",
+        "B": "Anfield",
+        "C": "Old Trafford",
+        "D": "Santiago Bernabeu",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who is the captain of the Argentina national football team as of 2024?",
+        "A": "Lionel Messi",
+        "B": "Sergio Aguero",
+        "C": "Paulo Dybala",
+        "D": "Angel Di Maria",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which football club is known as the 'Red Devils'?",
+        "A": "Manchester City",
+        "B": "Manchester United",
+        "C": "Liverpool",
+        "D": "Arsenal",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who won the Golden Boot in the 2018 FIFA World Cup?",
+        "A": "Kylian Mbappe",
+        "B": "Harry Kane",
+        "C": "Antoine Griezmann",
+        "D": "Luka Modric",
+        "answer": "B",
+
+    },
+    {
+        "question": "Which Italian club is known as 'The Old Lady'?",
+        "A": "AC Milan",
+        "B": "Inter Milan",
+        "C": "AS Roma",
+        "D": "Juventus",
+        "answer": "D",
+
+    },
+    {
+        "question": "Who is the manager of FC Barcelona as of 2024?",
+        "A": "Ronald Koeman",
+        "B": "Pep Guardiola",
+        "C": "Xavi Hernandez",
+        "D": "Luis Enrique",
+        "answer": "C",
+
+    },
+    {
+        "question": "Which English club has the nickname 'The Gunners'?",
+        "A": "Chelsea",
+        "B": "Manchester United",
+        "C": "Arsenal",
+        "D": "Liverpool",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who is the top scorer in the history of the UEFA Europa League?",
+        "A": "Radamel Falcao",
+        "B": "Aritz Aduriz",
+        "C": "Eden Hazard",
+        "D": "Antoine Griezmann",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which Brazilian player is known for his stepovers and flashy style of play?",
+        "A": "Neymar",
+        "B": "Roberto Firmino",
+        "C": "Philippe Coutinho",
+        "D": "Gabriel Jesus",
+        "answer": "A",
+
+    },
+
+    {
+        "question": "Who is widely regarded as the greatest basketball player of all time?",
+        "A": "LeBron James",
+        "B": "Kobe Bryant",
+        "C": "Michael Jordan",
+        "D": "Magic Johnson",
+        "answer": "C",
+
+    },
+    {
+        "question": "Which NBA team has won the most championships?",
+        "A": "Boston Celtics",
+        "B": "Los Angeles Lakers",
+        "C": "Chicago Bulls",
+        "D": "Golden State Warriors",
+        "answer": "B",
+
+    },
+    {
+        "question": "What is the height of an official NBA basketball hoop?",
+        "A": "10 feet",
+        "B": "9.5 feet",
+        "C": "11 feet",
+        "D": "12 feet",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who holds the record for the most points scored in a single NBA game?",
+        "A": "Kobe Bryant",
+        "B": "Wilt Chamberlain",
+        "C": "Michael Jordan",
+        "D": "LeBron James",
+        "answer": "B",
+
+    },
+    {
+        "question": "Which NBA team drafted Dirk Nowitzki in 1998 before trading him to the Dallas Mavericks?",
+        "A": "Boston Celtics",
+        "B": "Milwaukee Bucks",
+        "C": "Los Angeles Clippers",
+        "D": "Chicago Bulls",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who is known as 'The Answer' in basketball?",
+        "A": "LeBron James",
+        "B": "Allen Iverson",
+        "C": "Kevin Durant",
+        "D": "Stephen Curry",
+        "answer": "B",
+
+    },
+    {
+        "question": "Which player won the NBA MVP award for the 2020-2021 season?",
+        "A": "Giannis Antetokounmpo",
+        "B": "LeBron James",
+        "C": "Stephen Curry",
+        "D": "Kevin Durant",
+        "answer": "A",
+
+    },
+    {
+        "question": "What is the regulation height of an NBA backboard?",
+        "A": "50 inches",
+        "B": "54 inches",
+        "C": "60 inches",
+        "D": "72 inches",
+        "answer": "B",
+
+    },
+    {
+        "question": "Which player is known for his signature 'Skyhook' shot?",
+        "A": "Larry Bird",
+        "B": "Kareem Abdul-Jabbar",
+        "C": "Hakeem Olajuwon",
+        "D": "Tim Duncan",
+        "answer": "B",
+
+    },
+    {
+        "question": "In which year did the NBA introduce the three-point line?",
+        "A": "1973",
+        "B": "1980",
+        "C": "1986",
+        "D": "1990",
+        "answer": "C",
+
+    },
+    {
+        "question": "Which team did Michael Jordan play for when he made his famous 'Flu Game' appearance in the NBA Finals?",
+        "A": "Chicago Bulls",
+        "B": "Los Angeles Lakers",
+        "C": "Houston Rockets",
+        "D": "New York Knicks",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the all-time leading scorer in NBA history?",
+        "A": "Kobe Bryant",
+        "B": "Kareem Abdul-Jabbar",
+        "C": "LeBron James",
+        "D": "Michael Jordan",
+        "answer": "B",
+
+    },
+    {
+        "question": "Which player won the NBA Rookie of the Year award in the 2020-2021 season?",
+        "A": "LaMelo Ball",
+        "B": "Anthony Edwards",
+        "C": "James Wiseman",
+        "D": "Tyrese Haliburton",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the head coach of the Golden State Warriors as of 2024?",
+        "A": "Steve Kerr",
+        "B": "Doc Rivers",
+        "C": "Erik Spoelstra",
+        "D": "Tyronn Lue",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which NBA team is often referred to as the 'Dubs'?",
+        "A": "Los Angeles Lakers",
+        "B": "Golden State Warriors",
+        "C": "Miami Heat",
+        "D": "Boston Celtics",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who is known for his nickname 'The Greek Freak' in basketball?",
+        "A": "Giannis Antetokounmpo",
+        "B": "Luka Doncic",
+        "C": "Joel Embiid",
+        "D": "Nikola Jokic",
+        "answer": "A",
+
+    },
+    {
+        "question": "In which city did the Sacramento Kings play their home games before moving to Sacramento?",
+        "A": "Kansas City",
+        "B": "Seattle",
+        "C": "Cincinnati",
+        "D": "Buffalo",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who is the NBA's all-time leader in assists?",
+        "A": "Chris Paul",
+        "B": "John Stockton",
+        "C": "Magic Johnson",
+        "D": "Steve Nash",
+        "answer": "B",
+
+    },
+    {
+        "question": "Which player was known for his famous 'Fadeaway' jump shot?",
+        "A": "Dirk Nowitzki",
+        "B": "Karl Malone",
+        "C": "Hakeem Olajuwon",
+        "D": "Shaquille O'Neal",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who won the NBA Finals MVP in the 2019-2020 season?",
+        "A": "LeBron James",
+        "B": "Anthony Davis",
+        "C": "Jimmy Butler",
+        "D": "Kawhi Leonard",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which college did Michael Jordan play for before entering the NBA?",
+        "A": "Duke University",
+        "B": "North Carolina State University",
+        "C": "University of North Carolina",
+        "D": "Kentucky University",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who won the NBA Defensive Player of the Year award in the 2020-2021 season?",
+        "A": "Rudy Gobert",
+        "B": "Anthony Davis",
+        "C": "Ben Simmons",
+        "D": "Bam Adebayo",
+        "answer": "A",
+
+    },
+    {
+        "question": "In which year did the NBA adopt the shot clock?",
+        "A": "1954",
+        "B": "1960",
+        "C": "1972",
+        "D": "1985",
+        "answer": "B",
+
+    },
+    {
+        "question": "Which player is known for his nickname 'The Klaw'?",
+        "A": "Kawhi Leonard",
+        "B": "Paul George",
+        "C": "Jimmy Butler",
+        "D": "Anthony Davis",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the all-time leading scorer in NCAA Division I men's basketball?",
+        "A": "Pete Maravich",
+        "B": "Kareem Abdul-Jabbar",
+        "C": "Larry Bird",
+        "D": "Christian Laettner",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which NBA team drafted Shaquille O'Neal as the first overall pick in the 1992 NBA Draft?",
+        "A": "Orlando Magic",
+        "B": "Los Angeles Lakers",
+        "C": "Charlotte Hornets",
+        "D": "Golden State Warriors",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is known for his nickname 'Splash Brother' in basketball?",
+        "A": "Kevin Durant",
+        "B": "Stephen Curry",
+        "C": "Klay Thompson",
+        "D": "Damian Lillard",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who holds the record for the highest individual score in a Test match?",
+        "A": "Brian Lara",
+        "B": "Sachin Tendulkar",
+        "C": "Virender Sehwag",
+        "D": "Chris Gayle",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which country has won the most ICC Cricket World Cup titles?",
+        "A": "India",
+        "B": "Australia",
+        "C": "West Indies",
+        "D": "Pakistan",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who is the only player to have scored 10,000 runs in both Tests and ODIs?",
+        "A": "Sachin Tendulkar",
+        "B": "Ricky Ponting",
+        "C": "Virat Kohli",
+        "D": "Kumar Sangakkara",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which bowler has the most wickets in Test cricket?",
+        "A": "Shane Warne",
+        "B": "Muttiah Muralitharan",
+        "C": "Anil Kumble",
+        "D": "James Anderson",
+        "answer": "D",
+
+    },
+    {
+        "question": "In which year did India win their first ICC Cricket World Cup?",
+        "A": "1983",
+        "B": "1992",
+        "C": "2003",
+        "D": "2011",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the fastest cricketer to reach 10,000 runs in One Day Internationals (ODIs)?",
+        "A": "Sachin Tendulkar",
+        "B": "Virat Kohli",
+        "C": "Rohit Sharma",
+        "D": "AB de Villiers",
+        "answer": "B",
+
+    },
+    {
+        "question": "Which player has the highest individual score in T20 International cricket?",
+        "A": "Aaron Finch",
+        "B": "Chris Gayle",
+        "C": "Rohit Sharma",
+        "D": "David Malan",
+        "answer": "C",
+
+    },
+    {
+        "question": "In which city is the Melbourne Cricket Ground (MCG) located?",
+        "A": "Sydney",
+        "B": "Melbourne",
+        "C": "Brisbane",
+        "D": "Adelaide",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who is the only cricketer to score a triple century in Test cricket twice?",
+        "A": "Virender Sehwag",
+        "B": "Brian Lara",
+        "C": "Chris Gayle",
+        "D": "David Warner",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which country won the ICC T20 World Cup in 2016?",
+        "A": "West Indies",
+        "B": "Sri Lanka",
+        "C": "England",
+        "D": "Pakistan",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the captain of the Australian cricket team as of 2024?",
+        "A": "Steve Smith",
+        "B": "Aaron Finch",
+        "C": "Pat Cummins",
+        "D": "David Warner",
+        "answer": "C",
+
+    },
+    {
+        "question": "Which bowler has the most five-wicket hauls in ODIs?",
+        "A": "Wasim Akram",
+        "B": "Muttiah Muralitharan",
+        "C": "Glenn McGrath",
+        "D": "Lasith Malinga",
+        "answer": "B",
+
+    },
+    {
+        "question": "In which year did the first-ever ICC Cricket World Cup take place?",
+        "A": "1971",
+        "B": "1975",
+        "C": "1983",
+        "D": "1987",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who is the only cricketer to take 10 wickets in a single inning of a Test match?",
+        "A": "Jim Laker",
+        "B": "Anil Kumble",
+        "C": "Shane Warne",
+        "D": "Muttiah Muralitharan",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which Indian batsman holds the record for the most runs in a single Test inning?",
+        "A": "Rahul Dravid",
+        "B": "Virender Sehwag",
+        "C": "Sunil Gavaskar",
+        "D": "Sachin Tendulkar",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who won the ICC Cricketer of the Year award in 2020?",
+        "A": "Virat Kohli",
+        "B": "Kane Williamson",
+        "C": "Steve Smith",
+        "D": "Ben Stokes",
+        "answer": "B",
+
+    },
+    {
+        "question": "Which player holds the record for the most sixes in T20 Internationals?",
+        "A": "Rohit Sharma",
+        "B": "Chris Gayle",
+        "C": "Martin Guptill",
+        "D": "AB de Villiers",
+        "answer": "C",
+
+    },
+    {
+        "question": "In which country is the Sharjah Cricket Stadium located?",
+        "A": "India",
+        "B": "Pakistan",
+        "C": "UAE",
+        "D": "Sri Lanka",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who holds the record for the fastest century in One Day Internationals (ODIs)?",
+        "A": "AB de Villiers",
+        "B": "Virat Kohli",
+        "C": "Chris Gayle",
+        "D": "Brian Lara",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which cricketer is known as the 'Sultan of Multan'?",
+        "A": "Virender Sehwag",
+        "B": "Shoaib Akhtar",
+        "C": "Saeed Anwar",
+        "D": "Inzamam-ul-Haq",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the all-time leading run-scorer in Test cricket?",
+        "A": "Sachin Tendulkar",
+        "B": "Ricky Ponting",
+        "C": "Rahul Dravid",
+        "D": "Alastair Cook",
+        "answer": "D",
+
+    },
+    {
+        "question": "Which team won the ICC Champions Trophy in 2017?",
+        "A": "India",
+        "B": "Pakistan",
+        "C": "Australia",
+        "D": "South Africa",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who is the current captain of the Indian cricket team in Test matches?",
+        "A": "Virat Kohli",
+        "B": "Rohit Sharma",
+        "C": "Ajinkya Rahane",
+        "D": "KL Rahul",
+        "answer": "C",
+
+    },
+    {
+        "question": "In which year did the first Women's Cricket World Cup take place?",
+        "A": "1973",
+        "B": "1982",
+        "C": "1993",
+        "D": "2000",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the only cricketer to score four consecutive centuries in ODIs?",
+        "A": "Sachin Tendulkar",
+        "B": "Virat Kohli",
+        "C": "Rohit Sharma",
+        "D": "AB de Villiers",
+        "answer": "C",
+
+    },
+    {
+        "question": "Which player holds the record for the most wickets in a single ICC Cricket World Cup edition?",
+        "A": "Wasim Akram",
+        "B": "Mitchell Starc",
+        "C": "Glenn McGrath",
+        "D": "Muttiah Muralitharan",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who won the ICC Women's Cricketer of the Year award in 2020?",
+        "A": "Ellyse Perry",
+        "B": "Meg Lanning",
+        "C": "Shafali Verma",
+        "D": "Alyssa Healy",
+        "answer": "B",
+
+    },
+    {
+        "question": "In which year did the first T20 International cricket match take place?",
+        "A": "2003",
+        "B": "2005",
+        "C": "2007",
+        "D": "2009",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who is the only cricketer to have taken two ODI hat-tricks?",
+        "A": "Lasith Malinga",
+        "B": "Wasim Akram",
+        "C": "Brett Lee",
+        "D": "Chaminda Vaas",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which country won the FIFA World Cup in 2002?",
+        "A": "Italy",
+        "B": "France",
+        "C": "Brazil",
+        "D": "Germany",
+        "answer": "C",
+
+    },
+    {
+        "question": "In which year did Lionel Messi make his professional debut for FC Barcelona?",
+        "A": "2003",
+        "B": "2005",
+        "C": "2007",
+        "D": "2009",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who is the all-time leading scorer for the German national football team?",
+        "A": "Miroslav Klose",
+        "B": "Thomas Muller",
+        "C": "Mario Gomez",
+        "D": "Jurgen Klinsmann",
+        "answer": "A",
+
+    },
+    {
+        "question": "In which city is the famous football club Borussia Dortmund based?",
+        "A": "Munich",
+        "B": "Berlin",
+        "C": "Hamburg",
+        "D": "Dortmund",
+        "answer": "D",
+
+    },
+    {
+        "question": "Who is the current captain of the Portugal national football team?",
+        "A": "Bruno Fernandes",
+        "B": "Diogo Jota",
+        "C": "Cristiano Ronaldo",
+        "D": "Bernardo Silva",
+        "answer": "C",
+
+    },
+    {
+        "question": "Which English footballer is nicknamed 'Golden Balls'?",
+        "A": "Steven Gerrard",
+        "B": "Frank Lampard",
+        "C": "David Beckham",
+        "D": "Wayne Rooney",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who is the all-time leading scorer for the French national football team?",
+        "A": "Zinedine Zidane",
+        "B": "Michel Platini",
+        "C": "Thierry Henry",
+        "D": "Karim Benzema",
+        "answer": "C",
+
+    },
+    {
+        "question": "In which country did the first Women's World Cup take place?",
+        "A": "Sweden",
+        "B": "China",
+        "C": "USA",
+        "D": "Norway",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who won the Golden Boot in the 2014 FIFA World Cup?",
+        "A": "Thomas Muller",
+        "B": "James Rodriguez",
+        "C": "Lionel Messi",
+        "D": "Neymar",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which English club is known as 'The Blues'?",
+        "A": "Manchester United",
+        "B": "Chelsea",
+        "C": "Arsenal",
+        "D": "Liverpool",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who is the manager of Real Madrid as of 2024?",
+        "A": "Zinedine Zidane",
+        "B": "Carlo Ancelotti",
+        "C": "Mauricio Pochettino",
+        "D": "Jose Mourinho",
+        "answer": "C",
+
+    },
+    {
+        "question": "Which player is known as the 'Egyptian King' in football?",
+        "A": "Mohamed Salah",
+        "B": "Sadio Mane",
+        "C": "Mohamed Elneny",
+        "D": "Ahmed Hegazi",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who won the FIFA Puskas Award in 2019 for the best goal of the year?",
+        "A": "Lionel Messi",
+        "B": "Zlatan Ibrahimovic",
+        "C": "Mohamed Salah",
+        "D": "Daniel Zsori",
+        "answer": "D",
+
+    },
+    {
+        "question": "In which city is the famous football club AC Milan based?",
+        "A": "Milan",
+        "B": "Rome",
+        "C": "Turin",
+        "D": "Naples",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the all-time leading scorer for the Spanish national football team?",
+        "A": "Fernando Torres",
+        "B": "David Villa",
+        "C": "Fernando Hierro",
+        "D": "Raul",
+        "answer": "D",
+
+    },
+    {
+        "question": "Which Brazilian player is known for his acrobatic bicycle kicks?",
+        "A": "Neymar",
+        "B": "Roberto Firmino",
+        "C": "Philippe Coutinho",
+        "D": "Marcelo",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who won the FIFA Best Men's Player award in 2020?",
+        "A": "Lionel Messi",
+        "B": "Cristiano Ronaldo",
+        "C": "Robert Lewandowski",
+        "D": "Mohamed Salah",
+        "answer": "A",
+
+    },
+    {
+        "question": "In which country did the first ever football World Cup take place?",
+        "A": "Uruguay",
+        "B": "Brazil",
+        "C": "Argentina",
+        "D": "Italy",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the top scorer in the history of the UEFA European Championship?",
+        "A": "Cristiano Ronaldo",
+        "B": "Michel Platini",
+        "C": "Alan Shearer",
+        "D": "Thierry Henry",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which Portuguese club is known as 'The Dragons'?",
+        "A": "Sporting CP",
+        "B": "SL Benfica",
+        "C": "FC Porto",
+        "D": "Vitoria de Guimaraes",
+        "answer": "C",
+
+    }
+]

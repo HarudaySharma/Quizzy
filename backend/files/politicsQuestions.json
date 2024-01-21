@@ -1,0 +1,451 @@
+[
+    {
+        "question": "Who was the first Prime Minister of India?",
+        "A": "Jawaharlal Nehru",
+        "B": "Sardar Patel",
+        "C": "Indira Gandhi",
+        "D": "Lal Bahadur Shastri",
+        "answer": "A"
+    },
+    {
+        "question": "Which political party did Mahatma Gandhi lead during the Indian independence movement?",
+        "A": "Indian National Congress",
+        "B": "All India Forward Bloc",
+        "C": "Muslim League",
+        "D": "Communist Party of India",
+        "answer": "A"
+    },
+    {
+        "question": "Who is known as the 'Iron Lady of India'?",
+        "A": "Indira Gandhi",
+        "B": "Sonia Gandhi",
+        "C": "Mayawati",
+        "D": "Mamata Banerjee",
+        "answer": "A"
+    },
+    {
+        "question": "In which year was the Republic of India officially declared?",
+        "A": "1947",
+        "B": "1950",
+        "C": "1962",
+        "D": "1971",
+        "answer": "B"
+    },
+    {
+        "question": "Who is the President of India as of 2024?",
+        "A": "Ram Nath Kovind",
+        "B": "Narendra Modi",
+        "C": "Sonia Gandhi",
+        "D": "Amit Shah",
+        "answer": "A"
+    },
+    {
+        "question": "Which political party did Dr. B.R. Ambedkar lead?",
+        "A": "Indian National Congress",
+        "B": "Bharatiya Janata Party",
+        "C": "Dalit Panthers",
+        "D": "Bahujan Samaj Party",
+        "answer": "C"
+    },
+    {
+        "question": "Who was the first woman Prime Minister of India?",
+        "A": "Sonia Gandhi",
+        "B": "Indira Gandhi",
+        "C": "Mayawati",
+        "D": "Sushma Swaraj",
+        "answer": "B"
+    },
+    {
+        "question": "Which Indian state has its own flag?",
+        "A": "Maharashtra",
+        "B": "Kerala",
+        "C": "Jammu and Kashmir",
+        "D": "Gujarat",
+        "answer": "C"
+    },
+    {
+        "question": "Who is known as the 'Father of the Indian Constitution'?",
+        "A": "Jawaharlal Nehru",
+        "B": "Sardar Patel",
+        "C": "Rajendra Prasad",
+        "D": "B.R. Ambedkar",
+        "answer": "D"
+    },
+    {
+        "question": "Which political party did Atal Bihari Vajpayee belong to?",
+        "A": "Indian National Congress",
+        "B": "Bharatiya Janata Party",
+        "C": "Communist Party of India",
+        "D": "Samajwadi Party",
+        "answer": "B"
+    },
+    {
+        "question": "Who is the Chief Minister of Delhi as of 2024?",
+        "A": "Arvind Kejriwal",
+        "B": "Manohar Lal Khattar",
+        "C": "Yogi Adityanath",
+        "D": "Mamata Banerjee",
+        "answer": "A"
+    },
+    {
+        "question": "What is the maximum strength of the Lok Sabha (House of the People)?",
+        "A": "500",
+        "B": "525",
+        "C": "550",
+        "D": "545",
+        "answer": "D"
+    },
+    {
+        "question": "Who was the first Vice President of India?",
+        "A": "Sarvepalli Radhakrishnan",
+        "B": "Jawaharlal Nehru",
+        "C": "Rajendra Prasad",
+        "D": "Sardar Patel",
+        "answer": "A"
+    },
+    {
+        "question": "In which year did India become a member of the United Nations?",
+        "A": "1945",
+        "B": "1947",
+        "C": "1950",
+        "D": "1955",
+        "answer": "A"
+    },
+    {
+        "question": "Who is the Deputy Prime Minister of India as of 2024?",
+        "A": "Amit Shah",
+        "B": "Nitin Gadkari",
+        "C": "Rajnath Singh",
+        "D": "S. Jaishankar",
+        "answer": "C"
+    },
+    {
+        "question": "Which Indian state has the highest number of seats in the Lok Sabha?",
+        "A": "Uttar Pradesh",
+        "B": "Maharashtra",
+        "C": "Bihar",
+        "D": "West Bengal",
+        "answer": "A"
+    },
+    {
+        "question": "Who is known as the 'People's President'?",
+        "A": "A.P.J. Abdul Kalam",
+        "B": "Pranab Mukherjee",
+        "C": "R. Venkataraman",
+        "D": "K.R. Narayanan",
+        "answer": "A"
+    },
+    {
+        "question": "Which article of the Indian Constitution deals with the President's rule in a state?",
+        "A": "Article 356",
+        "B": "Article 370",
+        "C": "Article 301",
+        "D": "Article 152",
+        "answer": "A"
+    },
+    {
+        "question": "Who is the current Chief Justice of India as of 2024?",
+        "A": "N.V. Ramana",
+        "B": "Sharad Arvind Bobde",
+        "C": "Ranjan Gogoi",
+        "D": "Dipak Misra",
+        "answer": "A"
+    },
+    {
+        "question": "In which year was the Goods and Services Tax (GST) implemented in India?",
+        "A": "2016",
+        "B": "2017",
+        "C": "2018",
+        "D": "2019",
+        "answer": "B"
+    },
+    {
+        "question": "Who was the first Chief Minister of Jammu and Kashmir?",
+        "A": "Sheikh Abdullah",
+        "B": "Ghulam Mohammed Sadiq",
+        "C": "Farooq Abdullah",
+        "D": "Mehbooba Mufti",
+        "answer": "B"
+    },
+    {
+        "question": "Which Indian political leader is known as the 'Missile Man of India'?",
+        "A": "Atal Bihari Vajpayee",
+        "B": "Narendra Modi",
+        "C": "Rajiv Gandhi",
+        "D": "A.P.J. Abdul Kalam",
+        "answer": "D"
+    },
+    {
+        "question": "Who is the founder of the Aam Aadmi Party (AAP)?",
+        "A": "Arvind Kejriwal",
+        "B": "Manish Sisodia",
+        "C": "Kumar Vishwas",
+        "D": "Yogendra Yadav",
+        "answer": "A"
+    },
+    {
+        "question": "Which Indian state is known as the 'Land of Five Rivers'?",
+        "A": "Punjab",
+        "B": "Haryana",
+        "C": "Uttar Pradesh",
+        "D": "Rajasthan",
+        "answer": "A"
+    },
+    {
+        "question": "Who was the first woman Chief Minister of an Indian state?",
+        "A": "Jayalalithaa",
+        "B": "Mamata Banerjee",
+        "C": "Sushma Swaraj",
+        "D": "Sucheta Kriplani",
+        "answer": "D"
+    },
+    {
+        "question": "In which year did India adopt the National Flag?",
+        "A": "1942",
+        "B": "1947",
+        "C": "1950",
+        "D": "1952",
+        "answer": "C"
+    },
+    {
+        "question": "Who was the first Chief Justice of India?",
+        "A": "Harilal Jekisundas Kania",
+        "B": "M. Patanjali Sastri",
+        "C": "H.J. Kania",
+        "D": "P.B. Gajendragadkar",
+        "answer": "A"
+    },
+    {
+        "question": "Which Indian state has the largest area?",
+        "A": "Maharashtra",
+        "B": "Rajasthan",
+        "C": "Madhya Pradesh",
+        "D": "Uttar Pradesh",
+        "answer": "B"
+    },
+    {
+        "question": "Who was the first President of India?",
+        "A": "S. Radhakrishnan",
+        "B": "Rajendra Prasad",
+        "C": "Zakir Hussain",
+        "D": "V.V. Giri",
+        "answer": "B"
+    },
+    {
+        "question": "Which Indian state is known as the 'God's Own Country'?",
+        "A": "Kerala",
+        "B": "Goa",
+        "C": "Himachal Pradesh",
+        "D": "Uttarakhand",
+        "answer": "A"
+    },
+    {
+        "question": "Who is the current Prime Minister of India as of 2024?",
+        "A": "Narendra Modi",
+        "B": "Manmohan Singh",
+        "C": "Rahul Gandhi",
+        "D": "Amit Shah",
+        "answer": "A"
+    },
+    {
+        "question": "In which year did India become a Republic?",
+        "A": "1947",
+        "B": "1949",
+        "C": "1952",
+        "D": "1955",
+        "answer": "B"
+    },
+    {
+        "question": "Who was the first Chief Minister of West Bengal?",
+        "A": "Jyoti Basu",
+        "B": "Bidhan Chandra Roy",
+        "C": "Mamata Banerjee",
+        "D": "Hiren Mukherjee",
+        "answer": "B"
+    },
+    {
+        "question": "Which political party did Subhas Chandra Bose lead during the pre-independence era?",
+        "A": "Indian National Congress",
+        "B": "Forward Bloc",
+        "C": "Socialist Party",
+        "D": "Communist Party of India",
+        "answer": "B"
+    },
+    {
+        "question": "Who was the first woman Governor of an Indian state?",
+        "A": "Sarojini Naidu",
+        "B": "Pratibha Patil",
+        "C": "Anandiben Patel",
+        "D": "Sucheta Kriplani",
+        "answer": "A"
+    },
+    {
+        "question": "Which state is known as the 'Land of the Rising Sun'?",
+        "A": "Arunachal Pradesh",
+        "B": "Nagaland",
+        "C": "Manipur",
+        "D": "Mizoram",
+        "answer": "A"
+    },
+    {
+        "question": "Who is known as the 'Bard of Bengal'?",
+        "A": "Rabindranath Tagore",
+        "B": "Kazi Nazrul Islam",
+        "C": "Bankim Chandra Chattopadhyay",
+        "D": "Sarat Chandra Chattopadhyay",
+        "answer": "C"
+    },
+    {
+        "question": "Which Indian state is known as the 'Spice Garden of India'?",
+        "A": "Karnataka",
+        "B": "Kerala",
+        "C": "Andhra Pradesh",
+        "D": "Tamil Nadu",
+        "answer": "B"
+    },
+    {
+        "question": "Who is the founder of the Bahujan Samaj Party (BSP)?",
+        "A": "Mayawati",
+        "B": "Kanshi Ram",
+        "C": "Mulayam Singh Yadav",
+        "D": "Akhilesh Yadav",
+        "answer": "B"
+    },
+    {
+        "question": "Which Indian state is known as the 'Land of Five Rivers'?",
+        "A": "Punjab",
+        "B": "Haryana",
+        "C": "Uttar Pradesh",
+        "D": "Rajasthan",
+        "answer": "A"
+    },
+    {
+        "question": "Who is known as the 'Nightingale of India'?",
+        "A": "Lata Mangeshkar",
+        "B": "Asha Bhonsle",
+        "C": "Sarojini Naidu",
+        "D": "Indira Gandhi",
+        "answer": "C"
+    },
+    {
+        "question": "Which political party did Jyoti Basu belong to?",
+        "A": "Indian National Congress",
+        "B": "Communist Party of India (Marxist)",
+        "C": "Bharatiya Janata Party",
+        "D": "Trinamool Congress",
+        "answer": "B"
+    },
+    {
+        "question": "Who is known as the 'Father of Indian Space Program'?",
+        "A": "Vikram Sarabhai",
+        "B": "A.P.J. Abdul Kalam",
+        "C": "Satish Dhawan",
+        "D": "K. Radhakrishnan",
+        "answer": "A"
+    },
+    {
+        "question": "Which Indian state is known as the 'Land of White Elephants'?",
+        "A": "Assam",
+        "B": "Kerala",
+        "C": "Gujarat",
+        "D": "Rajasthan",
+        "answer": "C"
+    },
+    {
+        "question": "Who was the first Chief Minister of Tamil Nadu?",
+        "A": "M.G. Ramachandran",
+        "B": "C.N. Annadurai",
+        "C": "J. Jayalalithaa",
+        "D": "Karunanidhi",
+        "answer": "B"
+    },
+    {
+        "question": "Which Indian state is known as the 'Land of Festivals'?",
+        "A": "Goa",
+        "B": "West Bengal",
+        "C": "Rajasthan",
+        "D": "Kerala",
+        "answer": "B"
+    },
+    {
+        "question": "Who is known as the 'Lion of Punjab'?",
+        "A": "Lala Lajpat Rai",
+        "B": "Bhagat Singh",
+        "C": "Gurudev Rabindranath Tagore",
+        "D": "Kartar Singh Sarabha",
+        "answer": "A"
+    },
+    {
+        "question": "In which year was the National Green Tribunal (NGT) established in India?",
+        "A": "2008",
+        "B": "2010",
+        "C": "2012",
+        "D": "2014",
+        "answer": "C"
+    },
+    {
+        "question": "Who was the first Chief Minister of Andhra Pradesh?",
+        "A": "N. Chandrababu Naidu",
+        "B": "Y.S. Rajasekhara Reddy",
+        "C": "Potti Sreeramulu",
+        "D": "K. Rosaiah",
+        "answer": "C"
+    },
+    {
+        "question": "Which Indian state is known as the 'Land of Lakes'?",
+        "A": "Madhya Pradesh",
+        "B": "Kerala",
+        "C": "Rajasthan",
+        "D": "Odisha",
+        "answer": "A"
+    },
+    {
+        "question": "Who is the Chief Minister of Maharashtra as of 2024?",
+        "A": "Uddhav Thackeray",
+        "B": "Devendra Fadnavis",
+        "C": "Sharad Pawar",
+        "D": "Ajit Pawar",
+        "answer": "A"
+    },
+    {
+        "question": "Which Indian state is known as the 'Land of Five Gems'?",
+        "A": "Gujarat",
+        "B": "Jharkhand",
+        "C": "Odisha",
+        "D": "Rajasthan",
+        "answer": "C"
+    },
+    {
+        "question": "Who is known as the 'Grand Old Man of India'?",
+        "A": "Bal Gangadhar Tilak",
+        "B": "Dadabhai Naoroji",
+        "C": "Gopal Krishna Gokhale",
+        "D": "Motilal Nehru",
+        "answer": "B"
+    },
+    {
+        "question": "Which Indian state is known as the 'Pearl of the East'?",
+        "A": "Sikkim",
+        "B": "Arunachal Pradesh",
+        "C": "Mizoram",
+        "D": "Manipur",
+        "answer": "A"
+    },
+    {
+        "question": "Who is known as the 'Architect of the Indian Constitution'?",
+        "A": "B.R. Ambedkar",
+        "B": "Jawaharlal Nehru",
+        "C": "Sardar Patel",
+        "D": "Gopal Krishna Gokhale",
+        "answer": "A"
+    },
+    {
+        "question": "Which Indian state is known as the 'Land of the Gods'?",
+        "A": "Uttar Pradesh",
+        "B": "Himachal Pradesh",
+        "C": "Jharkhand",
+        "D": "Chhattisgarh",
+        "answer": "B"
+    }
+]
+

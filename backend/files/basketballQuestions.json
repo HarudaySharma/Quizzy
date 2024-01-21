@@ -1,0 +1,245 @@
+[
+    {
+        "question": "Who is widely regarded as the greatest basketball player of all time?",
+        "A": "LeBron James",
+        "B": "Kobe Bryant",
+        "C": "Michael Jordan",
+        "D": "Magic Johnson",
+        "answer": "C",
+        "isCorrect": true
+    },
+    {
+        "question": "Which NBA team has won the most championships?",
+        "A": "Boston Celtics",
+        "B": "Los Angeles Lakers",
+        "C": "Chicago Bulls",
+        "D": "Golden State Warriors",
+        "answer": "B",
+        "isCorrect": true
+    },
+    {
+        "question": "What is the height of an official NBA basketball hoop?",
+        "A": "10 feet",
+        "B": "9.5 feet",
+        "C": "11 feet",
+        "D": "12 feet",
+        "answer": "A",
+        "isCorrect": true
+    },
+    {
+        "question": "Who holds the record for the most points scored in a single NBA game?",
+        "A": "Kobe Bryant",
+        "B": "Wilt Chamberlain",
+        "C": "Michael Jordan",
+        "D": "LeBron James",
+        "answer": "B",
+        "isCorrect": true
+    },
+    {
+        "question": "Which NBA team drafted Dirk Nowitzki in 1998 before trading him to the Dallas Mavericks?",
+        "A": "Boston Celtics",
+        "B": "Milwaukee Bucks",
+        "C": "Los Angeles Clippers",
+        "D": "Chicago Bulls",
+        "answer": "B",
+        "isCorrect": true
+    },
+    {
+        "question": "Who is known as 'The Answer' in basketball?",
+        "A": "LeBron James",
+        "B": "Allen Iverson",
+        "C": "Kevin Durant",
+        "D": "Stephen Curry",
+        "answer": "B",
+        "isCorrect": true
+    },
+    {
+        "question": "Which player won the NBA MVP award for the 2020-2021 season?",
+        "A": "Giannis Antetokounmpo",
+        "B": "LeBron James",
+        "C": "Stephen Curry",
+        "D": "Kevin Durant",
+        "answer": "A",
+        "isCorrect": true
+    },
+    {
+        "question": "What is the regulation height of an NBA backboard?",
+        "A": "50 inches",
+        "B": "54 inches",
+        "C": "60 inches",
+        "D": "72 inches",
+        "answer": "B",
+        "isCorrect": true
+    },
+    {
+        "question": "Which player is known for his signature 'Skyhook' shot?",
+        "A": "Larry Bird",
+        "B": "Kareem Abdul-Jabbar",
+        "C": "Hakeem Olajuwon",
+        "D": "Tim Duncan",
+        "answer": "B",
+        "isCorrect": true
+    },
+    {
+        "question": "In which year did the NBA introduce the three-point line?",
+        "A": "1973",
+        "B": "1980",
+        "C": "1986",
+        "D": "1990",
+        "answer": "C",
+        "isCorrect": true
+    },
+    {
+        "question": "Which team did Michael Jordan play for when he made his famous 'Flu Game' appearance in the NBA Finals?",
+        "A": "Chicago Bulls",
+        "B": "Los Angeles Lakers",
+        "C": "Houston Rockets",
+        "D": "New York Knicks",
+        "answer": "A",
+        "isCorrect": true
+    },
+    {
+        "question": "Who is the all-time leading scorer in NBA history?",
+        "A": "Kobe Bryant",
+        "B": "Kareem Abdul-Jabbar",
+        "C": "LeBron James",
+        "D": "Michael Jordan",
+        "answer": "B",
+        "isCorrect": true
+    },
+    {
+        "question": "Which player won the NBA Rookie of the Year award in the 2020-2021 season?",
+        "A": "LaMelo Ball",
+        "B": "Anthony Edwards",
+        "C": "James Wiseman",
+        "D": "Tyrese Haliburton",
+        "answer": "A",
+        "isCorrect": true
+    },
+    {
+        "question": "Who is the head coach of the Golden State Warriors as of 2024?",
+        "A": "Steve Kerr",
+        "B": "Doc Rivers",
+        "C": "Erik Spoelstra",
+        "D": "Tyronn Lue",
+        "answer": "A",
+        "isCorrect": true
+    },
+    {
+        "question": "Which NBA team is often referred to as the 'Dubs'?",
+        "A": "Los Angeles Lakers",
+        "B": "Golden State Warriors",
+        "C": "Miami Heat",
+        "D": "Boston Celtics",
+        "answer": "B",
+        "isCorrect": true
+    },
+    {
+        "question": "Who is known for his nickname 'The Greek Freak' in basketball?",
+        "A": "Giannis Antetokounmpo",
+        "B": "Luka Doncic",
+        "C": "Joel Embiid",
+        "D": "Nikola Jokic",
+        "answer": "A",
+        "isCorrect": true
+    },
+    {
+        "question": "In which city did the Sacramento Kings play their home games before moving to Sacramento?",
+        "A": "Kansas City",
+        "B": "Seattle",
+        "C": "Cincinnati",
+        "D": "Buffalo",
+        "answer": "C",
+        "isCorrect": true
+    },
+    {
+        "question": "Who is the NBA's all-time leader in assists?",
+        "A": "Chris Paul",
+        "B": "John Stockton",
+        "C": "Magic Johnson",
+        "D": "Steve Nash",
+        "answer": "B",
+        "isCorrect": true
+    },
+    {
+        "question": "Which player was known for his famous 'Fadeaway' jump shot?",
+        "A": "Dirk Nowitzki",
+        "B": "Karl Malone",
+        "C": "Hakeem Olajuwon",
+        "D": "Shaquille O'Neal",
+        "answer": "A",
+        "isCorrect": true
+    },
+    {
+        "question": "Who won the NBA Finals MVP in the 2019-2020 season?",
+        "A": "LeBron James",
+        "B": "Anthony Davis",
+        "C": "Jimmy Butler",
+        "D": "Kawhi Leonard",
+        "answer": "A",
+        "isCorrect": true
+    },
+    {
+        "question": "Which college did Michael Jordan play for before entering the NBA?",
+        "A": "Duke University",
+        "B": "North Carolina State University",
+        "C": "University of North Carolina",
+        "D": "Kentucky University",
+        "answer": "C",
+        "isCorrect": true
+    },
+    {
+        "question": "Who won the NBA Defensive Player of the Year award in the 2020-2021 season?",
+        "A": "Rudy Gobert",
+        "B": "Anthony Davis",
+        "C": "Ben Simmons",
+        "D": "Bam Adebayo",
+        "answer": "A",
+        "isCorrect": true
+    },
+    {
+        "question": "In which year did the NBA adopt the shot clock?",
+        "A": "1954",
+        "B": "1960",
+        "C": "1972",
+        "D": "1985",
+        "answer": "B",
+        "isCorrect": true
+    },
+    {
+        "question": "Which player is known for his nickname 'The Klaw'?",
+        "A": "Kawhi Leonard",
+        "B": "Paul George",
+        "C": "Jimmy Butler",
+        "D": "Anthony Davis",
+        "answer": "A",
+        "isCorrect": true
+    },
+    {
+        "question": "Who is the all-time leading scorer in NCAA Division I men's basketball?",
+        "A": "Pete Maravich",
+        "B": "Kareem Abdul-Jabbar",
+        "C": "Larry Bird",
+        "D": "Christian Laettner",
+        "answer": "A",
+        "isCorrect": true
+    },
+    {
+        "question": "Which NBA team drafted Shaquille O'Neal as the first overall pick in the 1992 NBA Draft?",
+        "A": "Orlando Magic",
+        "B": "Los Angeles Lakers",
+        "C": "Charlotte Hornets",
+        "D": "Golden State Warriors",
+        "answer": "A",
+        "isCorrect": true
+    },
+    {
+        "question": "Who is known for his nickname 'Splash Brother' in basketball?",
+        "A": "Kevin Durant",
+        "B": "Stephen Curry",
+        "C": "Klay Thompson",
+        "D": "Damian Lillard",
+        "answer": "C",
+        "isCorrect": true
+    }
+]

@@ -5,10 +5,12 @@ import getAllQuestions from '../utils/getAllQuestions.js'
 import { ErrorHandler} from '../utils/errorHandler.js'
 import { MCQ } from '../types/app.js'
 import getSelectedQuestions from '../utils/getSelectedQuestions.js'
+import { Categories } from '../utils/categories.js'
 
-const randomQuestions = async() =>{
+
+const randomQuestions = async(category: string) =>{
     try {
-        const questions: MCQ[] =  await getAllQuestions();
+        const questions: MCQ[] =  await getAllQuestions(Categories[category as keyof typeof Categories]);
         
         let selectedQuestions: MCQ[]  = [];
         let usedIndices: number[] = [];
@@ -28,9 +30,9 @@ const randomQuestions = async() =>{
 }
 
 export const getQuestions = async(req: Request, res: Response, next: NextFunction ) => {
-    console.log("getQuestions");
+    const {category} = req.body;
     try {
-        const selectedQuestions: MCQ[] = await randomQuestions();
+        const selectedQuestions: MCQ[] = await randomQuestions(category);
         console.log(selectedQuestions);
         try {
             const msg = await saveSelectedQuestions(selectedQuestions);

@@ -1,0 +1,426 @@
+[
+    {
+        "question": "Which country won the FIFA World Cup in 2018?",
+        "A": "France",
+        "B": "Germany",
+        "C": "Brazil",
+        "D": "Argentina",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the all-time leading goal scorer in FIFA World Cup history?",
+        "A": "Pele",
+        "B": "Lionel Messi",
+        "C": "Cristiano Ronaldo",
+        "D": "Miroslav Klose",
+        "answer": "D",
+
+    },
+    {
+        "question": "In which year did England win the FIFA World Cup?",
+        "A": "1966",
+        "B": "1974",
+        "C": "1982",
+        "D": "1990",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is known as the 'Hand of God' for his controversial goal in the 1986 World Cup?",
+        "A": "Diego Maradona",
+        "B": "Pele",
+        "C": "Zinedine Zidane",
+        "D": "Ronaldinho",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which club has won the most UEFA Champions League titles?",
+        "A": "Real Madrid",
+        "B": "Barcelona",
+        "C": "Bayern Munich",
+        "D": "AC Milan",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the top scorer in the history of the English Premier League?",
+        "A": "Alan Shearer",
+        "B": "Thierry Henry",
+        "C": "Wayne Rooney",
+        "D": "Andy Cole",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which player has won the FIFA Ballon d'Or the most times?",
+        "A": "Lionel Messi",
+        "B": "Cristiano Ronaldo",
+        "C": "Pele",
+        "D": "Diego Maradona",
+        "answer": "A",
+
+    },
+    {
+        "question": "In which country did the first official international football match take place?",
+        "A": "England",
+        "B": "Brazil",
+        "C": "Uruguay",
+        "D": "Germany",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who is the manager of Liverpool FC as of 2024?",
+        "A": "Jurgen Klopp",
+        "B": "Pep Guardiola",
+        "C": "Zinedine Zidane",
+        "D": "Carlo Ancelotti",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which player holds the record for the most goals in a single Premier League season?",
+        "A": "Alan Shearer",
+        "B": "Luis Suarez",
+        "C": "Thierry Henry",
+        "D": "Mohamed Salah",
+        "answer": "A",
+
+    },
+    {
+        "question": "In which country is the famous football club Barcelona located?",
+        "A": "Italy",
+        "B": "Germany",
+        "C": "Spain",
+        "D": "England",
+        "answer": "C",
+
+    },
+    {
+        "question": "Which player is often referred to as 'CR7'?",
+        "A": "Cristiano Ronaldo",
+        "B": "Cesc Fabregas",
+        "C": "Carlos Tevez",
+        "D": "Ciro Immobile",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the all-time leading goal scorer for the Brazil national football team?",
+        "A": "Ronaldo Nazario",
+        "B": "Pele",
+        "C": "Zico",
+        "D": "Romario",
+        "answer": "B",
+
+    },
+    {
+        "question": "Which goalkeeper is known for his 'Sweeper Keeper' style of play?",
+        "A": "Manuel Neuer",
+        "B": "David De Gea",
+        "C": "Thibaut Courtois",
+        "D": "Alisson Becker",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the all-time leading goal scorer in the UEFA Champions League?",
+        "A": "Lionel Messi",
+        "B": "Cristiano Ronaldo",
+        "C": "Raul",
+        "D": "Robert Lewandowski",
+        "answer": "B",
+
+    },
+    {
+        "question": "Which African country has won the Africa Cup of Nations the most times?",
+        "A": "Nigeria",
+        "B": "Cameroon",
+        "C": "Egypt",
+        "D": "Ghana",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who is known as the 'Egyptian King' in football?",
+        "A": "Mohamed Salah",
+        "B": "Sadio Mane",
+        "C": "Mohamed Elneny",
+        "D": "Ahmed Hegazi",
+        "answer": "A",
+
+    },
+    {
+        "question": "In which year did Cristiano Ronaldo win his first FIFA Ballon d'Or?",
+        "A": "2008",
+        "B": "2009",
+        "C": "2010",
+        "D": "2011",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which stadium is known as the 'Theatre of Dreams'?",
+        "A": "Camp Nou",
+        "B": "Anfield",
+        "C": "Old Trafford",
+        "D": "Santiago Bernabeu",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who is the captain of the Argentina national football team as of 2024?",
+        "A": "Lionel Messi",
+        "B": "Sergio Aguero",
+        "C": "Paulo Dybala",
+        "D": "Angel Di Maria",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which football club is known as the 'Red Devils'?",
+        "A": "Manchester City",
+        "B": "Manchester United",
+        "C": "Liverpool",
+        "D": "Arsenal",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who won the Golden Boot in the 2018 FIFA World Cup?",
+        "A": "Kylian Mbappe",
+        "B": "Harry Kane",
+        "C": "Antoine Griezmann",
+        "D": "Luka Modric",
+        "answer": "B",
+
+    },
+    {
+        "question": "Which Italian club is known as 'The Old Lady'?",
+        "A": "AC Milan",
+        "B": "Inter Milan",
+        "C": "AS Roma",
+        "D": "Juventus",
+        "answer": "D",
+
+    },
+    {
+        "question": "Who is the manager of FC Barcelona as of 2024?",
+        "A": "Ronald Koeman",
+        "B": "Pep Guardiola",
+        "C": "Xavi Hernandez",
+        "D": "Luis Enrique",
+        "answer": "C",
+
+    },
+    {
+        "question": "Which English club has the nickname 'The Gunners'?",
+        "A": "Chelsea",
+        "B": "Manchester United",
+        "C": "Arsenal",
+        "D": "Liverpool",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who is the top scorer in the history of the UEFA Europa League?",
+        "A": "Radamel Falcao",
+        "B": "Aritz Aduriz",
+        "C": "Eden Hazard",
+        "D": "Antoine Griezmann",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which Brazilian player is known for his stepovers and flashy style of play?",
+        "A": "Neymar",
+        "B": "Roberto Firmino",
+        "C": "Philippe Coutinho",
+        "D": "Gabriel Jesus",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which country won the FIFA World Cup in 2002?",
+        "A": "Italy",
+        "B": "France",
+        "C": "Brazil",
+        "D": "Germany",
+        "answer": "C",
+
+    },
+    {
+        "question": "In which year did Lionel Messi make his professional debut for FC Barcelona?",
+        "A": "2003",
+        "B": "2005",
+        "C": "2007",
+        "D": "2009",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who is the all-time leading scorer for the German national football team?",
+        "A": "Miroslav Klose",
+        "B": "Thomas Muller",
+        "C": "Mario Gomez",
+        "D": "Jurgen Klinsmann",
+        "answer": "A",
+
+    },
+    {
+        "question": "In which city is the famous football club Borussia Dortmund based?",
+        "A": "Munich",
+        "B": "Berlin",
+        "C": "Hamburg",
+        "D": "Dortmund",
+        "answer": "D",
+
+    },
+    {
+        "question": "Who is the current captain of the Portugal national football team?",
+        "A": "Bruno Fernandes",
+        "B": "Diogo Jota",
+        "C": "Cristiano Ronaldo",
+        "D": "Bernardo Silva",
+        "answer": "C",
+
+    },
+    {
+        "question": "Which English footballer is nicknamed 'Golden Balls'?",
+        "A": "Steven Gerrard",
+        "B": "Frank Lampard",
+        "C": "David Beckham",
+        "D": "Wayne Rooney",
+        "answer": "C",
+
+    },
+    {
+        "question": "Who is the all-time leading scorer for the French national football team?",
+        "A": "Zinedine Zidane",
+        "B": "Michel Platini",
+        "C": "Thierry Henry",
+        "D": "Karim Benzema",
+        "answer": "C",
+
+    },
+    {
+        "question": "In which country did the first Women's World Cup take place?",
+        "A": "Sweden",
+        "B": "China",
+        "C": "USA",
+        "D": "Norway",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who won the Golden Boot in the 2014 FIFA World Cup?",
+        "A": "Thomas Muller",
+        "B": "James Rodriguez",
+        "C": "Lionel Messi",
+        "D": "Neymar",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which English club is known as 'The Blues'?",
+        "A": "Manchester United",
+        "B": "Chelsea",
+        "C": "Arsenal",
+        "D": "Liverpool",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who is the manager of Real Madrid as of 2024?",
+        "A": "Zinedine Zidane",
+        "B": "Carlo Ancelotti",
+        "C": "Mauricio Pochettino",
+        "D": "Jose Mourinho",
+        "answer": "C",
+
+    },
+    {
+        "question": "Which player is known as the 'Egyptian King' in football?",
+        "A": "Mohamed Salah",
+        "B": "Sadio Mane",
+        "C": "Mohamed Elneny",
+        "D": "Ahmed Hegazi",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who won the FIFA Puskas Award in 2019 for the best goal of the year?",
+        "A": "Lionel Messi",
+        "B": "Zlatan Ibrahimovic",
+        "C": "Mohamed Salah",
+        "D": "Daniel Zsori",
+        "answer": "D",
+
+    },
+    {
+        "question": "In which city is the famous football club AC Milan based?",
+        "A": "Milan",
+        "B": "Rome",
+        "C": "Turin",
+        "D": "Naples",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the all-time leading scorer for the Spanish national football team?",
+        "A": "Fernando Torres",
+        "B": "David Villa",
+        "C": "Fernando Hierro",
+        "D": "Raul",
+        "answer": "D",
+
+    },
+    {
+        "question": "Which Brazilian player is known for his acrobatic bicycle kicks?",
+        "A": "Neymar",
+        "B": "Roberto Firmino",
+        "C": "Philippe Coutinho",
+        "D": "Marcelo",
+        "answer": "B",
+
+    },
+    {
+        "question": "Who won the FIFA Best Men's Player award in 2020?",
+        "A": "Lionel Messi",
+        "B": "Cristiano Ronaldo",
+        "C": "Robert Lewandowski",
+        "D": "Mohamed Salah",
+        "answer": "A",
+
+    },
+    {
+        "question": "In which country did the first ever football World Cup take place?",
+        "A": "Uruguay",
+        "B": "Brazil",
+        "C": "Argentina",
+        "D": "Italy",
+        "answer": "A",
+
+    },
+    {
+        "question": "Who is the top scorer in the history of the UEFA European Championship?",
+        "A": "Cristiano Ronaldo",
+        "B": "Michel Platini",
+        "C": "Alan Shearer",
+        "D": "Thierry Henry",
+        "answer": "A",
+
+    },
+    {
+        "question": "Which Portuguese club is known as 'The Dragons'?",
+        "A": "Sporting CP",
+        "B": "SL Benfica",
+        "C": "FC Porto",
+        "D": "Vitoria de Guimaraes",
+        "answer": "C",
+
+    }
+]
+

@@ -1,0 +1,532 @@
+[
+  {
+    "question": "In 'Steins;Gate,' what is the main character Rintarou Okabe's alias?",
+    "A": "Hououin Kyouma",
+    "B": "Kurisu Makise",
+    "C": "Mayuri Shiina",
+    "D": "Itaru Hashida",
+    "answer": "A"
+  },
+  {
+    "question": "Which anime features a group of individuals with 'Nen' abilities, including the power of 'Emperor Time'?",
+    "A": "Bleach",
+    "B": "Hunter x Hunter",
+    "C": "Naruto",
+    "D": "One Piece",
+    "answer": "B"
+  },
+  {
+    "question": "In 'Serial Experiments Lain,' what term is used to describe the merging of the virtual and physical worlds?",
+    "A": "Dive",
+    "B": "Sync",
+    "C": "Convergence",
+    "D": "Integration",
+    "answer": "C"
+  },
+  {
+    "question": "Which anime follows the story of Kaneki Ken, who becomes a half-ghoul after a chance encounter?",
+    "A": "Parasyte",
+    "B": "Tokyo Ghoul",
+    "C": "Attack on Titan",
+    "D": "Berserk",
+    "answer": "B"
+  },
+  {
+    "question": "What is the name of the mysterious organization in 'Steins;Gate' that is responsible for time travel experiments?",
+    "A": "SERN",
+    "B": "CERN",
+    "C": "LHC",
+    "D": "IBN 5100",
+    "answer": "A"
+  },
+  {
+    "question": "In 'Psycho-Pass,' what is the name of the system that measures a person's criminal potential?",
+    "A": "Sybil System",
+    "B": "Dominators",
+    "C": "Enforcers",
+    "D": "Inspector System",
+    "answer": "A"
+  },
+  {
+    "question": "Which anime features a world where humans live within colossal mobile fortress cities to protect themselves from gigantic creatures known as Kabane?",
+    "A": "Attack on Titan",
+    "B": "Kabaneri of the Iron Fortress",
+    "C": "Aldnoah.Zero",
+    "D": "Knights of Sidonia",
+    "answer": "B"
+  },
+  {
+    "question": "In 'Monogatari Series,' what is the name of the main character who encounters various oddities?",
+    "A": "Araragi Koyomi",
+    "B": "Senjougahara Hitagi",
+    "C": "Shinobu Oshino",
+    "D": "Hanekawa Tsubasa",
+    "answer": "A"
+  },
+  {
+    "question": "Which anime features a high school where students use supernatural abilities represented by cards to battle each other?",
+    "A": "Cardcaptor Sakura",
+    "B": "Puella Magi Madoka Magica",
+    "C": "Fate/stay night",
+    "D": "Cardfight!! Vanguard",
+    "answer": "D"
+  },
+  {
+    "question": "In 'Cowboy Bebop,' what is the name of Spike Spiegel's former crime partner and love interest?",
+    "A": "Faye Valentine",
+    "B": "Jet Black",
+    "C": "Edward",
+    "D": "Julia",
+    "answer": "D"
+  },
+  {
+    "question": "Which anime features a game called 'Gantz,' where deceased individuals are brought back to life to hunt aliens?",
+    "A": "Gurren Lagann",
+    "B": "Paranoia Agent",
+    "C": "Gantz",
+    "D": "Death Parade",
+    "answer": "C"
+  },
+  {
+    "question": "In 'Code Geass,' what is the name of the masked revolutionary who leads the Black Knights?",
+    "A": "Suzaku Kururugi",
+    "B": "Lelouch vi Britannia",
+    "C": "C.C.",
+    "D": "Kallen Stadtfeld",
+    "answer": "B"
+  },
+  {
+    "question": "Which anime features a deadly game known as 'King's Game,' where participants receive mysterious commands with life-threatening consequences?",
+    "A": "Mirai Nikki",
+    "B": "Death Parade",
+    "C": "King's Game",
+    "D": "Danganronpa",
+    "answer": "C"
+  },
+  {
+    "question": "In 'Neon Genesis Evangelion,' what is the name of the organization tasked with defending Earth against mysterious beings called Angels?",
+    "A": "NERV",
+    "B": "SEELE",
+    "C": "Gehirn",
+    "D": "WILLE",
+    "answer": "A"
+  },
+  {
+    "question": "Which anime features a world where humanity is trapped in an endless loop and only the main character, Satoru Fujinuma, has the ability to go back in time to prevent tragedies?",
+    "A": "Re:Zero",
+    "B": "ERASED",
+    "C": "Steins;Gate",
+    "D": "The Girl Who Leapt Through Time",
+    "answer": "B"
+  },
+  {
+    "question": "In 'Black Clover,' what is the name of Asta's anti-magic sword?",
+    "A": "Excalibur",
+    "B": "Grimoire",
+    "C": "Demon Slayer",
+    "D": "Anti-Magic Sword",
+    "answer": "C"
+  },
+  {
+    "question": "Which anime features a virtual reality game called 'Ordinal Scale,' where players use augmented reality to battle monsters?",
+    "A": "Log Horizon",
+    "B": "No Game No Life",
+    "C": "Sword Art Online: Ordinal Scale",
+    "D": "Accel World",
+    "answer": "C"
+  },
+  {
+    "question": "In 'Death Note,' what is the real name of the detective known by the alias L?",
+    "A": "Nate River",
+    "B": "Soichiro Yagami",
+    "C": "Ryuk",
+    "D": "Hideki Ide",
+    "answer": "A"
+  },
+  {
+    "question": "Which anime features a group of individuals known as the 'Black Dogs' who fight against supernatural threats?",
+    "A": "Blue Exorcist",
+    "B": "D.Gray-man",
+    "C": "Ao no Exorcist",
+    "D": "Black Bullet",
+    "answer": "D"
+  },
+  {
+    "question": "In 'One Punch Man,' what is the Hero Association's top-ranked hero, known for his overwhelming strength?",
+    "A": "Genos",
+    "B": "Saitama",
+    "C": "Mumen Rider",
+    "D": "Bang",
+    "answer": "B"
+  },
+  {
+    "question": "Which anime follows the adventures of a young alchemist named Edward Elric and his brother Alphonse, who are searching for the Philosopher's Stone?",
+    "A": "Fullmetal Alchemist",
+    "B": "Attack on Titan",
+    "C": "Hunter x Hunter",
+    "D": "Fairy Tail",
+    "answer": "A"
+  },
+  {
+    "question": "What is the name of the protagonist in 'No Game No Life,' known for his genius gaming skills?",
+    "A": "Shiro",
+    "B": "Sora",
+    "C": "Steph",
+    "D": "Jibril",
+    "answer": "B"
+  },
+  {
+    "question": "In 'My Hero Academia,' what is the name of the hero with the Quirk 'Half-Cold Half-Hot'?",
+    "A": "Izuku Midoriya",
+    "B": "Katsuki Bakugo",
+    "C": "Shoto Todoroki",
+    "D": "All Might",
+    "answer": "C"
+  },
+  {
+    "question": "Which anime features a group of students with magical powers known as 'The Seven Witches'?",
+    "A": "Blue Exorcist",
+    "B": "Yamada-kun and the Seven Witches",
+    "C": "Magi: The Labyrinth of Magic",
+    "D": "Puella Magi Madoka Magica",
+    "answer": "B"
+  },
+  {
+    "question": "In 'Ghost in the Shell: Stand Alone Complex,' what is the name of the cyborg protagonist and leader of Section 9?",
+    "A": "Batou",
+    "B": "Major Motoko Kusanagi",
+    "C": "Togusa",
+    "D": "Aramaki",
+    "answer": "B"
+  },
+  {
+    "question": "Which anime features a world where people gain superpowers through a surgery known as 'Quirk'?",
+    "A": "My Hero Academia",
+    "B": "One Punch Man",
+    "C": "Mob Psycho 100",
+    "D": "Black Clover",
+    "answer": "A"
+  },
+  {
+    "question": "In 'Code Geass,' what is the name of the island nation that becomes the battleground for the conflict between Britannia and the Black Knights?",
+    "A": "Japan",
+    "B": "Australia",
+    "C": "Ceylon",
+    "D": "Area 11",
+    "answer": "D"
+  },
+  {
+    "question": "Which anime features a world where individuals have their memories erased and replaced by the 'Syndrome'?",
+    "A": "Paranoia Agent",
+    "B": "ERASED",
+    "C": "Death Parade",
+    "D": "Serial Experiments Lain",
+    "answer": "B"
+  },
+  {
+    "question": "In 'Hellsing,' what is the name of the powerful vampire who serves the Hellsing Organization?",
+    "A": "Alucard",
+    "B": "Seras Victoria",
+    "C": "Integra Hellsing",
+    "D": "Walter Dornez",
+    "answer": "A"
+  },
+  {
+    "question": "Which anime features a virtual world known as the 'Accelerated World,' where characters engage in intense battles using enhanced avatars?",
+    "A": "Log Horizon",
+    "B": "No Game No Life",
+    "C": "Sword Art Online",
+    "D": "Accel World",
+    "answer": "D"
+  },
+  {
+    "question": "In 'Attack on Titan,' what is the name of the elite group of soldiers equipped with ODM gear for battling Titans?",
+    "A": "Military Police Brigade",
+    "B": "Survey Corps",
+    "C": "Garrison Regiment",
+    "D": "Stationary Guard",
+    "answer": "B"
+  },
+  {
+    "question": "Which anime features a young boy named Gon Freecss on a quest to become a Hunter and find his missing father?",
+    "A": "One Piece",
+    "B": "Hunter x Hunter",
+    "C": "Yu Yu Hakusho",
+    "D": "Demon Slayer",
+    "answer": "B"
+  },
+  {
+    "question": "In 'Black Clover,' what is the name of Asta's magical grimoire?",
+    "A": "Grimoire of Despair",
+    "B": "Grimoire of Destruction",
+    "C": "Grimoire of Anti-Magic",
+    "D": "Grimoire of Hope",
+    "answer": "C"
+  },
+  {
+    "question": "Which anime features a school where students use weapons that can transform into humanoid creatures known as 'Not-Weapons'?",
+    "A": "Soul Eater",
+    "B": "Blue Exorcist",
+    "C": "Noragami",
+    "D": "High School DxD",
+    "answer": "A"
+  },
+  {
+    "question": "In 'One Punch Man,' what is the Hero Association's top-ranked S-Class hero?",
+    "A": "Tornado of Terror",
+    "B": "Silver Fang",
+    "C": "Atomic Samurai",
+    "D": "Blast",
+    "answer": "D"
+  },
+  {
+    "question": "Which anime features a group of individuals with psychic abilities known as 'Persona Users'?",
+    "A": "Persona 4: The Animation",
+    "B": "Psycho-Pass",
+    "C": "Paranoia Agent",
+    "D": "Shin Megami Tensei: Devil Survivor 2",
+    "answer": "A"
+  },
+  {
+    "question": "In 'Death Note,' what is the alias used by the mysterious individual who sends messages to Kira?",
+    "A": "N",
+    "B": "K",
+    "C": "L",
+    "D": "M",
+    "answer": "C"
+  },
+  {
+    "question": "Which anime features a world where individuals pilot giant robots known as 'FranXX' to protect humanity from mysterious creatures?",
+    "A": "Neon Genesis Evangelion",
+    "B": "Code Geass",
+    "C": "Darling in the FranXX",
+    "D": "Mobile Suit Gundam",
+    "answer": "C"
+  },
+  {
+    "question": "In which anime does the protagonist, Monkey D. Luffy, search for the One Piece?",
+    "A": "Naruto",
+    "B": "One Piece",
+    "C": "Bleach",
+    "D": "Dragon Ball",
+    "answer": "B"
+  },
+  {
+    "question": "Who is the main character in the anime 'Death Note'?",
+    "A": "Lelouch vi Britannia",
+    "B": "Goku",
+    "C": "Light Yagami",
+    "D": "Edward Elric",
+    "answer": "C"
+  },
+  {
+    "question": "In 'Attack on Titan,' what are the giant humanoid creatures threatening humanity called?",
+    "A": "Titans",
+    "B": "Colossi",
+    "C": "Behemoths",
+    "D": "Kaiju",
+    "answer": "A"
+  },
+  {
+    "question": "Which anime features a powerful group of individuals known as the Espada?",
+    "A": "Naruto",
+    "B": "Bleach",
+    "C": "My Hero Academia",
+    "D": "Fullmetal Alchemist",
+    "answer": "B"
+  },
+  {
+    "question": "In 'My Hero Academia,' what is the name of the protagonist with the Quirk 'One For All'?",
+    "A": "Izuku Midoriya",
+    "B": "Katsuki Bakugo",
+    "C": "Shoto Todoroki",
+    "D": "All Might",
+    "answer": "A"
+  },
+  {
+    "question": "Which anime follows the adventures of Gon Freecss as he aspires to become a Hunter?",
+    "A": "One Punch Man",
+    "B": "Hunter x Hunter",
+    "C": "Yu Yu Hakusho",
+    "D": "Demon Slayer",
+    "answer": "B"
+  },
+  {
+    "question": "What is the name of the powerful weapon in 'Soul Eater' that can transform into a person?",
+    "A": "Demon Blade",
+    "B": "Soul Scythe",
+    "C": "Death Scythe",
+    "D": "Eternal Sword",
+    "answer": "C"
+  },
+  {
+    "question": "In 'Dragon Ball Z,' who is Goku's eternal rival and the prince of the Saiyan race?",
+    "A": "Vegeta",
+    "B": "Piccolo",
+    "C": "Gohan",
+    "D": "Trunks",
+    "answer": "A"
+  },
+  {
+    "question": "Which anime features a group of students trying to assassinate their alien teacher, Koro-sensei?",
+    "A": "Assassination Classroom",
+    "B": "Blue Exorcist",
+    "C": "Tokyo Ghoul",
+    "D": "Parasyte",
+    "answer": "A"
+  },
+  {
+    "question": "What is the main character's name in 'Fullmetal Alchemist: Brotherhood'?",
+    "A": "Edward Elric",
+    "B": "Alphonse Elric",
+    "C": "Roy Mustang",
+    "D": "Winry Rockbell",
+    "answer": "A"
+  },
+  {
+    "question": "In 'Naruto,' which village does Naruto Uzumaki belong to?",
+    "A": "Hidden Leaf Village",
+    "B": "Hidden Sand Village",
+    "C": "Hidden Mist Village",
+    "D": "Hidden Cloud Village",
+    "answer": "A"
+  },
+  {
+    "question": "Which anime follows the story of Eren Yeager and his quest for revenge against the Titans?",
+    "A": "One Piece",
+    "B": "Death Note",
+    "C": "Attack on Titan",
+    "D": "Bleach",
+    "answer": "C"
+  },
+  {
+    "question": "In 'Cowboy Bebop,' what is the profession of the main character, Spike Spiegel?",
+    "A": "Bounty Hunter",
+    "B": "Pirate",
+    "C": "Space Detective",
+    "D": "Smuggler",
+    "answer": "A"
+  },
+  {
+    "question": "Which anime revolves around a game called 'Sword Art Online' where players get trapped in a virtual world?",
+    "A": "Log Horizon",
+    "B": "No Game No Life",
+    "C": "Sword Art Online",
+    "D": "Overlord",
+    "answer": "C"
+  },
+  {
+    "question": "In 'Demon Slayer,' what is the main character Tanjiro Kamado's weapon of choice?",
+    "A": "Sword",
+    "B": "Bow",
+    "C": "Spear",
+    "D": "Whip",
+    "answer": "A"
+  },
+  {
+    "question": "Who is the main character in 'One Punch Man,' known for defeating enemies with a single punch?",
+    "A": "Saitama",
+    "B": "Genos",
+    "C": "Mumen Rider",
+    "D": "Boros",
+    "answer": "A"
+  },
+  {
+    "question": "In 'Neon Genesis Evangelion,' what are the giant bio-mechanical robots used to fight Angels called?",
+    "A": "Mobile Suits",
+    "B": "Evas",
+    "C": "Gundams",
+    "D": "Mechs",
+    "answer": "B"
+  },
+  {
+    "question": "Which anime features a group of students with unique psychic abilities known as 'Espers'?",
+    "A": "Psycho-Pass",
+    "B": "Mob Psycho 100",
+    "C": "Paranoia Agent",
+    "D": "Akira",
+    "answer": "D"
+  },
+  {
+    "question": "What is the name of the magical guild in the anime 'Fairy Tail'?",
+    "A": "Black Bulls",
+    "B": "Blue Pegasus",
+    "C": "Fairy Tail",
+    "D": "Sabertooth",
+    "answer": "C"
+  },
+  {
+    "question": "In 'Code Geass,' what power does the protagonist Lelouch vi Britannia possess?",
+    "A": "Telepathy",
+    "B": "Mind Control",
+    "C": "Time Travel",
+    "D": "Teleportation",
+    "answer": "B"
+  },
+  {
+    "question": "Which anime follows the adventures of Alucard, a powerful vampire hunter?",
+    "A": "Vampire Knight",
+    "B": "Hellsing",
+    "C": "Seraph of the End",
+    "D": "Rosario + Vampire",
+    "answer": "B"
+  },
+  {
+    "question": "What is the name of the virtual reality MMORPG in 'Log Horizon'?",
+    "A": "Aincrad",
+    "B": "Elder Tale",
+    "C": "ALfheim Online",
+    "D": "Gun Gale Online",
+    "answer": "B"
+  },
+  {
+    "question": "Who is known as the 'Strongest Hero' in the anime 'One Punch Man'?",
+    "A": "Genos",
+    "B": "Saitama",
+    "C": "Mumen Rider",
+    "D": "Boros",
+    "answer": "B"
+  },
+  {
+    "question": "Which anime features a character named Light Yagami who gains possession of a notebook with deadly powers?",
+    "A": "Naruto",
+    "B": "Death Note",
+    "C": "My Hero Academia",
+    "D": "Fullmetal Alchemist",
+    "answer": "B"
+  },
+  {
+    "question": "In 'Hunter x Hunter,' what is the name of Gon's best friend and fellow hunter?",
+    "A": "Killua Zoldyck",
+    "B": "Kurapika",
+    "C": "Leorio Paradinight",
+    "D": "Hisoka",
+    "answer": "A"
+  },
+  {
+    "question": "Which anime features a world where humanity is on the brink of extinction due to monstrous humanoid creatures?",
+    "A": "One Piece",
+    "B": "Attack on Titan",
+    "C": "Demon Slayer",
+    "D": "Tokyo Ghoul",
+    "answer": "B"
+  },
+  {
+    "question": "What is the name of the pirate crew led by Monkey D. Luffy in 'One Piece'?",
+    "A": "Straw Hat Pirates",
+    "B": "Red-Haired Pirates",
+    "C": "Blackbeard Pirates",
+    "D": "Whitebeard Pirates",
+    "answer": "A"
+  },
+  {
+    "question": "Which anime features a character named Inuyasha, a half-demon seeking the Shikon Jewel?",
+    "A": "Naruto",
+    "B": "Inuyasha",
+    "C": "Bleach",
+    "D": "Dragon Ball",
+    "answer": "B"
+  }
+]
+
+  
