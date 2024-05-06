@@ -1,5 +1,5 @@
 import { readFile } from "fs";
-import { MCQ } from "../types/app";
+import { MCQ } from  "../types/types.js"
 import { Categories, getQuestionFileLoc } from "./categories.js";
 
 const getAllQuestions = async (category: Categories): Promise<Array<MCQ>> => {

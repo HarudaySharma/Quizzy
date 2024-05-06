@@ -1,4 +1,4 @@
-import { MCQ } from "../types/app.js";
+import { MCQ } from "../types/types.js";
 import { readFile } from "fs";
 import { Categories, getQuestionFileLoc } from "./categories.js";
 

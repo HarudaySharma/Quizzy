@@ -1,33 +1,10 @@
 import {NextFunction, Request, Response} from 'express'
-import getRandomIndex from '../utils/getRandomIndex.js'
 import saveSelectedQuestions from '../utils/saveSelectedQuestions.js'
-import getAllQuestions from '../utils/getAllQuestions.js'
 import { ErrorHandler} from '../utils/errorHandler.js'
-import { MCQ } from '../types/app.js'
+import { CheckedQuestion, MCQ } from '../types/types.js'
 import getSelectedQuestions from '../utils/getSelectedQuestions.js'
-import { Categories } from '../utils/categories.js'
+import randomQuestions from '../utils/randomQuestions.js'
 
-
-const randomQuestions = async(category: string, mcqCount: number) =>{
-    try {
-        const questions: MCQ[] =  await getAllQuestions(Categories[category as keyof typeof Categories]);
-        
-        let selectedQuestions: MCQ[]  = [];
-        let usedIndices: number[] = [];
-        for(let i = 0; i < mcqCount; i++){
-            usedIndices.push(getRandomIndex(usedIndices, questions.length));
-        }
-        while(usedIndices.length) {
-            selectedQuestions.push(questions[usedIndices?.pop() ?? 1]); 
-        }
-        return selectedQuestions;
-    }
-    catch(err) {
-        console.log("failed to read file", err);
-        return [];
-    }
-
-}
 
 export const getQuestions = async(req: Request, res: Response, next: NextFunction ) => {
     const {category, mcqCount} = req.body;
@@ -59,15 +36,21 @@ export const checkAnswers = async(req: Request, res: Response, next: NextFunctio
     const {questions} = req.body as { questions: MCQ[] };
     try {
         const selectedQuestions = await getSelectedQuestions();
-        const checkedQuestions = questions.map((element)=> {
-            element.isCorrect = selectedQuestions.find((mcq) => mcq.question == element.question)
-                                                           ?.answer == element.answer ? true : false;
-            return element;
+        const checkedQuestions: CheckedQuestion[] = questions.map((element)=> {
+            const selQuestion  = selectedQuestions.find((mcq) => mcq.question === element.question);
+            if(!selQuestion) {
+                throw new ErrorHandler("Questions didn't matched", 401);
+            }
+            return {
+                ...element,
+                correctOption: selQuestion.answer,
+                isCorrect: selQuestion.answer == element.answer ? true : false,
+            }
         });
         res.status(200).json(checkedQuestions);
     }
     catch(err) {
         console.log(err)
-        next();
+        next(new ErrorHandler("try again", 501));
     }
 }

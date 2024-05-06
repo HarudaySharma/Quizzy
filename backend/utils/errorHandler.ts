@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 
 export class ErrorHandler extends Error {
     message: string;
@@ -10,7 +10,7 @@ export class ErrorHandler extends Error {
     }
 };
 
-export const errorMiddleware = (error: ErrorHandler,  req: Request, res: Response) => {
+export const errorMiddleware = (error: ErrorHandler,  _: Request, res: Response, __: NextFunction) => {
     const msg = error.message || "Internal Server Error";
     const statusCode = error.statusCode || 500;
     res.status(statusCode)
