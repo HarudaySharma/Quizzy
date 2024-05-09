@@ -7,7 +7,9 @@ export interface MCQ {
     answer: 'A' | 'B' | 'C' | 'D';
 }
 
+export type Options = 'A' | 'B' | 'C' | 'D';
+
 export interface CheckedQuestion extends MCQ {
-    correctOption: 'A' | 'B' | 'C' | 'D';
+    correctOption: Options;
     isCorrect: boolean;
 }
