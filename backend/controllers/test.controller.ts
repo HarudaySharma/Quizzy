@@ -1,7 +1,7 @@
 import {NextFunction, Request, Response} from 'express'
 import saveSelectedQuestions from '../utils/saveSelectedQuestions.js'
 import { ErrorHandler} from '../utils/errorHandler.js'
-import { CheckedQuestion, MCQ } from '../types/types.js'
+import { CheckedQuestion, MCQ, MarkedQuestion } from '../types/types.js'
 import getSelectedQuestions from '../utils/getSelectedQuestions.js'
 import randomQuestions from '../utils/randomQuestions.js'
 
@@ -33,18 +33,20 @@ export const getQuestions = async(req: Request, res: Response, next: NextFunctio
 }
 
 export const checkAnswers = async(req: Request, res: Response, next: NextFunction) => {
-    const {questions} = req.body as { questions: MCQ[] };
+    const {markedQuestions} = req.body as { markedQuestions: MarkedQuestion[] };
     try {
         const selectedQuestions = await getSelectedQuestions();
-        const checkedQuestions: CheckedQuestion[] = questions.map((element)=> {
+        const checkedQuestions: CheckedQuestion[] = markedQuestions.map((element)=> {
             const selQuestion  = selectedQuestions.find((mcq) => mcq.question === element.question);
             if(!selQuestion) {
                 throw new ErrorHandler("Questions didn't matched", 401);
             }
             return {
                 ...element,
-                correctOption: selQuestion.answer,
-                isCorrect: selQuestion.answer == element.answer ? true : false,
+                correctAnswer: {
+                    option: selQuestion.answer,
+                    text: selQuestion[selQuestion.answer]
+                },
             }
         });
         res.status(200).json(checkedQuestions);

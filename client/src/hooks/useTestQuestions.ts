@@ -12,8 +12,10 @@ const useTestQuestions = ({ defaultCategoryValue, defaultMCQCount }: useTestQues
     const [mcqList, setMcqList] = useState<MCQ[]>([]);
 
     const fetchQuestions = useCallback(async () => {
-        if (!category || !mcqCount)
+        if (!category || !mcqCount) {
+            setMcqList([]);
             return;
+        }
         try {
             const res = await fetch('/api/quiz/test/questions/', {
                 method: 'POST',

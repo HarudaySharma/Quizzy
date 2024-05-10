@@ -1,4 +1,4 @@
-import { Categories, MCQ } from "../types";
+/* import { Categories, MCQ } from "../types";
 import { createContext, useContext } from "react";
 
 type QuizPageContextType = {
@@ -17,4 +17,4 @@ export function useQuizPageContext() {
     }
 
     return {mcqList: context.mcqList, setCategory: context.setCategory, setMcqCount: context.setMcqCount};
-}
+} */

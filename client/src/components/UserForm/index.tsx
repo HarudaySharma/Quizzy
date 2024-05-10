@@ -1,27 +1,42 @@
-import React, {  useState } from 'react'
+import React, { ReactNode, useState } from 'react'
 import { Categories } from '../../types';
 import CategoryList from './CategoryList'
-import { Button } from '../../@/components/ui/button';
 import McqCountField from './McqCountField';
 import { UserFormContext } from '../../context/userFormContext';
-import { useQuizPageContext } from '../../context/QuizPageContext';
+import { UserFormButton } from './UserFormButton';
 
 export interface UserFormData {
     category?: Categories
     mcqCount?: number;
 }
 
-const UserForm = () => {
+interface Props {
+    onSubmit: (category: Categories, mcqCount: number) => void;
+    categoryList: ReactNode;
+    mcqCountField: ReactNode;
+    button: ReactNode;
+}
+
+// CategoryList and McqCountList 
+const UserForm = ({
+    onSubmit,
+    categoryList,
+    mcqCountField,
+    button,
+}: Props) => {
+    
     const [formData, setFormData] = useState<UserFormData | undefined>(undefined);
-    const {setCategory, setMcqCount} = useQuizPageContext();
+    //const { setCategory, setMcqCount } = useQuizPageContext();
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log(formData);
-        if(!formData)
+        if (!formData)
             return;
-        setCategory(formData.category);
-        setMcqCount(formData.mcqCount);
+        if (!formData.category || !formData.mcqCount) {
+            return;
+        }
+        onSubmit(formData.category, formData.mcqCount);
     }
 
     return (
@@ -32,18 +47,17 @@ const UserForm = () => {
                 className='border-2 p-4 flex flex-col gap-2'
             >
                 <UserFormContext.Provider value={{ formData, setFormData }}>
-                    <CategoryList />
-                    <McqCountField />
+                    {categoryList}
+                    {mcqCountField}
                 </UserFormContext.Provider>
-                <Button
-                    type='submit'
-                    className='bg-sky-100 py-2 px-1 cursor-pointer hover:bg-sky-200'
-                >
-                    Submit
-                </Button>
+                {button}
             </form>
         </div>
     )
 }
 
-export default UserForm
+UserForm.CategoryList = CategoryList;
+UserForm.McqCountField = McqCountField;
+UserForm.Button = UserFormButton;
+
+export default UserForm;

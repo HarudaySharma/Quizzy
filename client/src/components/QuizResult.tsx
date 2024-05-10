@@ -1,23 +1,29 @@
-import { useMcqComponentContext } from '../context/McqComponentContext'
+import { CheckedQuestion } from '../types';
 
-const QuizResult = () => {
-    const { markedAnswers, correctCount, inCorrectCount, totalMcqs } = useMcqComponentContext();
+interface Props {
+    checkedQuestions: CheckedQuestion[];
+    correctCount: number,
+    inCorrectCount: number,
+    totalMcqs: number,
+}
+
+const QuizResult = ({ checkedQuestions, correctCount, inCorrectCount, totalMcqs}: Props) => {
 
     const List = () => {
         return (
             <div>
                 {
-                    markedAnswers.map(obj =>
+                    checkedQuestions.map(obj =>
                         <div key={obj.question}>
                             <p>{obj.question}</p>
                             <div>
-                                {obj.correctAnswer?.option}: {obj.correctAnswer?.text}
+                                {obj.correctAnswer.option}: {obj.correctAnswer.text}
                             </div>
                             <div>
-                                {obj.userAnswer?.option}: {obj.userAnswer?.text}
+                                {obj.userAnswer.option}: {obj.userAnswer.text}
                             </div>
                             <div>
-                                {obj.userAnswer?.option === obj.correctAnswer?.option
+                                {obj.userAnswer.option === obj.correctAnswer.option
                                     ? "CORRECT"
                                     : "INCORRECT"}
                             </div>
@@ -49,8 +55,8 @@ const QuizResult = () => {
 
     return (
         <div>
-            <List />
             <MetaData />
+            <List />
         </div>
     )
 }

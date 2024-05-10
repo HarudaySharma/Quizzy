@@ -9,9 +9,16 @@ export interface MCQ {
     answer: Options;
 }
 
-export interface CheckedQuestion extends MCQ {
-    correctOption: Options;
-    isCorrect: boolean;
+export interface CheckedQuestion {
+    question: string;
+    correctAnswer: {
+        option: Options,
+        text: string
+    };
+    userAnswer: {
+        option: Options,
+        text: string
+    };
 }
 
 export interface MarkedQuestion {
@@ -20,7 +27,7 @@ export interface MarkedQuestion {
         option: Options,
         text: string
     };
-    userAnswer?: {
+    userAnswer: {
         option: Options,
         text: string
     };
