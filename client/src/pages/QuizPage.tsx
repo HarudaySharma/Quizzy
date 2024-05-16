@@ -1,7 +1,7 @@
 import UserForm from '../components/UserForm'
 import useQuizQuestions from '../hooks/useQuizQuestions';
 import { ReactNode, useEffect, useState } from 'react';
-import McqComponent from '../components/McqComponent';
+import CompoundMcq from '../components/CompoundMcq';
 import { Categories, MarkedQuestion } from '../types';
 import QuizResult from '../components/QuizResult';
 import markedToCheckedQuestions from '../utils/markedToCheckedQuestions';
@@ -33,13 +33,13 @@ const QuizPage = () => {
 
     const handleRetry = () => {
         setRenderComponent(
-            <McqComponent
+            <CompoundMcq
                 mcqList={mcqList}
-                meta={<McqComponent.MetaData
+                meta={<CompoundMcq.MetaData
                     children={[
-                        <McqComponent.TotalMcqs />,
-                        <McqComponent.CorrectCount />,
-                        <McqComponent.InCorrectCount />
+                        <CompoundMcq.MetaData.TotalMcqs />,
+                        <CompoundMcq.MetaData.CorrectCount />,
+                        <CompoundMcq.MetaData.InCorrectCount />
                     ]}
                 />}
                 onQuizOver={onQuizOver}
@@ -87,22 +87,22 @@ const QuizPage = () => {
                     </h1>
                     <UserForm
                         onSubmit={handleFormSubmit}
-                        categoryList={<UserForm.CategoryList />}
-                        mcqCountField={<UserForm.McqCountField />}
-                        button={<UserForm.Button />}
-                    />
+                    >
+                        <UserForm.CategoryList />
+                        <UserForm.McqCountField />
+                        <UserForm.Button />
+                    </UserForm>
                 </>)
         }
-
         else {
             setRenderComponent(
-                <McqComponent
+                <CompoundMcq
                     mcqList={mcqList}
-                    meta={<McqComponent.MetaData
+                    meta={<CompoundMcq.MetaData
                         children={[
-                            <McqComponent.TotalMcqs />,
-                            <McqComponent.CorrectCount />,
-                            <McqComponent.InCorrectCount />
+                            <CompoundMcq.MetaData.TotalMcqs />,
+                            <CompoundMcq.MetaData.CorrectCount />,
+                            <CompoundMcq.MetaData.InCorrectCount />
                         ]}
                     />}
                     onQuizOver={onQuizOver}

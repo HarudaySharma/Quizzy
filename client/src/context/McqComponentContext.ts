@@ -2,7 +2,7 @@ import { useContext, createContext } from "react";
 import { MCQ, MarkedQuestion } from "../types";
 
 
-type McqComponentContextType = {
+type CompoundMcqContextType = {
     mcq: MCQ;
     correctCount: number;
     inCorrectCount: number;
@@ -10,10 +10,10 @@ type McqComponentContextType = {
     markedAnswers: MarkedQuestion[];
 }
 
-export const McqComponentContext = createContext<McqComponentContextType | undefined>(undefined);
+export const CompoundMcqContext = createContext<CompoundMcqContextType | undefined>(undefined);
 
 export const useMcqComponentContext = () => {
-    const context = useContext(McqComponentContext);
+    const context = useContext(CompoundMcqContext);
 
     if (!context) {
         throw Error("wtf you doing! pass the McqComponent state and its setter in the context provider");

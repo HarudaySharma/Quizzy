@@ -1,8 +1,8 @@
 import { ReactNode, useEffect, useState } from 'react'
 import McqCard from './McqCard';
-import { McqComponentContext } from '../../context/McqComponentContext';
+import { CompoundMcqContext } from '../../context/McqComponentContext';
 import { MCQ, MarkedQuestion, Options } from '../../types';
-import McqComponentMetaData, { CorrectCount, InCorrectCount, TotalMcqs } from './McqComponentMetaData';
+import McqComponentMetaData from './McqComponentMetaData';
 import { SimpleResult } from '../../pages/QuizPage';
 import { TestResult } from '../../pages/TestPage';
 
@@ -88,18 +88,25 @@ const McqComponent = ({
     return (
         <div className="m-4 bg-transparent">
             <h3 className="text-md uppercase "> Questions </h3>
-            <McqComponentContext.Provider value={{ mcq: mcqList[mcqIndex], totalMcqs: mcqList.length, markedAnswers: markedQuestions, correctCount, inCorrectCount }}>
-                {meta}
+            <CompoundMcqContext.Provider value={{ mcq: mcqList[mcqIndex], totalMcqs: mcqList.length, markedAnswers: markedQuestions, correctCount, inCorrectCount }}>
+                <div>{meta}</div>
                 <div className='my-6'></div>
-                <McqCard answerSubmitHandler={answerSubmitHandler} />
-            </McqComponentContext.Provider>
+                <McqCard
+                    answerSubmitHandler={answerSubmitHandler}
+                    question={<McqCard.Question />}
+                    options={[
+                        <McqCard.Option option='A' />,
+                        <McqCard.Option option='B' />,
+                        <McqCard.Option option='C' />,
+                        <McqCard.Option option='D' />,
+                    ]}
+                    submitButton={<McqCard.SubmitButton />}
+                />
+            </CompoundMcqContext.Provider>
         </div >
     )
 }
 
 McqComponent.MetaData = McqComponentMetaData;
-McqComponent.TotalMcqs = TotalMcqs;
-McqComponent.CorrectCount = CorrectCount;
-McqComponent.InCorrectCount = InCorrectCount;
 
 export default McqComponent

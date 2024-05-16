@@ -5,15 +5,15 @@ const HomePage = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="grid max-w-screen-2xl bg-sky-50 mx-auto">
+        <div className="grid max-w-full bg-sky-50 mx-auto">
             <h1 className="text-3xl text-center font-bold">
                 WELCOME
             </h1>
             <div className="flex flex-col gap-4">
-                <Button onClick={() => navigate('/quiz')} className="p-4 px-24 mx-4">
+                <Button onClick={() => navigate('/quiz')} className="p-16 px-24 mx-4">
                     Take a Quiz
                 </Button>
-                <Button onClick={() => navigate('/quiz/test')} className="p-4 px-24 mx-4">
+                <Button onClick={() => navigate('/quiz/test')} className="p-16 px-24 mx-4">
                     Take a MCQ Test
                 </Button>
             </div>

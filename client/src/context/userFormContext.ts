@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { UserFormData } from "../components/UserForm/UserForm";
+import { UserFormData } from "../components/UserForm";
 
 type UserFormContextType = {
     formData: UserFormData | undefined;

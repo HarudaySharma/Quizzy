@@ -29,4 +29,8 @@ const McqComponentMetaData = ({ children }: Props) => {
     );
 }
 
+McqComponentMetaData.TotalMcqs = TotalMcqs;
+McqComponentMetaData.CorrectCount = CorrectCount;
+McqComponentMetaData.InCorrectCount = InCorrectCount;
+
 export default McqComponentMetaData;

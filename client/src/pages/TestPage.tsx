@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useState } from 'react';
 import UserForm from '../components/UserForm'
-import McqComponent from '../components/McqComponent';
+import CompoundMcq from '../components/CompoundMcq';
 import { Categories, CheckedQuestion, MarkedQuestion } from '../types';
 import QuizResult from '../components/QuizResult';
 import OverButtons from '../components/OverButtons';
@@ -30,11 +30,11 @@ const TestPage = () => {
 
     const handleRetry = () => {
         setRenderComponent(
-            <McqComponent
+            <CompoundMcq
                 mcqList={mcqList}
-                meta={<McqComponent.MetaData
+                meta={<CompoundMcq.MetaData
                     children={[
-                        <McqComponent.TotalMcqs />
+                        <CompoundMcq.MetaData.TotalMcqs />
                     ]}
                 />}
                 onQuizOver={onQuizOver}
@@ -57,7 +57,7 @@ const TestPage = () => {
             // show retry connection btn
             return;
         }
-        const {correctCount, inCorrectCount} = analyseCheckedQuestions(checkedQuestions);
+        const { correctCount, inCorrectCount } = analyseCheckedQuestions(checkedQuestions);
         setRenderComponent(<>
             <QuizResult
                 checkedQuestions={checkedQuestions}
@@ -89,19 +89,20 @@ const TestPage = () => {
                     </h1>
                     <UserForm
                         onSubmit={handleFormSubmit}
-                        categoryList={<UserForm.CategoryList />}
-                        mcqCountField={<UserForm.McqCountField />}
-                        button={<UserForm.Button />}
-                    />
+                    >
+                        <UserForm.CategoryList />
+                        <UserForm.McqCountField />
+                        <UserForm.Button />
+                    </UserForm>
                 </>)
         }
         else {
             setRenderComponent(
-                <McqComponent
+                <CompoundMcq
                     mcqList={mcqList}
-                    meta={<McqComponent.MetaData
+                    meta={<CompoundMcq.MetaData
                         children={[
-                            <McqComponent.TotalMcqs />
+                            <CompoundMcq.MetaData.TotalMcqs />
                         ]}
                     />}
                     onQuizOver={onQuizOver}

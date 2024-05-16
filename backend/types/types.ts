@@ -1,3 +1,5 @@
+import { Request } from "express";
+
 export type Options = 'A' | 'B' | 'C' | 'D';
 
 export interface MCQ {
@@ -29,3 +31,6 @@ export interface CheckedQuestion {
     };
 }
 
+export interface CustomRequest extends Request {
+    sessionId?: string;
+}

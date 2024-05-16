@@ -6,7 +6,6 @@ export enum Categories{
     HISTORY = "historyQuestions.json",
     POLITICS = "politicsQuestions.json",
     SPORTS = "sportsQuestions.json",
-    SELECTED = "selectedQuestions.json"
 };
 
 export const getQuestionFileLoc = (category: Categories) => {

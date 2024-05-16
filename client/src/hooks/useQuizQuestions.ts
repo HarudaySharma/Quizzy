@@ -1,9 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
 import { Categories, MCQ } from "../types";
 
+type RequestModes = 'TIMER' | 'NO-TIMER';
+
 type useQuizQuestionsParams = {
     defaultCategoryValue?: Categories,
     defaultMCQCount?: number,
+    variant: RequestModes,
 }
 
 const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount }: useQuizQuestionsParams) => {

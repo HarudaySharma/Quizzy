@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react'
+import React, {  ReactNode, useState } from 'react'
 import { Categories } from '../../types';
 import CategoryList from './CategoryList'
 import McqCountField from './McqCountField';
@@ -12,17 +12,13 @@ export interface UserFormData {
 
 interface Props {
     onSubmit: (category: Categories, mcqCount: number) => void;
-    categoryList: ReactNode;
-    mcqCountField: ReactNode;
-    button: ReactNode;
+    children: ReactNode | ReactNode[]
 }
 
 // CategoryList and McqCountList 
 const UserForm = ({
     onSubmit,
-    categoryList,
-    mcqCountField,
-    button,
+    children,
 }: Props) => {
     
     const [formData, setFormData] = useState<UserFormData | undefined>(undefined);
@@ -47,10 +43,8 @@ const UserForm = ({
                 className='border-2 p-4 flex flex-col gap-2'
             >
                 <UserFormContext.Provider value={{ formData, setFormData }}>
-                    {categoryList}
-                    {mcqCountField}
+                {children}
                 </UserFormContext.Provider>
-                {button}
             </form>
         </div>
     )
