@@ -13,12 +13,12 @@ async function sessionMiddleware(req: CustomRequest, res: Response, next: NextFu
     if (!sessionId) {
         const newSessionId = generateSessionId();
 
-        try {
+        /* try {
             await redisClient.SADD('sessions', `id:${newSessionId}`);
         }
         catch(err) {
             next(err);
-        }
+        } */
 
         res.cookie('quiz_app_sessionId', newSessionId, { maxAge: 1000 * 60 * 60 * 1 });
         req.sessionId = newSessionId;

@@ -2,35 +2,42 @@ import { MCQ } from '../types/types.js'
 import getRandomIndex from '../utils/getRandomIndex.js'
 import { Categories } from '../utils/categories.js'
 import getAllQuestions from "./getAllQuestions.js";
-import { ErrorHandler } from './errorHandler.js';
 
 type returnType = {
     selectedQuestions: MCQ[],
-    usedIndices: number[]
+    usedIndices: string[]
 }
 
-const randomQuestions = async (category: string, mcqCount: number, indicesUsed?: number[]): Promise<returnType> => {
+const randomQuestions = async (category: keyof typeof Categories, mcqCount: number, indicesUsed?: string[]): Promise<returnType> => {
     try {
-        if (!Boolean(Categories[`${category as keyof typeof Categories}`])) {
-            throw new ErrorHandler("Category mentioned NOT AVAILABLE", 400);
-        }
-        const questions: MCQ[] = await getAllQuestions(Categories[category as keyof typeof Categories]);
+        const questions: MCQ[] = await getAllQuestions(Categories[category]);
         let selectedQuestions: MCQ[] = [];
         let usedIndices: Set<number> = new Set();
+
+        const newSelectedIndices: string[] = [];
         if (indicesUsed) {
-            indicesUsed.forEach(idx => usedIndices.add(idx));
+            indicesUsed.forEach(idx => usedIndices.add(parseInt(idx, 10)));
         }
-        for (let i = 0; i < mcqCount; i++) {
+
+        //console.log(indicesUsed?.length, questions.length);
+        if (indicesUsed && indicesUsed.length >= questions.length) {
+            return { selectedQuestions: [], usedIndices: [] };
+        }
+        for (let i = 0; i < mcqCount;) {
             if (mcqCount >= questions.length) {
                 usedIndices.add(i);
+                newSelectedIndices.push(`${i}`);
+                selectedQuestions.push(questions[i]);
+                i++;
                 continue;
             }
-            usedIndices.add(getRandomIndex(usedIndices, questions.length));
-        }
-        usedIndices.forEach(idx => {
+            const idx = getRandomIndex(usedIndices, questions.length);
+            usedIndices.add(idx);
+            newSelectedIndices.push(`${idx}`);
             selectedQuestions.push(questions[idx]);
-        })
-        return { selectedQuestions, usedIndices: Array.from(usedIndices) };
+            i++;
+        }
+        return { selectedQuestions, usedIndices: newSelectedIndices };
     }
     catch (err) {
         console.log("failed to read file");

@@ -3,8 +3,9 @@ import { ErrorHandler } from '../utils/errorHandler.js'
 import randomQuestions from '../utils/randomQuestions.js'
 import { Categories } from '../utils/categories.js'
 import { CustomRequest } from '../types/types.js'
-import getUsedIndices from '../utils/getUsedIndices.js'
-import saveUsedIndices from '../utils/saveUsedIndices.js'
+import getUsedIndicesSet from '../utils/getUsedIndices.js'
+import addToUsedIndicesSet from '../utils/addUsedIndicesToSet.js'
+import clearUsedIndicesSet from '../utils/clearUsedIndices.js'
 
 export const getQuestions = async (req: CustomRequest, res: Response, next: NextFunction) => {
     const { category, mcqCount } = req.body as { mcqCount: number, category: keyof typeof Categories };
@@ -26,8 +27,9 @@ export const getQuestions = async (req: CustomRequest, res: Response, next: Next
 }
 
 export const getQuestionsWithTimer = async (req: CustomRequest, res: Response, next: NextFunction) => {
-    const { category } = req.body as { category: keyof typeof Categories };
+    const { category, initialRequest } = req.body as { category: keyof typeof Categories, initialRequest: boolean };
     const { sessionId } = req;
+    console.log("endpoint quiz/questions/timer hit");
     const MCQCOUNT = 30;
 
     // check if the user has a session id;
@@ -42,14 +44,24 @@ export const getQuestionsWithTimer = async (req: CustomRequest, res: Response, n
 
     try {
         // get indices used from cache (redis db) associated with user session id;
-        const indicesUsed = await getUsedIndices(sessionId, category);
+        let indicesUsed: string[] = [];
+        if (initialRequest) {
+            clearUsedIndicesSet(sessionId, category);
+        }
+        else {
+            console.log("here1");
+            indicesUsed = await getUsedIndicesSet(sessionId, category);
+        }
+        console.log("here2");
         // get the new batch of questions
         const { selectedQuestions, usedIndices } = await randomQuestions(category, MCQCOUNT, indicesUsed);
 
         // save the usedIndices to redis db
-        await saveUsedIndices(usedIndices, sessionId, category);
+            console.log("here3");
+        await addToUsedIndicesSet(usedIndices, sessionId, category);
+            console.log("here4");
 
-        console.log(selectedQuestions);
+        //console.log(selectedQuestions);
         res.status(200).json(selectedQuestions);
     }
     catch (err) {

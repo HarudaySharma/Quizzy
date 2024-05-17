@@ -5,8 +5,11 @@ import { CheckedQuestion, CustomRequest, MarkedQuestion } from '../types/types.j
 import getSelectedQuestions from '../utils/getSelectedQuestions.js'
 import randomQuestions from '../utils/randomQuestions.js'
 import { Categories } from '../utils/categories.js'
-import getUsedIndices from '../utils/getUsedIndices.js'
-import saveUsedIndices from '../utils/saveUsedIndices.js'
+import getUsedIndicesSet from '../utils/getUsedIndices.js'
+import addToUsedIndicesSet from '../utils/addUsedIndicesToSet.js'
+import clearUsedIndicesSet from '../utils/clearUsedIndices.js'
+import deleteSelectedQuestions from '../utils/deleteSelectedQuestions.js'
+import clearSelectedQuestions from '../utils/clearSelectedQuestions.js'
 
 export const getQuestions = async (req: CustomRequest, res: Response, next: NextFunction) => {
     const { category, mcqCount } = req.body as { mcqCount: number, category: keyof typeof Categories }
@@ -23,7 +26,7 @@ export const getQuestions = async (req: CustomRequest, res: Response, next: Next
 
     try {
         const { selectedQuestions } = await randomQuestions(category, mcqCount);
-        console.log(JSON.stringify(selectedQuestions));
+        //console.log(JSON.stringify(selectedQuestions));
 
         try {
             await saveSelectedQuestions({ selectedQuestions, sessionId, category });
@@ -46,9 +49,9 @@ export const getQuestions = async (req: CustomRequest, res: Response, next: Next
 }
 
 export const getQuestionsWithTimer = async (req: CustomRequest, res: Response, next: NextFunction) => {
-    const { category } = req.body as {category: keyof typeof Categories};
+    const { category, initialRequest } = req.body as { category: keyof typeof Categories, initialRequest: boolean };
     const { sessionId } = req;
-    const MCQCOUNT = 30;
+    const MCQCOUNT = 10;
 
     // check if the user has a session id;
     if (!sessionId) {
@@ -62,16 +65,23 @@ export const getQuestionsWithTimer = async (req: CustomRequest, res: Response, n
 
     try {
         // get indices used from cache (redis db) associated with user session id;
-        const indicesUsed = await getUsedIndices(sessionId, category);
+        let indicesUsed: string[] = [];
+        if (initialRequest) {
+            clearUsedIndicesSet(sessionId, category);
+            clearSelectedQuestions(sessionId, category);
+        }
+        else {
+            indicesUsed = await getUsedIndicesSet(sessionId, category);
+        }
         // get the new batch of questions
         const { selectedQuestions, usedIndices } = await randomQuestions(category, MCQCOUNT, indicesUsed);
 
         // save the usedIndices to redis db
-        await saveUsedIndices(usedIndices, sessionId, category);
+        await addToUsedIndicesSet(usedIndices, sessionId, category);
         // update the questions selected of the particular session
-        await saveSelectedQuestions({sessionId, selectedQuestions, category, options: {append: true}});
+        await saveSelectedQuestions({ sessionId, selectedQuestions, category, options: { append: true } });
 
-        console.log(selectedQuestions);
+        //console.log(selectedQuestions);
         res.status(200).json(selectedQuestions);
     }
     catch (err) {
@@ -98,7 +108,7 @@ export const checkAnswers = async (req: CustomRequest, res: Response, next: Next
 
     try {
         const selectedQuestions = await getSelectedQuestions(sessionId, category);
-        console.log(selectedQuestions);
+        //console.log(selectedQuestions);
         try {
             const checkedQuestions: CheckedQuestion[] = markedQuestions.map((element) => {
                 const selQuestion = selectedQuestions.find((mcq) => mcq.question === element.question);
@@ -113,7 +123,16 @@ export const checkAnswers = async (req: CustomRequest, res: Response, next: Next
                     },
                 }
             });
+
+            try {
+                deleteSelectedQuestions(sessionId, category);
+            }
+            catch (err) {
+                console.log(err);
+            }
+
             res.status(200).json(checkedQuestions);
+            return;
         }
         catch (err) {
             return next(err);

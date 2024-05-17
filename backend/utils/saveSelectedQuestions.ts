@@ -1,6 +1,8 @@
 import redisClient from '../services/redis.service.js';
 import { MCQ } from '../types/types.js';
+import applyTTL from './applyTTL.js';
 import { Categories } from './categories.js';
+import getTTL from './getTTL.js';
 import { getSelectedQuestionsKey } from './redis.util.js';
 
 /* export default async function saveSelectedQuestions (data: object[]): Promise<string> {
@@ -27,16 +29,24 @@ type PARAMS = {
 
 export default async function saveSelectedQuestions({ selectedQuestions, category, sessionId, options }: PARAMS) {
     try {
+        const key = getSelectedQuestionsKey(sessionId, category);
         if (options?.append) {
-            const savedQuestions = await redisClient.get(getSelectedQuestionsKey(sessionId, category));
-            console.log(savedQuestions);
+            const savedQuestions = await redisClient.get(key);
+            //console.log(savedQuestions);
             if (savedQuestions) {
                 const allQuestions = selectedQuestions.concat(JSON.parse(savedQuestions));
-                await redisClient.set(getSelectedQuestionsKey(sessionId, category), JSON.stringify(allQuestions));
+
+                const ttl = await getTTL(key);
+                await redisClient.set(key, JSON.stringify(allQuestions));
+                await applyTTL(key, ttl);
+                console.log(`appended questions for sessionId:${sessionId}`);
                 return;
             }
         }
-        await redisClient.set(getSelectedQuestionsKey(sessionId, category), JSON.stringify(selectedQuestions));
+        const ttl = await getTTL(key);
+        await redisClient.set(key, JSON.stringify(selectedQuestions));
+        await applyTTL(key, ttl);
+        console.log(`saved questions for sessionId:${sessionId}`);
     }
     catch (err) {
         console.log('Error at "saveSelectedQuestions"');
