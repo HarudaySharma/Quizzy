@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "npx tsc",
-    "dev": "npx tsc -w & nodemon ./backend/dist/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx tsc -w & nodemon ./dist/server.js"
   },
   "keywords": [],
   "author": "Haruday",
