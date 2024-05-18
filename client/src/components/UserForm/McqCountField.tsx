@@ -13,12 +13,14 @@ const McqCountField = () => {
 
     //className='flex flex-row gap-1 '
     //className='basis-2/3 py-2 px-1'
-    return (
-        <>
-            <Label className='py-2' htmlFor='mcqCount'>Number of Questions ?</Label>
-            <Input type='number' id='mcqCount' onChange={handleChange} />
-        </>
-    )
+    if (formData?.variant === 'NO-TIMER') {
+        return (
+            <>
+                <Label className='py-2' htmlFor='mcqCount'>Number of Questions ?</Label>
+                <Input type='number' id='mcqCount' onChange={handleChange} />
+            </>
+        )
+    }
 }
 
 export default McqCountField

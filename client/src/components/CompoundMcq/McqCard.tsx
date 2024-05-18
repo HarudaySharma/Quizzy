@@ -6,13 +6,13 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../../@/co
 import { McqCardContext, useMcqCardContext } from '../../context/MCQCardContext';
 
 interface Props {
-    question: ReactNode;
+    header: ReactNode[];
+    footer: ReactNode;
     options: ReactNode[];
-    submitButton: ReactNode;
     answerSubmitHandler: (markedOption: Options) => void;
 }
 
-const McqCard = ({ answerSubmitHandler, question, options, submitButton }: Props) => {
+const McqCard = ({ answerSubmitHandler, header, footer, options, submitButton }: Props) => {
     const [selectedOption, setSelectedOption] = useState<Options>();
 
     const { mcq } = useMcqComponentContext();
@@ -42,12 +42,9 @@ const McqCard = ({ answerSubmitHandler, question, options, submitButton }: Props
         }} >
             <Card>
                 <CardHeader>
-                    {question}
+                    {header}
                 </CardHeader>
                 <form onSubmit={onSubmitHandler} >
-                    <CardFooter>
-                        {submitButton}
-                    </CardFooter>
                     <CardContent>
                         <div className='my-4'></div>
                         <section className='flex flex-col gap-2'>
@@ -55,6 +52,9 @@ const McqCard = ({ answerSubmitHandler, question, options, submitButton }: Props
                         </section>
                         <div className='my-8'></div>
                     </CardContent>
+                    <CardFooter>
+                        {footer}
+                    </CardFooter>
                 </form>
             </Card>
         </McqCardContext.Provider>

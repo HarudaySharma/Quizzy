@@ -5,6 +5,9 @@ import { MCQ, MarkedQuestion, Options } from '../../types';
 import McqComponentMetaData from './McqComponentMetaData';
 import { SimpleResult } from '../../pages/QuizPage';
 import { TestResult } from '../../pages/TestPage';
+import QuizTimer from './QuizTimer';
+import { Button } from '../../@/components/ui/button';
+//import QuizTimer from './QuizTimer';
 
 // will take mcqList, and setter to have all the markedAnswers at last,
 // checked Answers
@@ -15,6 +18,8 @@ interface BaseProps<T> {
     meta: ReactNode;
     onQuizOver: (result: T) => void
     includeCount: boolean;
+    setUnvisitedQuestions: React.Dispatch<React.SetStateAction<number | undefined>>;
+    time?: number;
 }
 
 interface TestProps extends BaseProps<TestResult> { }
@@ -27,6 +32,8 @@ const McqComponent = ({
     meta,
     onQuizOver,
     includeCount,
+    setUnvisitedQuestions,
+    time
 }: Props) => {
 
     const [mcqIndex, setMcqIndex] = useState(0);
@@ -35,9 +42,33 @@ const McqComponent = ({
     const [correctCount, setCorrectCount] = useState(0);
     const [inCorrectCount, setInCorrectCount] = useState(0);
     const [markedQuestions, setMarkedQuestions] = useState<MarkedQuestion[]>([]);
+    const [timer, setTimer] = useState(time ? time : null);
+
+    // if quiz is a timed one
+    useEffect(() => {
+        if (timer === null) {
+            return;
+        }
+        if (timer === 0) {
+            if (includeCount) {
+                onQuizOver({
+                    markedQuestions,
+                    correctCount,
+                    inCorrectCount,
+                    totalMcqs: mcqList.length
+                });
+            } else {
+                onQuizOver({
+                    markedQuestions,
+                    totalMcqs: mcqList.length
+                });
+            }
+        }
+    }, [timer]);
 
     useEffect(() => {
-        console.log(attempted);
+        setUnvisitedQuestions(mcqList.length - attempted);
+        console.log(`mcqList-Len : ${mcqList.length}`);
         if (attempted === mcqList.length) {
             if (includeCount) {
                 onQuizOver({
@@ -85,23 +116,56 @@ const McqComponent = ({
         }
     }
 
+    const handleQuizTerminate = () => {
+        if (includeCount) {
+            onQuizOver({
+                markedQuestions,
+                correctCount,
+                inCorrectCount,
+                totalMcqs: mcqList.length
+            });
+        } else {
+            onQuizOver({
+                markedQuestions,
+                totalMcqs: mcqList.length
+            });
+        }
+    }
+
+    const contextValues = {
+        mcq: mcqList[mcqIndex],
+        timer: timer,
+        setTimer: setTimer,
+        totalMcqs: mcqList.length,
+        markedAnswers: markedQuestions,
+        correctCount: correctCount,
+        inCorrectCount: inCorrectCount
+    }
+
     return (
         <div className="m-4 bg-transparent">
             <h3 className="text-md uppercase "> Questions </h3>
-            <CompoundMcqContext.Provider value={{ mcq: mcqList[mcqIndex], totalMcqs: mcqList.length, markedAnswers: markedQuestions, correctCount, inCorrectCount }}>
-                <div>{meta}</div>
+            <CompoundMcqContext.Provider value={contextValues}>
+                <QuizTimer />
+                {meta}
                 <div className='my-6'></div>
                 <McqCard
                     answerSubmitHandler={answerSubmitHandler}
-                    question={<McqCard.Question />}
+                    header={[<McqCard.Question />]}
                     options={[
                         <McqCard.Option option='A' />,
                         <McqCard.Option option='B' />,
                         <McqCard.Option option='C' />,
                         <McqCard.Option option='D' />,
                     ]}
-                    submitButton={<McqCard.SubmitButton />}
+                    footer={[<McqCard.SubmitButton />]}
                 />
+                <Button
+                    className='bg-red-50 text-red-500 hover:bg-red-50 hover:text-black'
+                    onClick={handleQuizTerminate}
+                >
+                    Terminate Quiz
+                </Button>
             </CompoundMcqContext.Provider>
         </div >
     )

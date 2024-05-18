@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import { useMcqComponentContext } from "../../context/McqComponentContext";
 
 export const TotalMcqs = () => {

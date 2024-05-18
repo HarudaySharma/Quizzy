@@ -30,7 +30,7 @@ export const getQuestionsWithTimer = async (req: CustomRequest, res: Response, n
     const { category, initialRequest } = req.body as { category: keyof typeof Categories, initialRequest: boolean };
     const { sessionId } = req;
     console.log("endpoint quiz/questions/timer hit");
-    const MCQCOUNT = 30;
+    const MCQCOUNT = 10;
 
     // check if the user has a session id;
     if (!sessionId) {
@@ -49,17 +49,13 @@ export const getQuestionsWithTimer = async (req: CustomRequest, res: Response, n
             clearUsedIndicesSet(sessionId, category);
         }
         else {
-            console.log("here1");
             indicesUsed = await getUsedIndicesSet(sessionId, category);
         }
-        console.log("here2");
         // get the new batch of questions
         const { selectedQuestions, usedIndices } = await randomQuestions(category, MCQCOUNT, indicesUsed);
 
         // save the usedIndices to redis db
-            console.log("here3");
         await addToUsedIndicesSet(usedIndices, sessionId, category);
-            console.log("here4");
 
         //console.log(selectedQuestions);
         res.status(200).json(selectedQuestions);

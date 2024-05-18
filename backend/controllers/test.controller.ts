@@ -8,7 +8,6 @@ import { Categories } from '../utils/categories.js'
 import getUsedIndicesSet from '../utils/getUsedIndices.js'
 import addToUsedIndicesSet from '../utils/addUsedIndicesToSet.js'
 import clearUsedIndicesSet from '../utils/clearUsedIndices.js'
-import deleteSelectedQuestions from '../utils/deleteSelectedQuestions.js'
 import clearSelectedQuestions from '../utils/clearSelectedQuestions.js'
 
 export const getQuestions = async (req: CustomRequest, res: Response, next: NextFunction) => {
@@ -125,7 +124,7 @@ export const checkAnswers = async (req: CustomRequest, res: Response, next: Next
             });
 
             try {
-                deleteSelectedQuestions(sessionId, category);
+                //deleteSelectedQuestions(sessionId, category);
             }
             catch (err) {
                 console.log(err);

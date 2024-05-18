@@ -1,5 +1,5 @@
 import UserForm from '../components/UserForm'
-import useQuizQuestions from '../hooks/useQuizQuestions';
+import useQuizQuestions, { RequestModes } from '../hooks/useQuizQuestions';
 import { ReactNode, useEffect, useState } from 'react';
 import CompoundMcq from '../components/CompoundMcq';
 import { Categories, MarkedQuestion } from '../types';
@@ -21,16 +21,36 @@ export type SimpleResult = {
 
 }
 
+export type handleFormSubmitParams = {
+    category: Categories;
+    mcqCount?: number;
+    variant: RequestModes;
+    timer?: number;
+}
+
 const QuizPage = () => {
-    const { mcqList, setCategory, setMcqCount } = useQuizQuestions({})
+    const { mcqList, setCategory, setMcqCount, variant, setVariant, timedRequests } = useQuizQuestions({})
+    const { fetchTimedQuestions } = timedRequests;
     const [renderComponent, setRenderComponent] = useState<ReactNode>()
+    const [unvisitedQuestions, setUnvisitedQuestions] = useState<number | undefined>(undefined);
+    const [time, setTime] = useState<number | undefined>(undefined);
 
 
-    const handleFormSubmit = (category: Categories, mcqCount: number) => {
+    // after user submits the form
+    const handleFormSubmit = ({ category, mcqCount, variant, timer }: handleFormSubmitParams) => {
         setCategory(category);
-        setMcqCount(mcqCount);
+        if (variant === 'TIMER') {
+            setVariant('TIMER');
+            setTime(timer);
+        }
+        else {
+            setVariant('NO-TIMER');
+            setMcqCount(mcqCount);
+        }
     }
 
+    // after the quiz has ended 
+    // and user want's to retry with same questions
     const handleRetry = () => {
         setRenderComponent(
             <CompoundMcq
@@ -44,15 +64,35 @@ const QuizPage = () => {
                 />}
                 onQuizOver={onQuizOver}
                 includeCount={true}
+                setUnvisitedQuestions={setUnvisitedQuestions}
+                time={time}
             />)
     }
 
+    // user want to retake form
     const handleReset = () => {
         setCategory(undefined);
-        setMcqCount(undefined);
+        if (variant === 'TIMER') {
+            setTime(undefined);
+        }
+        if (variant === 'NO-TIMER') {
+            setMcqCount(undefined);
+        }
+        setVariant(undefined);
     }
 
+    // to fetch more mcqs from the server if having a timed quiz 
+    useEffect(() => {
+        console.log(`unvisitedQuestions :${unvisitedQuestions}`);
+        if (unvisitedQuestions && unvisitedQuestions <= 5) {
+            fetchTimedQuestions();
+        }
+    }, [unvisitedQuestions])
+
+    // function to be executed after quiz is over
+    // shows the result and reset any state that need to be reset
     const onQuizOver = (result: SimpleResult | TestResult) => {
+        //setInitialRequest(true);
         if ('correctCount' in result && 'inCorrectCount' in result) {
             const { correctCount, inCorrectCount, totalMcqs, markedQuestions } = result;
             setRenderComponent(<>
@@ -78,8 +118,9 @@ const QuizPage = () => {
         }
     }
 
+    // what UI to render 
     useEffect(() => {
-        if (mcqList.length == 0) {
+        if (variant === undefined) {
             setRenderComponent(
                 <>
                     <h1 className="text-3xl text-center font-bold">
@@ -89,27 +130,50 @@ const QuizPage = () => {
                         onSubmit={handleFormSubmit}
                     >
                         <UserForm.CategoryList />
+                        <UserForm.ChooseButtons />
                         <UserForm.McqCountField />
-                        <UserForm.Button />
+                        <UserForm.SetTimerField />
+                        <UserForm.SubmitBtn />
                     </UserForm>
                 </>)
         }
-        else {
+        if (variant === 'NO-TIMER' && mcqList.length !== 0) {
             setRenderComponent(
                 <CompoundMcq
                     mcqList={mcqList}
                     meta={<CompoundMcq.MetaData
                         children={[
-                            <CompoundMcq.MetaData.TotalMcqs />,
-                            <CompoundMcq.MetaData.CorrectCount />,
-                            <CompoundMcq.MetaData.InCorrectCount />
+                            <CompoundMcq.MetaData.TotalMcqs key={"total mcq"} />,
+                            <CompoundMcq.MetaData.CorrectCount key={"correct count"} />,
+                            <CompoundMcq.MetaData.InCorrectCount key={"incorrect count"} />
                         ]}
                     />}
                     onQuizOver={onQuizOver}
                     includeCount={true}
+                    setUnvisitedQuestions={setUnvisitedQuestions}
                 />)
         }
-    }, [mcqList]);
+        if (variant === 'TIMER' && mcqList.length !== 0) {
+            setRenderComponent(
+                <>
+                    <CompoundMcq
+                        mcqList={mcqList}
+                        meta={<CompoundMcq.MetaData
+                            children={[
+                                <CompoundMcq.MetaData.TotalMcqs />,
+                                <CompoundMcq.MetaData.CorrectCount />,
+                                <CompoundMcq.MetaData.InCorrectCount />
+                            ]}
+                        />}
+                        onQuizOver={onQuizOver}
+                        includeCount={true}
+                        setUnvisitedQuestions={setUnvisitedQuestions}
+                        time={time}
+                    />
+                </>
+            )
+        }
+    }, [variant, mcqList]);
 
     return (
         <div className="grid max-w-screen-2xl bg-sky-50 mx-auto">

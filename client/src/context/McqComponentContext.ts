@@ -8,6 +8,8 @@ type CompoundMcqContextType = {
     inCorrectCount: number;
     totalMcqs: number;
     markedAnswers: MarkedQuestion[];
+    timer: number | null;
+    setTimer: React.Dispatch<React.SetStateAction<number | null>>;
 }
 
 export const CompoundMcqContext = createContext<CompoundMcqContextType | undefined>(undefined);
@@ -15,6 +17,7 @@ export const CompoundMcqContext = createContext<CompoundMcqContextType | undefin
 export const useMcqComponentContext = () => {
     const context = useContext(CompoundMcqContext);
 
+    //console.log(context);
     if (!context) {
         throw Error("wtf you doing! pass the McqComponent state and its setter in the context provider");
     }
@@ -25,5 +28,7 @@ export const useMcqComponentContext = () => {
         inCorrectCount: context.inCorrectCount,
         totalMcqs: context.totalMcqs,
         markedAnswers: context.markedAnswers,
+        timer: context.timer,
+        setTimer: context.setTimer,
     }
 }

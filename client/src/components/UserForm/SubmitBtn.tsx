@@ -1,6 +1,6 @@
 import { Button } from '../../@/components/ui/button';
 
-export const UserFormButton = () => {
+const SubmitBtn = () => {
     return (
         <Button
             type='submit'
@@ -11,3 +11,4 @@ export const UserFormButton = () => {
     )
 }
 
+export default SubmitBtn;
