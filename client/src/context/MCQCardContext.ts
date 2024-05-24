@@ -1,4 +1,5 @@
 import { createContext, useContext } from "react";
+import { Options } from "../types";
 
 type McqComponentContextTypes = {
     question: string,
@@ -8,7 +9,10 @@ type McqComponentContextTypes = {
         C: string,
         D: string,
     }
-    optionChangeHandler: (e: React.ChangeEvent<HTMLInputElement>) => void
+    selectedOption: Options | undefined;
+    correctOption?: Options;
+    optionChoosed?: Options;
+    optionChooseHandler: (option: Options) => boolean | undefined;
 }
 
 export const McqCardContext = createContext<McqComponentContextTypes | undefined>(undefined);
@@ -20,8 +24,10 @@ export const useMcqCardContext = () => {
     }
     return {
         question: context.question,
-        options:  context.options,
-        optionChangeHandler: context.optionChangeHandler
+        options: context.options,
+        selectedOption: context.selectedOption,
+        optionChooseHandler: context.optionChooseHandler,
+        correctOption: context.correctOption,
     }
 }
 

@@ -6,6 +6,7 @@ type CompoundMcqContextType = {
     mcq: MCQ;
     correctCount: number;
     inCorrectCount: number;
+    attemptedCount?: number;
     totalMcqs: number;
     markedAnswers: MarkedQuestion[];
     timer: number | null;
@@ -26,6 +27,7 @@ export const useMcqComponentContext = () => {
         mcq: context.mcq,
         correctCount: context.correctCount,
         inCorrectCount: context.inCorrectCount,
+        attemptedCount: context.attemptedCount,
         totalMcqs: context.totalMcqs,
         markedAnswers: context.markedAnswers,
         timer: context.timer,

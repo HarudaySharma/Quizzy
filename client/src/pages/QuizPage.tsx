@@ -40,6 +40,7 @@ const QuizPage = () => {
     const handleFormSubmit = ({ category, mcqCount, variant, timer }: handleFormSubmitParams) => {
         setCategory(category);
         if (variant === 'TIMER') {
+            console.log("timer", timer);
             setVariant('TIMER');
             setTime(timer);
         }
@@ -57,9 +58,11 @@ const QuizPage = () => {
                 mcqList={mcqList}
                 meta={<CompoundMcq.MetaData
                     children={[
-                        <CompoundMcq.MetaData.TotalMcqs />,
-                        <CompoundMcq.MetaData.CorrectCount />,
-                        <CompoundMcq.MetaData.InCorrectCount />
+                        <CompoundMcq.MetaData.TotalMcqs key={"total mcq"} />,
+                        <div className='flex flex-row gap-2'>
+                            <CompoundMcq.MetaData.CorrectCount key={"correct count"} />
+                            <CompoundMcq.MetaData.InCorrectCount key={"incorrect count"} />
+                        </div>
                     ]}
                 />}
                 onQuizOver={onQuizOver}
@@ -142,10 +145,13 @@ const QuizPage = () => {
                 <CompoundMcq
                     mcqList={mcqList}
                     meta={<CompoundMcq.MetaData
+                        className={'justify-between px-4 py-2'}
                         children={[
                             <CompoundMcq.MetaData.TotalMcqs key={"total mcq"} />,
-                            <CompoundMcq.MetaData.CorrectCount key={"correct count"} />,
-                            <CompoundMcq.MetaData.InCorrectCount key={"incorrect count"} />
+                            <div className='flex flex-row gap-2'>
+                                <CompoundMcq.MetaData.CorrectCount key={"correct count"} />
+                                <CompoundMcq.MetaData.InCorrectCount key={"incorrect count"} />
+                            </div>
                         ]}
                     />}
                     onQuizOver={onQuizOver}
@@ -160,9 +166,11 @@ const QuizPage = () => {
                         mcqList={mcqList}
                         meta={<CompoundMcq.MetaData
                             children={[
-                                <CompoundMcq.MetaData.TotalMcqs />,
-                                <CompoundMcq.MetaData.CorrectCount />,
-                                <CompoundMcq.MetaData.InCorrectCount />
+                                <CompoundMcq.MetaData.TotalMcqs key={"total mcq"} />,
+                                <div className='flex flex-row gap-2'>
+                                    <CompoundMcq.MetaData.CorrectCount key={"correct count"} />
+                                    <CompoundMcq.MetaData.InCorrectCount key={"incorrect count"} />
+                                </div>
                             ]}
                         />}
                         onQuizOver={onQuizOver}
@@ -176,7 +184,7 @@ const QuizPage = () => {
     }, [variant, mcqList]);
 
     return (
-        <div className="grid max-w-screen-2xl bg-sky-50 mx-auto">
+        <div className="grid  mx-auto">
             <div className="flex flex-col gap-4">
                 {renderComponent}
             </div>

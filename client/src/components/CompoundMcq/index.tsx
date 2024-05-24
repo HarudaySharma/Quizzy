@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode, useCallback, useEffect, useState } from 'react'
 import McqCard from './McqCard';
 import { CompoundMcqContext } from '../../context/McqComponentContext';
 import { MCQ, MarkedQuestion, Options } from '../../types';
@@ -7,7 +7,6 @@ import { SimpleResult } from '../../pages/QuizPage';
 import { TestResult } from '../../pages/TestPage';
 import QuizTimer from './QuizTimer';
 import { Button } from '../../@/components/ui/button';
-//import QuizTimer from './QuizTimer';
 
 // will take mcqList, and setter to have all the markedAnswers at last,
 // checked Answers
@@ -37,7 +36,6 @@ const McqComponent = ({
 }: Props) => {
 
     const [mcqIndex, setMcqIndex] = useState(0);
-
     const [attempted, setAttempted] = useState(0);
     const [correctCount, setCorrectCount] = useState(0);
     const [inCorrectCount, setInCorrectCount] = useState(0);
@@ -87,10 +85,14 @@ const McqComponent = ({
         return;
     }, [attempted])
 
+    const getCorrectOption = useCallback((): Options => {
+        return mcqList[mcqIndex].answer;
+    },[mcqList]);
+
     //checks each submitted answer and saves it
-    const answerSubmitHandler = (markedOption: Options) => {
+    function answerSubmitHandler (markedOption: Options) {
         setAttempted(prev => prev + 1);
-        const markedAnswer: MarkedQuestion = {
+        const markedQuestion: MarkedQuestion = {
             question: mcqList[mcqIndex].question,
             correctAnswer: {
                 option: mcqList[mcqIndex].answer,
@@ -104,7 +106,7 @@ const McqComponent = ({
         if (mcqIndex < mcqList.length - 1) {
             setMcqIndex(prev => prev + 1);
         }
-        setMarkedQuestions([...markedQuestions, markedAnswer]);
+        setMarkedQuestions([...markedQuestions, markedQuestion]);
 
         if (!includeCount) {
             return;
@@ -139,18 +141,20 @@ const McqComponent = ({
         totalMcqs: mcqList.length,
         markedAnswers: markedQuestions,
         correctCount: correctCount,
-        inCorrectCount: inCorrectCount
+        inCorrectCount: inCorrectCount,
+        attemptedCount: attempted,
     }
 
+    //<h3 className="text-md uppercase "> Questions </h3>
     return (
-        <div className="m-4 bg-transparent">
-            <h3 className="text-md uppercase "> Questions </h3>
+        <div className="m-4 bg-transparent w-fit  max-w-80 content-center mx-auto border-2 border-black">
             <CompoundMcqContext.Provider value={contextValues}>
                 <QuizTimer />
                 {meta}
                 <div className='my-6'></div>
                 <McqCard
                     answerSubmitHandler={answerSubmitHandler}
+                    getCorrectOption={getCorrectOption}
                     header={[<McqCard.Question />]}
                     options={[
                         <McqCard.Option option='A' />,

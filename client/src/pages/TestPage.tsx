@@ -81,7 +81,7 @@ const TestPage = () => {
     // function to be executed after quiz is over
     // shows the result and reset any state that need to be reset
     const onQuizOver = async ({ markedQuestions, totalMcqs }: TestResult) => {
-        if(!category)
+        if (!category)
             return;
         let checkedQuestions: CheckedQuestion[];
         try {
@@ -90,7 +90,7 @@ const TestPage = () => {
         catch (err) {
             console.log(err);
             // show retry connection btn
-            setRenderComponent(() => <div onClick={() => onQuizOver({markedQuestions, totalMcqs})}><h1> retry</h1></div>);
+            setRenderComponent(() => <div onClick={() => onQuizOver({ markedQuestions, totalMcqs })}><h1> retry</h1></div>);
             return
         }
         const { correctCount, inCorrectCount } = analyseCheckedQuestions(checkedQuestions);
@@ -141,6 +141,7 @@ const TestPage = () => {
                     meta={<CompoundMcq.MetaData
                         children={[
                             <CompoundMcq.MetaData.TotalMcqs />,
+                            <CompoundMcq.MetaData.AttemptedCount />
                         ]}
                     />}
                     onQuizOver={onQuizOver}
@@ -156,6 +157,7 @@ const TestPage = () => {
                         meta={<CompoundMcq.MetaData
                             children={[
                                 <CompoundMcq.MetaData.TotalMcqs />,
+                                <CompoundMcq.MetaData.AttemptedCount />
                             ]}
                         />}
                         onQuizOver={onQuizOver}

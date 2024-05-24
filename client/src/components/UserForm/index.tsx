@@ -28,10 +28,10 @@ const UserForm = ({
 }: Props) => {
     
     const [formData, setFormData] = useState<UserFormData | undefined>(undefined);
-    //const { setCategory, setMcqCount } = useQuizPageContext();
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
         console.log(formData);
         if (!formData)
             return;
@@ -47,17 +47,14 @@ const UserForm = ({
     }
 
     return (
-        <div className=''>
-            <h3> Select Category of MCQ's </h3>
             <form
                 onSubmit={handleSubmit}
-                className='border-2 p-4 flex flex-col gap-2'
+                className='max-w-screen-xl mx-auto border-2 p-4 flex flex-col gap-12'
             >
                 <UserFormContext.Provider value={{ formData, setFormData }}>
                 {children}
                 </UserFormContext.Provider>
             </form>
-        </div>
     )
 }
 
