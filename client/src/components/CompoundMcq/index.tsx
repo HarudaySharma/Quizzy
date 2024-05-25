@@ -87,10 +87,10 @@ const McqComponent = ({
 
     const getCorrectOption = useCallback((): Options => {
         return mcqList[mcqIndex].answer;
-    },[mcqList]);
+    }, [mcqList, mcqIndex]);
 
     //checks each submitted answer and saves it
-    function answerSubmitHandler (markedOption: Options) {
+    function answerSubmitHandler(markedOption: Options) {
         setAttempted(prev => prev + 1);
         const markedQuestion: MarkedQuestion = {
             question: mcqList[mcqIndex].question,

@@ -22,6 +22,7 @@ const getSelectedQuestions = async (sessionId, category) => {
     }
     catch (err) {
         console.log('Error at "getSelectedQuestions"');
+        console.log(`sessionId: ${sessionId}`);
         throw err;
     }
 };

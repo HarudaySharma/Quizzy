@@ -8,6 +8,7 @@ import useTestQuestions from '../hooks/useTestQuestions';
 import fetchCheckedAnswers from '../utils/fetchCheckedAnswers';
 import analyseCheckedQuestions from '../utils/analyseCheckedAnswers';
 import { handleFormSubmitParams } from './QuizPage';
+import { Button } from '../@/components/ui/button';
 
 
 /*
@@ -90,7 +91,18 @@ const TestPage = () => {
         catch (err) {
             console.log(err);
             // show retry connection btn
-            setRenderComponent(() => <div onClick={() => onQuizOver({ markedQuestions, totalMcqs })}><h1> retry</h1></div>);
+            setRenderComponent(() =>
+                <div className='h-screen grid justify-center items-center'>
+                    <div>
+                        <div className='text-red-400 bold'> failed to fetch result</div>
+                        <Button
+                            className={`w-fit py-4 px-12`}
+                            onClick={() => onQuizOver({ markedQuestions, totalMcqs })}>
+                            Retry
+                        </Button>
+                    </div>
+                </div>
+            );
             return
         }
         const { correctCount, inCorrectCount } = analyseCheckedQuestions(checkedQuestions);

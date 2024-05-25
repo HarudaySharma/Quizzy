@@ -3,7 +3,7 @@ import { Categories, CheckedQuestion, MarkedQuestion } from "../types";
 const fetchCheckedAnswers = async (category: Categories, markedQuestions: MarkedQuestion[]) => {
 
     try {
-        const res = await fetch('/api/quiz/test/questions/check', {
+        const res = await fetch('https://quiz-app-server-nine.vercel.app/api/quiz/test/questions/check', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

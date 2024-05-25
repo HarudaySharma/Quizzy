@@ -6,10 +6,10 @@ export default defineConfig({
     plugins: [react()],
     server: {
         proxy: {
-            '/api/' : {
-                target: "http://localhost:3000/",
-                    secure: false,
-            },
-        },
+            /* '/api/': {
+                target: "https://quiz-app-server-nine.vercel.app/",
+                changeOrigin: true
+            } */
+        }
     }
 })

@@ -23,7 +23,7 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
             return;
         }
         try {
-            const res = await fetch('/api/quiz/questions/', {
+            const res = await fetch('https://quiz-app-server-nine.vercel.app/api/quiz/questions/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         }
         console.log('fetching timed questions');
         try {
-            const res = await fetch('/api/quiz/questions/timer', {
+            const res = await fetch('https://quiz-app-server-nine.vercel.app/api/quiz/questions/timer', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
