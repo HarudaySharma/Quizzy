@@ -2,6 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 import { Categories, MCQ } from "../types";
 import { RequestModes } from "./useQuizQuestions";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 type useTestQuestionsParams = {
     defaultCategoryValue?: Categories,
     defaultMCQCount?: number,
@@ -22,12 +24,13 @@ const useTestQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
             return;
         }
         try {
-            const res = await fetch('https://quiz-app-server-nine.vercel.app/api/quiz/test/questions/', {
+            const res = await fetch(`${API_URL}/api/quiz/test/questions/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ category, mcqCount })
+                body: JSON.stringify({ category, mcqCount }),
+                credentials: 'include'
             });
             if (!res.ok) {
                 console.log("failed");
@@ -49,12 +52,13 @@ const useTestQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
             return;
         }
         try {
-            const res = await fetch('https://quiz-app-server-nine.vercel.app/api/quiz/test/questions/timer', {
+            const res = await fetch(`${API_URL}/api/quiz/test/questions/timer`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ category, initialRequest: initialRequest })
+                body: JSON.stringify({ category, initialRequest: initialRequest }),
+                credentials: 'include'
             });
             if (!res.ok) {
                 console.log("failed");

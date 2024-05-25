@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 import { Categories, MCQ } from "../types";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export type RequestModes = 'TIMER' | 'NO-TIMER';
 
 type useQuizQuestionsParams = {
@@ -23,12 +25,13 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
             return;
         }
         try {
-            const res = await fetch('https://quiz-app-server-nine.vercel.app/api/quiz/questions/', {
+            const res = await fetch(`${API_URL}/api/quiz/questions/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ category, mcqCount })
+                body: JSON.stringify({ category, mcqCount }),
+                credentials: 'include'
             });
             if (!res.ok) {
                 console.log("failed");
@@ -51,12 +54,13 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         }
         console.log('fetching timed questions');
         try {
-            const res = await fetch('https://quiz-app-server-nine.vercel.app/api/quiz/questions/timer', {
+            const res = await fetch(`${API_URL}/api/quiz/questions/timer`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ category, initialRequest: initialRequest })
+                body: JSON.stringify({ category, initialRequest: initialRequest }),
+                credentials: 'include'
             });
             if (!res.ok) {
                 console.log("failed");

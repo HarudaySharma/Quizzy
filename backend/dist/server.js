@@ -9,7 +9,17 @@ config();
 const app = express();
 const PORT = process.env.PORT;
 app.use(cors({
-    origin: "*"
+    credentials: true,
+    origin: `${process.env.WEB_CLIENT_URL}`,
+    methods: ['GET', 'POST', 'PUT', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'], // Include allowed headers
+}));
+// middleware to handle preflight requests
+app.options('*', cors({
+    credentials: true,
+    origin: `${process.env.WEB_CLIENT_URL}`,
+    methods: ['GET', 'POST', 'PUT', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 app.use(express.json());
 app.use(cookieParser());

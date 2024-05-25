@@ -1,20 +1,14 @@
 import generateSessionId from "../utils/generateSessionId.js";
-/*
-    * session:id {
-    *   usedIndices: set<number>
-    * }
-    */
+const options = {
+    maxAge: 1000 * 60 * 60 * 1, // calculated in ms (2hrs)
+    secure: true,
+    sameSite: 'none'
+};
 async function sessionMiddleware(req, res, next) {
     const sessionId = req.cookies.quiz_app_sessionId;
     if (!sessionId) {
         const newSessionId = generateSessionId();
-        /* try {
-            await redisClient.SADD('sessions', `id:${newSessionId}`);
-        }
-        catch(err) {
-            next(err);
-        } */
-        res.cookie('quiz_app_sessionId', newSessionId, { maxAge: 1000 * 60 * 60 * 1 });
+        res.cookie('quiz_app_sessionId', newSessionId, options);
         req.sessionId = newSessionId;
     }
     else {
