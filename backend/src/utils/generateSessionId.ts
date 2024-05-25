@@ -1,6 +1,6 @@
-import { uuid } from "uuidv4";
+import { v4 } from "uuid";
 
 export default function generateSessionId () {
-    const sessionId = uuid();
+    const sessionId = v4();
     return sessionId;
 }
