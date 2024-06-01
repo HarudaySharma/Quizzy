@@ -80,8 +80,11 @@ export const getQuestionsWithTimer = async (req: CustomRequest, res: Response, n
         // update the questions selected of the particular session
         await saveSelectedQuestions({ sessionId, selectedQuestions, category, options: { append: true } });
 
-        //console.log(selectedQuestions);
-        res.status(200).json(selectedQuestions);
+        const questionWithoutAnswers = selectedQuestions.map((question) => {
+            const { answer, ...rest } = question;
+            return rest;
+        })
+        res.status(200).json(questionWithoutAnswers);
     }
     catch (err) {
         console.log(err);
