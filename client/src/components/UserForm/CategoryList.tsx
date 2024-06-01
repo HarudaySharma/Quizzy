@@ -12,21 +12,26 @@ const CategoryList = ({ className }: PROPS) => {
 
     const handleChange = (key: keyof typeof Categories) => {
         const category = Categories[key];
+        console.log(category);
+        if(!category) {
+            return;
+        }
         setFormData({ ...formData, category: category });
     }
 
     return (
         <Select onValueChange={handleChange}>
-            <SelectTrigger className={`p-4 mx-auto w-96 font-mono ${className}`}>
+            <SelectTrigger onClick={e => e.preventDefault()} className={`p-4 mx-auto w-96 font-mono ${className}`}>
                 <SelectValue placeholder='Select a Category' />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent onClick={(e) => e.preventDefault()}>
                 {
                     categories.map((category) =>
                         <SelectItem
                             className={`font-mono tracking-widest `}
                             key={category}
                             value={category}
+                            onClick={e=> {e.preventDefault(); e.stopPropagation()}}
                         >
                             {category}
                         </SelectItem>

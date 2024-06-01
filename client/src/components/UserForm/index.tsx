@@ -10,7 +10,7 @@ import ChooseButtons from './ChooseButtons';
 import SetTimerField from './SetTimerField';
 
 export interface UserFormData {
-    category?: Categories
+    category?: Categories;
     mcqCount?: number;
     variant?: RequestModes;
     timer?: number;

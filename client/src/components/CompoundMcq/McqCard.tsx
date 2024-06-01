@@ -94,31 +94,39 @@ function McqQuestion({ className }: { className?: string }) {
 
 function McqOption({ className, option }: { className?: string, option: 'A' | 'B' | 'C' | 'D' }) {
     const { optionChooseHandler, options, correctOption, selectedOption } = useMcqCardContext();
-    const [bgColor, setBgColor] = useState("bg-gray-200");
+    const [bgColor, setBgColor] = useState("gray");
+    const [bgBold, setBgBoldness] = useState(200);
     const [disable, setDisable] = useState<boolean>(false);
 
     useEffect(() => {
+        console.log(selectedOption, correctOption);
         // reset to default 
         if (!selectedOption) {
-            setBgColor('bg-gray-200');
+            setBgColor('gray');
+            setBgBoldness(200);
             setDisable(false);
+            return;
         }
-        // let the user choose only one time
+        // let the user choose only one option at a time
         if (selectedOption && correctOption) {
             setDisable(true);
         }
         // for test questions
         if (!correctOption && selectedOption === option) {
-            setBgColor('bg-blue-100');
+            setBgColor('blue');
+            setBgBoldness(100);
         }
         // resetting if the user changed the option (only for test question)
         if (!correctOption && selectedOption !== option) {
-            setBgColor('bg-gray-100');
+            setBgColor('gray');
+            setBgBoldness(200);
         }
         // for quiz questions (after the user has guessed show them the correctOption)
         if (selectedOption && correctOption === option) {
-            setBgColor('bg-green-200');
+            setBgColor('green');
+            setBgBoldness(200);
         }
+        return;
     }, [correctOption, selectedOption]);
 
 
@@ -131,10 +139,12 @@ function McqOption({ className, option }: { className?: string, option: 'A' | 'B
         if (isCorrect === undefined)// must be a Test Question
             return;
         if (isCorrect) {
-            setBgColor('bg-green-200');
+            setBgColor('green');
+            setBgBoldness(200);
         }
         else {
-            setBgColor('bg-red-200');
+            setBgColor('red');
+            setBgBoldness(200);
         }
         return;
     }
@@ -144,7 +154,9 @@ function McqOption({ className, option }: { className?: string, option: 'A' | 'B
             <Button
                 key={options[option]}
                 onClick={onClickHandler}
-                className={`w-full ${bgColor} p-4 rounded-lg shadow text-black font-bold ${className}`}
+                className={`w-full  p-4 rounded-lg shadow text-black font-bold  
+                            hover:bg-${bgColor}-${bgBold} active:outline-none active:ring-4 active:ring-${bgColor}-${bgBold}
+                            disabled:opacity-100 ${className} bg-${bgColor}-${bgBold}`}
                 disabled={disable}
             >
                 {options[option]}

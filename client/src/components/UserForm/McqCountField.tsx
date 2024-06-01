@@ -5,12 +5,12 @@ import { Label } from '../../@/components/ui/label';
 
 const McqCountField = () => {
     const { formData, setFormData } = useUserFormContext();
-    const [showLabel, setShowLabel] = useState(false);
+    //const [showLabel, setShowLabel] = useState(false);
     const [mcqCount, setMcqCount] = useState("");
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const num = e.target.value;
-        console.log(num);
+        //console.log(num);
         if (num === "") {
             setMcqCount("");
             setFormData({ ...formData, mcqCount: undefined });
@@ -26,23 +26,22 @@ const McqCountField = () => {
 
     if (formData?.variant === 'NO-TIMER') {
         return (
-            <fieldset className='flex flex-col gap-4'>
-                {showLabel && <Label
-                    className='w-fit mx-auto py-2 relative top-4 bg-white px-6'
+            <fieldset className='flex flex-col gap-2'>
+                <Label
+                    className='w-fit py-1 px-1'
                     htmlFor='mcqCount'
                 >
                     Number of Questions ?
                 </Label>
-                }
                 <Input
                     className='p-4 mx-auto w-96 font-mono'
-                    onBlur={() => setShowLabel(false)}
-                    onFocus={() => setShowLabel(true)}
+                    // onBlur={() => setShowLabel(false)}
+                    // onFocus={() => setShowLabel(true)}
                     type='number'
                     id='mcqCount'
                     value={mcqCount}
                     onChange={handleChange}
-                    placeholder={showLabel ? "" : "Number of Questions ?"}
+                   //placeholder={"Number of Questions ?"}
                 />
             </fieldset>
         )

@@ -40,6 +40,5 @@ export enum Categories {
     Football = "FOOTBALL",
     History = "HISTORY",
     Politics = "POLITICS",
-    Sports = "SPORTS",
-
+    Sports = "SPORTS"
 }
