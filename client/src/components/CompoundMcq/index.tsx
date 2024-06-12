@@ -92,12 +92,8 @@ const McqComponent = ({
     }, [mcqList, mcqIndex]);
 
     //checks each submitted answer and saves it
-<<<<<<< HEAD
-    function answerSubmitHandler(markedOption: Options) {
-=======
     function answerSubmitHandler(markedOption: OPTIONS) {
 
->>>>>>> dev
         setAttempted(prev => prev + 1);
 
         const markedQuestion: MarkedQuestion = {
