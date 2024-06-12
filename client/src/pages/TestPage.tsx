@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, useCallback, useEffect, useState } from 'react';
 import UserForm from '../components/UserForm'
 import CompoundMcq from '../components/CompoundMcq';
 import { CheckedQuestion, MarkedQuestion } from '../types';
@@ -30,10 +30,11 @@ const TestPage = () => {
     const [time, setTime] = useState<number | undefined>(undefined);
 
 
-    const handleFormSubmit = ({ category, mcqCount, variant, timer }: handleFormSubmitParams) => {
-        setVariant(variant);
+    const handleFormSubmit = useCallback(({ category, mcqCount, requestMode, timer }: handleFormSubmitParams) => {
+        console.log('here');
+        setVariant(requestMode);
         setCategory(category);
-        if (variant === 'TIMER') {
+        if (requestMode === 'TIMER') {
             setVariant('TIMER');
             setTime(timer);
         }
@@ -41,21 +42,25 @@ const TestPage = () => {
             setVariant('NO-TIMER');
             setMcqCount(mcqCount);
         }
-    }
+    }, [setVariant, setCategory, setTime, setMcqCount]);
 
 
     const handleRetry = () => {
         setRenderComponent(
             <CompoundMcq
                 mcqList={mcqList}
-                meta={<CompoundMcq.MetaData
-                    children={[
-                        <CompoundMcq.MetaData.TotalMcqs />,
-                    ]}
-                />}
+                meta={<>
+                    <CompoundMcq.MetaData
+                        children={<>
+                            <CompoundMcq.MetaData.TotalMcqs />
+                            <CompoundMcq.MetaData.AttemptedCount />
+                        </>}
+                    />
+                    <CompoundMcq.Timer />
+                </>}
                 onQuizOver={onQuizOver}
-                includeCount={false}
                 setUnvisitedQuestions={setUnvisitedQuestions}
+                variant='TEST'
                 time={time}
             />)
     }
@@ -157,7 +162,7 @@ const TestPage = () => {
                         ]}
                     />}
                     onQuizOver={onQuizOver}
-                    includeCount={false}
+                    variant='TEST'
                     setUnvisitedQuestions={setUnvisitedQuestions}
                 />)
         }
@@ -166,14 +171,17 @@ const TestPage = () => {
                 <>
                     <CompoundMcq
                         mcqList={mcqList}
-                        meta={<CompoundMcq.MetaData
-                            children={[
-                                <CompoundMcq.MetaData.TotalMcqs />,
-                                <CompoundMcq.MetaData.AttemptedCount />
-                            ]}
-                        />}
+                        meta={<>
+                            <CompoundMcq.MetaData
+                                children={<>
+                                    <CompoundMcq.MetaData.TotalMcqs />
+                                    <CompoundMcq.MetaData.AttemptedCount />
+                                </>}
+                            />
+                            <CompoundMcq.Timer />
+                        </>}
                         onQuizOver={onQuizOver}
-                        includeCount={false}
+                        variant='TEST'
                         setUnvisitedQuestions={setUnvisitedQuestions}
                         time={time}
                     />
@@ -183,8 +191,14 @@ const TestPage = () => {
     }, [variant, mcqList]);
 
     return (
-        <div className="grid max-w-screen-2xl bg-sky-50 mx-auto">
-            <div className="flex flex-col gap-4">
+        <div className='w-full h-screen flex items-center justify-center'>
+            <div
+                className="
+                flex 
+                flex-col 
+                gap-4
+            "
+            >
                 {renderComponent}
             </div>
         </div >

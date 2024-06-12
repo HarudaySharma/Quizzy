@@ -1,5 +1,5 @@
 import { useContext, createContext } from "react";
-import { MCQ, MarkedQuestion } from "../types";
+import { MCQ, MarkedQuestion, VARIANT } from "../types";
 
 
 type CompoundMcqContextType = {
@@ -11,6 +11,7 @@ type CompoundMcqContextType = {
     markedAnswers: MarkedQuestion[];
     timer: number | null;
     setTimer: React.Dispatch<React.SetStateAction<number | null>>;
+    variant: VARIANT;
 }
 
 export const CompoundMcqContext = createContext<CompoundMcqContextType | undefined>(undefined);
@@ -32,5 +33,6 @@ export const useMcqComponentContext = () => {
         markedAnswers: context.markedAnswers,
         timer: context.timer,
         setTimer: context.setTimer,
+        variant: context.variant,
     }
 }

@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
-import { Options } from "../types";
+import { OPTIONS, VARIANT } from "../types";
 
-type McqComponentContextTypes = {
+export type McqComponentContextTypes = {
     question: string,
     options: {
         A: string,
@@ -9,10 +9,11 @@ type McqComponentContextTypes = {
         C: string,
         D: string,
     }
-    selectedOption: Options | undefined;
-    correctOption?: Options;
-    optionChoosed?: Options;
-    optionChooseHandler: (option: Options) => boolean | undefined;
+    selectedOption: OPTIONS | null;
+    correctOption: OPTIONS | null;
+    optionChoosed: OPTIONS | null;
+    optionChooseHandler: (option: OPTIONS) => boolean | null;
+    variant: VARIANT;
 }
 
 export const McqCardContext = createContext<McqComponentContextTypes | undefined>(undefined);
@@ -28,6 +29,7 @@ export const useMcqCardContext = () => {
         selectedOption: context.selectedOption,
         optionChooseHandler: context.optionChooseHandler,
         correctOption: context.correctOption,
+        variant: context.variant,
     }
 }
 

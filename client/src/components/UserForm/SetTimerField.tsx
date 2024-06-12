@@ -37,7 +37,7 @@ const SetTimerField = () => {
         setMinutes(m);
     }
 
-    if (formData?.variant === 'TIMER') {
+    if (formData?.requestMode === 'TIMER') {
         return (
             <fieldset className='flex flex-col w-fit mx-auto gap-4'>
                 <fieldset className='flex flex-col gap-1 w-fit mx-auto'>
