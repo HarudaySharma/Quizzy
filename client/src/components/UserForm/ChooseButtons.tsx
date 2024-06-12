@@ -11,7 +11,7 @@ const ChooseButtons = () => {
                 <Button
                     onClick={(e) => {
                         e.preventDefault();
-                        setFormData({ ...formData, variant: "TIMER" })
+                        setFormData({ ...formData, requestMode: "TIMER" })
                     }}
 
                 >
@@ -20,7 +20,7 @@ const ChooseButtons = () => {
                 <Button
                     onClick={(e) => {
                         e.preventDefault();
-                        setFormData({ ...formData, variant: "NO-TIMER" })
+                        setFormData({ ...formData, requestMode: "NO-TIMER" })
                     }}
                 >
                     Set No. of Mcqs ?

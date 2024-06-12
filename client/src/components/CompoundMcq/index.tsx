@@ -1,10 +1,10 @@
 import { ReactNode, useCallback, useEffect, useState } from 'react'
 import McqCard from './McqCard';
 import { CompoundMcqContext } from '../../context/McqComponentContext';
-import { MCQ, MarkedQuestion, Options } from '../../types';
+import { MCQ, MarkedQuestion, OPTIONS, VARIANT } from '../../types';
 import McqComponentMetaData from './McqComponentMetaData';
-import { SimpleResult } from '../../pages/QuizPage';
-import { TestResult } from '../../pages/TestPage';
+//import { SimpleResult } from '../../pages/QuizPage';
+//import { TestResult } from '../../pages/TestPage';
 import QuizTimer from './QuizTimer';
 import { Button } from '../../@/components/ui/button';
 
@@ -12,28 +12,24 @@ import { Button } from '../../@/components/ui/button';
 // checked Answers
 // what to show in QuizResult will be controlled by the Parent component of this one
 
-interface BaseProps<T> {
+
+interface McqComponentProps {
     mcqList: MCQ[];
     meta: ReactNode;
-    onQuizOver: (result: T) => void
-    includeCount: boolean;
     setUnvisitedQuestions: React.Dispatch<React.SetStateAction<number | undefined>>;
+    variant: VARIANT;
     time?: number;
+    onQuizOver: (result: any) => void
 }
-
-interface TestProps extends BaseProps<TestResult> { }
-interface SimpleProps extends BaseProps<SimpleResult | Omit<SimpleResult, 'correctCount' | 'inCorrectCount'>> { }
-
-type Props = SimpleProps | TestProps;
 
 const McqComponent = ({
     mcqList,
     meta,
     onQuizOver,
-    includeCount,
     setUnvisitedQuestions,
+    variant,
     time
-}: Props) => {
+}: McqComponentProps) => {
 
     const [mcqIndex, setMcqIndex] = useState(0);
     const [attempted, setAttempted] = useState(0);
@@ -47,35 +43,41 @@ const McqComponent = ({
         if (timer === null) {
             return;
         }
+
         if (timer === 0) {
-            if (includeCount) {
+            if (variant === 'TEST') {
+                onQuizOver({
+                    markedQuestions,
+                    totalMcqs: mcqList.length
+                })
+            }
+            if (variant === 'QUIZ') {
                 onQuizOver({
                     markedQuestions,
                     correctCount,
                     inCorrectCount,
-                    totalMcqs: mcqList.length
-                });
-            } else {
-                onQuizOver({
-                    markedQuestions,
                     totalMcqs: mcqList.length
                 });
             }
         }
-    }, [timer]);
+
+    }, [timer, variant]);
 
     useEffect(() => {
+
         setUnvisitedQuestions(mcqList.length - attempted);
         console.log(`mcqList-Len : ${mcqList.length}`);
+
         if (attempted === mcqList.length) {
-            if (includeCount) {
+            if (variant === 'QUIZ') {
                 onQuizOver({
                     markedQuestions,
                     correctCount,
                     inCorrectCount,
                     totalMcqs: mcqList.length
                 });
-            } else {
+            }
+            if (variant === 'TEST') {
                 onQuizOver({
                     markedQuestions,
                     totalMcqs: mcqList.length
@@ -85,13 +87,15 @@ const McqComponent = ({
         return;
     }, [attempted])
 
-    const getCorrectOption = useCallback((): Options => {
+    const getCorrectOption = useCallback(() => {
         return mcqList[mcqIndex].answer;
     }, [mcqList, mcqIndex]);
 
     //checks each submitted answer and saves it
-    function answerSubmitHandler(markedOption: Options) {
+    function answerSubmitHandler(markedOption: OPTIONS) {
+
         setAttempted(prev => prev + 1);
+
         const markedQuestion: MarkedQuestion = {
             question: mcqList[mcqIndex].question,
             correctAnswer: {
@@ -103,14 +107,17 @@ const McqComponent = ({
                 text: mcqList[mcqIndex][markedOption],
             }
         };
+
         if (mcqIndex < mcqList.length - 1) {
             setMcqIndex(prev => prev + 1);
         }
+
         setMarkedQuestions([...markedQuestions, markedQuestion]);
 
-        if (!includeCount) {
+        if (variant === 'TEST') {
             return;
         }
+
         if (markedOption === mcqList[mcqIndex].answer) {
             setCorrectCount(prev => prev + 1);
         } else {
@@ -119,16 +126,17 @@ const McqComponent = ({
     }
 
     const handleQuizTerminate = () => {
-        if (includeCount) {
+        if (variant === 'TEST') {
+            onQuizOver({
+                markedQuestions,
+                totalMcqs: mcqList.length
+            });
+        }
+        if (variant === 'QUIZ') {
             onQuizOver({
                 markedQuestions,
                 correctCount,
                 inCorrectCount,
-                totalMcqs: mcqList.length
-            });
-        } else {
-            onQuizOver({
-                markedQuestions,
                 totalMcqs: mcqList.length
             });
         }
@@ -143,30 +151,48 @@ const McqComponent = ({
         correctCount: correctCount,
         inCorrectCount: inCorrectCount,
         attemptedCount: attempted,
+        variant: variant,
     }
 
     //<h3 className="text-md uppercase "> Questions </h3>
     return (
-        <div className="m-4 bg-transparent w-fit  max-w-80 content-center mx-auto border-2 border-black">
+        <div
+            className={`
+                flex
+                flex-col
+                gap-2
+                content-center
+                items-center
+                bg-transparent 
+                sm:max-w-xl
+                w-11/12
+                mx-auto 
+                //border-2 
+                //border-black
+            `}
+        >
             <CompoundMcqContext.Provider value={contextValues}>
-                <QuizTimer />
                 {meta}
-                <div className='my-6'></div>
                 <McqCard
+                    key={mcqList[mcqIndex].question}
                     answerSubmitHandler={answerSubmitHandler}
                     getCorrectOption={getCorrectOption}
-                    header={[<McqCard.Question />]}
-                    options={[
-                        <McqCard.Option option='A' />,
-                        <McqCard.Option option='B' />,
-                        <McqCard.Option option='C' />,
-                        <McqCard.Option option='D' />,
-                    ]}
-                    footer={[<McqCard.SubmitButton />]}
+                    header={<>
+                        <McqCard.Question />
+                    </>}
+                    options={<>
+                        <McqCard.Option option='A' />
+                        <McqCard.Option option='B' />
+                        <McqCard.Option option='C' />
+                        <McqCard.Option option='D' />
+                    </>}
+                    footer={<>
+                        <McqCard.SubmitButton />
+                    </>}
                 />
                 <Button
-                    className='bg-red-50 text-red-500 hover:bg-red-50 hover:text-black'
                     onClick={handleQuizTerminate}
+                    variant={'destructive'}
                 >
                     Terminate Quiz
                 </Button>
@@ -176,5 +202,6 @@ const McqComponent = ({
 }
 
 McqComponent.MetaData = McqComponentMetaData;
+McqComponent.Timer = QuizTimer;
 
 export default McqComponent

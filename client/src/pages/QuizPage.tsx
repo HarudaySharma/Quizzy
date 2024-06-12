@@ -2,42 +2,44 @@ import UserForm from '../components/UserForm'
 import useQuizQuestions, { RequestModes } from '../hooks/useQuizQuestions';
 import { ReactNode, useEffect, useState } from 'react';
 import CompoundMcq from '../components/CompoundMcq';
-import { Categories, MarkedQuestion } from '../types';
+import { Categories, VARIANT } from '../types';
 import QuizResult from '../components/QuizResult';
 import markedToCheckedQuestions from '../utils/markedToCheckedQuestions';
 import OverButtons from '../components/OverButtons';
-import { TestResult } from './TestPage';
+//import { TestResult } from './TestPage';
 
 
 /*
  * responsibility to fetch mcqs
  * and fetch mcq whenever category or mcqCount are changed
  */
-export type SimpleResult = {
-    markedQuestions: MarkedQuestion[],
-    correctCount: number,
-    inCorrectCount: number,
-    totalMcqs: number,
-
-}
 
 export type handleFormSubmitParams = {
     category: Categories;
     mcqCount?: number;
-    variant: RequestModes;
+    requestMode: RequestModes;
     timer?: number;
 }
 
 const QuizPage = () => {
-    const { mcqList, setCategory, setMcqCount, variant, setVariant, timedRequests } = useQuizQuestions({})
-    const { fetchTimedQuestions } = timedRequests;
+
+    const {
+        mcqList,
+        setCategory,
+        setMcqCount,
+        variant,
+        setVariant,
+        timedRequests: {
+            fetchTimedQuestions
+        } } = useQuizQuestions({});
+
     const [renderComponent, setRenderComponent] = useState<ReactNode>()
     const [unvisitedQuestions, setUnvisitedQuestions] = useState<number | undefined>(undefined);
     const [time, setTime] = useState<number | undefined>(undefined);
 
 
     // after user submits the form
-    const handleFormSubmit = ({ category, mcqCount, variant, timer }: handleFormSubmitParams) => {
+    const handleFormSubmit = ({ category, mcqCount, requestMode: variant, timer }: handleFormSubmitParams) => {
         setCategory(category);
         if (variant === 'TIMER') {
             console.log("timer", timer);
@@ -66,9 +68,9 @@ const QuizPage = () => {
                     ]}
                 />}
                 onQuizOver={onQuizOver}
-                includeCount={true}
                 setUnvisitedQuestions={setUnvisitedQuestions}
                 time={time}
+                variant='QUIZ'
             />)
     }
 
@@ -94,31 +96,33 @@ const QuizPage = () => {
 
     // function to be executed after quiz is over
     // shows the result and reset any state that need to be reset
-    const onQuizOver = (result: SimpleResult | TestResult) => {
+    const onQuizOver = (result: any) => {
         //setInitialRequest(true);
-        if ('correctCount' in result && 'inCorrectCount' in result) {
-            const { correctCount, inCorrectCount, totalMcqs, markedQuestions } = result;
-            setRenderComponent(<>
-                <QuizResult
-                    checkedQuestions={markedToCheckedQuestions(markedQuestions)}
-                    correctCount={correctCount}
-                    inCorrectCount={inCorrectCount}
-                    totalMcqs={totalMcqs}
-                />
-                <OverButtons
-                    className='flex flex-row justify-center gap-x-12'
-                    children={[
-                        <OverButtons.RetryButton
-                            className='bg-gray-50 text-black'
-                            onClickHandler={handleRetry}
-                        />,
-                        <OverButtons.ResetButton
-                            className='bg-gray-50 text-black'
-                            onClickHandler={handleReset}
-                        />
-                    ]} />
-            </>);
-        }
+
+        if (result.variant as VARIANT === 'TEST')
+            return null;
+
+        const { correctCount, inCorrectCount, totalMcqs, markedQuestions } = result;
+        setRenderComponent(<>
+            <QuizResult
+                checkedQuestions={markedToCheckedQuestions(markedQuestions)}
+                correctCount={correctCount}
+                inCorrectCount={inCorrectCount}
+                totalMcqs={totalMcqs}
+            />
+            <OverButtons
+                className='flex flex-row justify-center gap-x-12'
+                children={[
+                    <OverButtons.RetryButton
+                        className='bg-gray-50 text-black'
+                        onClickHandler={handleRetry}
+                    />,
+                    <OverButtons.ResetButton
+                        className='bg-gray-50 text-black'
+                        onClickHandler={handleReset}
+                    />
+                ]} />
+        </>);
     }
 
     // what UI to render 
@@ -145,18 +149,18 @@ const QuizPage = () => {
                 <CompoundMcq
                     mcqList={mcqList}
                     meta={<CompoundMcq.MetaData
-                        className={'justify-between px-4 py-2'}
+                        className={``}
                         children={[
                             <CompoundMcq.MetaData.TotalMcqs key={"total mcq"} />,
-                            <div className='flex flex-row gap-2'>
+                            <div className='flex flex-wrap justify-center flex-row gap-2'>
                                 <CompoundMcq.MetaData.CorrectCount key={"correct count"} />
                                 <CompoundMcq.MetaData.InCorrectCount key={"incorrect count"} />
                             </div>
                         ]}
                     />}
                     onQuizOver={onQuizOver}
-                    includeCount={true}
                     setUnvisitedQuestions={setUnvisitedQuestions}
+                    variant='QUIZ'
                 />)
         }
         if (variant === 'TIMER' && mcqList.length !== 0) {
@@ -174,7 +178,7 @@ const QuizPage = () => {
                             ]}
                         />}
                         onQuizOver={onQuizOver}
-                        includeCount={true}
+                        variant='QUIZ'
                         setUnvisitedQuestions={setUnvisitedQuestions}
                         time={time}
                     />
@@ -184,11 +188,17 @@ const QuizPage = () => {
     }, [variant, mcqList]);
 
     return (
-        <div className="grid  mx-auto">
-            <div className="flex flex-col gap-4">
+        <div className='w-full h-screen flex items-center justify-center'>
+            <div
+                className="
+                flex 
+                flex-col 
+                gap-4
+            "
+            >
                 {renderComponent}
             </div>
-        </div >
+        </div>
     )
 }
 

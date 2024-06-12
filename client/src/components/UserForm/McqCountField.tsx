@@ -24,7 +24,7 @@ const McqCountField = () => {
         setFormData({ ...formData, mcqCount: Number(num) });
     }
 
-    if (formData?.variant === 'NO-TIMER') {
+    if (formData?.requestMode === 'NO-TIMER') {
         return (
             <fieldset className='flex flex-col gap-2'>
                 <Label

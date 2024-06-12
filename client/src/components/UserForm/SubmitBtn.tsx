@@ -14,7 +14,7 @@ const SubmitBtn = () => {
         else
             setDisabled(true);
 
-    }, [formData?.timer, formData?.variant, formData?.category, formData?.mcqCount]);
+    }, [formData?.timer, formData?.requestMode, formData?.category, formData?.mcqCount]);
 
     return (
         <Button

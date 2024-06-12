@@ -1,4 +1,6 @@
-export type Options = 'A' | 'B' | 'C' | 'D';
+export type OPTIONS = 'A' | 'B' | 'C' | 'D';
+
+export type VARIANT = 'TEST' | 'QUIZ';
 
 export interface MCQ {
     question: string,
@@ -6,17 +8,17 @@ export interface MCQ {
     B: string,
     C: string,
     D: string,
-    answer: Options;
+    answer: OPTIONS;
 }
 
 export interface CheckedQuestion {
     question: string;
     correctAnswer: {
-        option: Options,
+        option: OPTIONS,
         text: string
     };
     userAnswer: {
-        option: Options,
+        option: OPTIONS,
         text: string
     };
 }
@@ -24,11 +26,11 @@ export interface CheckedQuestion {
 export interface MarkedQuestion {
     question: string;
     correctAnswer?: {
-        option: Options,
+        option: OPTIONS,
         text: string
     };
     userAnswer: {
-        option: Options,
+        option: OPTIONS,
         text: string
     };
 }
