@@ -1,10 +1,8 @@
 import React, { ReactNode, useState } from 'react'
-import { Categories } from '../../types';
+import { Categories, RequestModes, handleFormSubmitParams } from '../../types';
 import CategoryList from './CategoryList'
 import McqCountField from './McqCountField';
 import { UserFormContext } from '../../context/userFormContext';
-import { handleFormSubmitParams } from '../../pages/QuizPage';
-import { RequestModes } from '../../hooks/useQuizQuestions';
 import SubmitBtn from './SubmitBtn';
 import ChooseButtons from './ChooseButtons';
 import SetTimerField from './SetTimerField';
@@ -17,7 +15,7 @@ export interface UserFormData {
 }
 
 interface Props {
-    onSubmit: (params :handleFormSubmitParams) => void;
+    onSubmit: (params: handleFormSubmitParams) => void;
     children: ReactNode | ReactNode[]
 }
 

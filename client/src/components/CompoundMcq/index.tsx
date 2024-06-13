@@ -167,8 +167,6 @@ const McqComponent = ({
                 sm:max-w-xl
                 w-11/12
                 mx-auto 
-                //border-2 
-                //border-black
             `}
         >
             <CompoundMcqContext.Provider value={contextValues}>

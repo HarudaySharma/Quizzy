@@ -1,13 +1,12 @@
 import { ReactNode, useCallback, useEffect, useState } from 'react';
 import UserForm from '../components/UserForm'
 import CompoundMcq from '../components/CompoundMcq';
-import { CheckedQuestion, MarkedQuestion } from '../types';
+import { CheckedQuestion, MarkedQuestion, handleFormSubmitParams } from '../types';
 import QuizResult from '../components/QuizResult';
 import OverButtons from '../components/OverButtons';
 import useTestQuestions from '../hooks/useTestQuestions';
 import fetchCheckedAnswers from '../utils/fetchCheckedAnswers';
 import analyseCheckedQuestions from '../utils/analyseCheckedAnswers';
-import { handleFormSubmitParams } from './QuizPage';
 import { Button } from '../@/components/ui/button';
 
 
@@ -21,7 +20,16 @@ export type TestResult = {
 }
 
 const TestPage = () => {
-    const { mcqList, setCategory, setMcqCount, category, variant, setVariant, WithTimer } = useTestQuestions({})
+    const {
+        mcqList,
+        setCategory,
+        setMcqCount,
+        category,
+        variant,
+        isFetching,
+        setVariant,
+        WithTimer
+    } = useTestQuestions({})
     const { fetchTimedQuestions } = WithTimer;
 
     const [renderComponent, setRenderComponent] = useState<ReactNode>()
@@ -31,9 +39,9 @@ const TestPage = () => {
 
 
     const handleFormSubmit = useCallback(({ category, mcqCount, requestMode, timer }: handleFormSubmitParams) => {
-        console.log('here');
-        setVariant(requestMode);
+
         setCategory(category);
+
         if (requestMode === 'TIMER') {
             setVariant('TIMER');
             setTime(timer);
@@ -52,7 +60,9 @@ const TestPage = () => {
                 meta={<>
                     <CompoundMcq.MetaData
                         children={<>
-                            <CompoundMcq.MetaData.TotalMcqs />
+                            <CompoundMcq.MetaData.TotalMcqs
+                                showLoading={isFetching}
+                            />
                             <CompoundMcq.MetaData.AttemptedCount />
                         </>}
                     />
@@ -78,6 +88,11 @@ const TestPage = () => {
 
     // to fetch more mcqs from the server if having a timed quiz 
     useEffect(() => {
+
+        if (isFetching) {
+            return;
+        }
+
         console.log(`unvisitedQuestions :${unvisitedQuestions}`);
         if (unvisitedQuestions && unvisitedQuestions <= 5) {
             fetchTimedQuestions();
@@ -156,10 +171,12 @@ const TestPage = () => {
                 <CompoundMcq
                     mcqList={mcqList}
                     meta={<CompoundMcq.MetaData
-                        children={[
-                            <CompoundMcq.MetaData.TotalMcqs />,
+                        children={<>
+                            <CompoundMcq.MetaData.TotalMcqs
+                                showLoading={isFetching}
+                            />
                             <CompoundMcq.MetaData.AttemptedCount />
-                        ]}
+                        </>}
                     />}
                     onQuizOver={onQuizOver}
                     variant='TEST'
@@ -174,7 +191,9 @@ const TestPage = () => {
                         meta={<>
                             <CompoundMcq.MetaData
                                 children={<>
-                                    <CompoundMcq.MetaData.TotalMcqs />
+                                    <CompoundMcq.MetaData.TotalMcqs
+                                        showLoading={isFetching}
+                                    />
                                     <CompoundMcq.MetaData.AttemptedCount />
                                 </>}
                             />
@@ -188,7 +207,7 @@ const TestPage = () => {
                 </>
             )
         }
-    }, [variant, mcqList]);
+    }, [variant, mcqList, isFetching]);
 
     return (
         <div className='w-full h-screen flex items-center justify-center'>

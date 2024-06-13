@@ -1,12 +1,19 @@
 import clsx from "clsx";
 import { useMcqComponentContext } from "../../../../context/McqComponentContext";
+import Loading from "../../../ui/Loading";
 
-const TotalMcqs = ({ className }: { className?: string }) => {
+interface TotalMcqsProps {
+    showLoading?: boolean;
+    className?: string;
+}
+
+const TotalMcqs = ({ showLoading, className }: TotalMcqsProps) => {
     const { totalMcqs } = useMcqComponentContext();
 
     return (
-        <div
-            className={clsx(`
+        <>
+            <div
+                className={clsx(`
                 p-4
                 bg-gray-50
                 rounded-md
@@ -15,11 +22,13 @@ const TotalMcqs = ({ className }: { className?: string }) => {
                 outline-gray-400
 
             `,
-                className
-            )}
-        >
-            Total MCQs: {totalMcqs}
-        </div>
+                    className
+                )}
+            >
+                Total MCQs: {totalMcqs}
+            </div>
+            {showLoading && <Loading />}
+        </>
     )
 }
 

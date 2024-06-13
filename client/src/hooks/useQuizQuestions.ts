@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
-import { Categories, MCQ } from "../types";
+import { Categories, MCQ, RequestModes } from "../types";
 
-export type RequestModes = 'TIMER' | 'NO-TIMER';
 
 type useQuizQuestionsParams = {
     defaultCategoryValue?: Categories,
@@ -17,12 +16,21 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
 
     const [initialRequest, setInitialRequest] = useState<boolean>(true);
 
+    const [isFetching, setIsFetching] = useState<boolean>(false);
+
+
     const fetchQuestions = useCallback(async () => {
         if (!category || !mcqCount) {
             setMcqList([]);
             return;
         }
+
+        if (isFetching) {
+            return;
+        }
+
         try {
+            setIsFetching(true);
             const res = await fetch('/api/quiz/questions/', {
                 method: 'POST',
                 headers: {
@@ -42,6 +50,9 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         catch (err) {
             console.log(err);
         }
+        finally {
+            setIsFetching(false);
+        }
     }, [mcqCount, category])
 
     const fetchTimedQuestions = useCallback(async () => {
@@ -49,8 +60,14 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
             setMcqList([]);
             return;
         }
+
+        if (isFetching) {
+            return;
+        }
+
         console.log('fetching timed questions');
         try {
+            setIsFetching(true);
             const res = await fetch('/api/quiz/questions/timer', {
                 method: 'POST',
                 headers: {
@@ -76,6 +93,9 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         catch (err) {
             console.log(err);
         }
+        finally {
+            setIsFetching(false);
+        }
     }, [variant, category, initialRequest])
 
 
@@ -96,6 +116,7 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         setMcqCount,
         variant,
         setVariant,
+        isFetching,
         timedRequests: {
             fetchTimedQuestions,
         }

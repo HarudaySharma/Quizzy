@@ -3,7 +3,7 @@ import { useMcqComponentContext } from '../../context/McqComponentContext'
 import { Timer } from 'lucide-react';
 
 const QuizTimer = () => {
-    const { timer, setTimer, variant } = useMcqComponentContext();
+    const { timer, setTimer } = useMcqComponentContext();
 
     useEffect(() => {
         if (timer === undefined || setTimer === undefined) {
@@ -19,11 +19,27 @@ const QuizTimer = () => {
     }, []);
 
 
-    if (variant === 'TEST' && timer !== null) {
+    if (timer !== null) {
         return (
-            <div>
+            <div
+                className="
+                    flex 
+                    text-lg
+                    font-bold
+                    tracking-wider
+                    gap-2
+                    relative
+                "
+            >
                 <Timer />
-                {timer}
+                <span
+                    className='
+                        relative
+                        bottom-px
+                    '
+                >
+                    {timer}
+                </span>
             </div>
 
         )

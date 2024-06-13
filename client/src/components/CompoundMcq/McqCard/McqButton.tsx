@@ -20,6 +20,7 @@ function McqButton({ className }: { className?: string }) {
                 p-4
                 text-gray-900
                 bg-lime-500
+                hover:bg-lime-400
             `,
                 className
             )}
