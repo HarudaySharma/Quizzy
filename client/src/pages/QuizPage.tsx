@@ -1,8 +1,8 @@
 import UserForm from '../components/UserForm'
-import useQuizQuestions, { RequestModes } from '../hooks/useQuizQuestions';
-import { ReactNode, useEffect, useState } from 'react';
+import useQuizQuestions  from '../hooks/useQuizQuestions';
+import { ReactNode, useEffect, useState, useCallback } from 'react';
 import CompoundMcq from '../components/CompoundMcq';
-import { Categories, VARIANT } from '../types';
+import { VARIANT, handleFormSubmitParams } from '../types';
 import QuizResult from '../components/QuizResult';
 import markedToCheckedQuestions from '../utils/markedToCheckedQuestions';
 import OverButtons from '../components/OverButtons';
@@ -12,13 +12,6 @@ import OverButtons from '../components/OverButtons';
  * responsibility to fetch mcqs
  * and fetch mcq whenever category or mcqCount are changed
  */
-
-export type handleFormSubmitParams = {
-    category: Categories;
-    mcqCount?: number;
-    requestMode: RequestModes;
-    timer?: number;
-}
 
 const QuizPage = () => {
 
@@ -39,10 +32,12 @@ const QuizPage = () => {
 
 
     // after user submits the form
-    const handleFormSubmit = ({ category, mcqCount, requestMode: variant, timer }: handleFormSubmitParams) => {
+    const handleFormSubmit = useCallback(({ category, mcqCount, requestMode, timer }: handleFormSubmitParams) => {
+
+        console.log({ category, mcqCount, requestMode, timer });
         setCategory(category);
-        if (variant === 'TIMER') {
-            console.log("timer", timer);
+
+        if (requestMode === 'TIMER') {
             setVariant('TIMER');
             setTime(timer);
         }
@@ -50,7 +45,8 @@ const QuizPage = () => {
             setVariant('NO-TIMER');
             setMcqCount(mcqCount);
         }
-    }
+    }, [setVariant, setCategory, setTime, setMcqCount]);
+
 
     // after the quiz has ended 
     // and user want's to retry with same questions
@@ -58,17 +54,20 @@ const QuizPage = () => {
         setRenderComponent(
             <CompoundMcq
                 mcqList={mcqList}
-                meta={<CompoundMcq.MetaData
-                    children={[
-                        <CompoundMcq.MetaData.TotalMcqs
-                            showLoading={isFetching}
-                        />,
-                        <div className='flex flex-row gap-2'>
-                            <CompoundMcq.MetaData.CorrectCount />
-                            <CompoundMcq.MetaData.InCorrectCount />
-                        </div>
-                    ]}
-                />}
+                meta={<>
+                    <CompoundMcq.MetaData
+                        children={<>
+                            <CompoundMcq.MetaData.TotalMcqs
+                                showLoading={isFetching}
+                            />
+                            <div className='flex flex-row gap-2'>
+                                <CompoundMcq.MetaData.CorrectCount />
+                                <CompoundMcq.MetaData.InCorrectCount />
+                            </div>
+                        </>}
+                    />
+                    <CompoundMcq.Timer />
+                </>}
                 onQuizOver={onQuizOver}
                 setUnvisitedQuestions={setUnvisitedQuestions}
                 time={time}
@@ -155,39 +154,46 @@ const QuizPage = () => {
             setRenderComponent(
                 <CompoundMcq
                     mcqList={mcqList}
-                    meta={<CompoundMcq.MetaData
-                        className={``}
-                        children={[
-                            <CompoundMcq.MetaData.TotalMcqs
-                                showLoading={isFetching}
-                            />,
-                            <div className='flex flex-wrap justify-center flex-row gap-2'>
-                                <CompoundMcq.MetaData.CorrectCount />
-                                <CompoundMcq.MetaData.InCorrectCount />
-                            </div>
-                        ]}
-                    />}
+                    meta={<>
+                        <CompoundMcq.MetaData
+                            className={``}
+                            children={<>
+                                <CompoundMcq.MetaData.TotalMcqs
+                                    showLoading={isFetching}
+                                />
+                                <div className='flex flex-wrap justify-center flex-row gap-2'>
+                                    <CompoundMcq.MetaData.CorrectCount />
+                                    <CompoundMcq.MetaData.InCorrectCount />
+                                </div>
+                            </>}
+                        />
+                    </>}
                     onQuizOver={onQuizOver}
                     setUnvisitedQuestions={setUnvisitedQuestions}
                     variant='QUIZ'
-                />)
+                />
+            )
         }
         if (variant === 'TIMER' && mcqList.length !== 0) {
+            console.log('here');
             setRenderComponent(
                 <>
                     <CompoundMcq
                         mcqList={mcqList}
-                        meta={<CompoundMcq.MetaData
-                            children={[
-                                <CompoundMcq.MetaData.TotalMcqs
-                                    showLoading={isFetching}
-                                />,
-                                <div className='flex flex-row gap-2'>
-                                    <CompoundMcq.MetaData.CorrectCount />
-                                    <CompoundMcq.MetaData.InCorrectCount />
-                                </div>
-                            ]}
-                        />}
+                        meta={<>
+                            <CompoundMcq.MetaData
+                                children={<>
+                                    <CompoundMcq.MetaData.TotalMcqs
+                                        showLoading={isFetching}
+                                    />
+                                    <div className='flex flex-row gap-2'>
+                                        <CompoundMcq.MetaData.CorrectCount />
+                                        <CompoundMcq.MetaData.InCorrectCount />
+                                    </div>
+                                </>}
+                            />
+                            <CompoundMcq.Timer />
+                        </>}
                         onQuizOver={onQuizOver}
                         variant='QUIZ'
                         setUnvisitedQuestions={setUnvisitedQuestions}
@@ -196,7 +202,7 @@ const QuizPage = () => {
                 </>
             )
         }
-    }, [variant, mcqList]);
+    }, [variant, mcqList, isFetching]);
 
     return (
         <div className='w-full h-screen flex items-center justify-center'>
@@ -214,3 +220,4 @@ const QuizPage = () => {
 }
 
 export default QuizPage
+

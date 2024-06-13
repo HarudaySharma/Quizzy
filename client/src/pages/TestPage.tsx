@@ -1,13 +1,12 @@
 import { ReactNode, useCallback, useEffect, useState } from 'react';
 import UserForm from '../components/UserForm'
 import CompoundMcq from '../components/CompoundMcq';
-import { CheckedQuestion, MarkedQuestion } from '../types';
+import { CheckedQuestion, MarkedQuestion, handleFormSubmitParams } from '../types';
 import QuizResult from '../components/QuizResult';
 import OverButtons from '../components/OverButtons';
 import useTestQuestions from '../hooks/useTestQuestions';
 import fetchCheckedAnswers from '../utils/fetchCheckedAnswers';
 import analyseCheckedQuestions from '../utils/analyseCheckedAnswers';
-import { handleFormSubmitParams } from './QuizPage';
 import { Button } from '../@/components/ui/button';
 
 
@@ -40,9 +39,9 @@ const TestPage = () => {
 
 
     const handleFormSubmit = useCallback(({ category, mcqCount, requestMode, timer }: handleFormSubmitParams) => {
-        console.log('here');
-        setVariant(requestMode);
+
         setCategory(category);
+
         if (requestMode === 'TIMER') {
             setVariant('TIMER');
             setTime(timer);
@@ -172,12 +171,12 @@ const TestPage = () => {
                 <CompoundMcq
                     mcqList={mcqList}
                     meta={<CompoundMcq.MetaData
-                        children={[
+                        children={<>
                             <CompoundMcq.MetaData.TotalMcqs
                                 showLoading={isFetching}
-                            />,
+                            />
                             <CompoundMcq.MetaData.AttemptedCount />
-                        ]}
+                        </>}
                     />}
                     onQuizOver={onQuizOver}
                     variant='TEST'
@@ -208,7 +207,7 @@ const TestPage = () => {
                 </>
             )
         }
-    }, [variant, mcqList]);
+    }, [variant, mcqList, isFetching]);
 
     return (
         <div className='w-full h-screen flex items-center justify-center'>

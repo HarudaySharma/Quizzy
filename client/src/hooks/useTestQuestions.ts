@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { Categories, MCQ } from "../types";
-import { RequestModes } from "./useQuizQuestions";
+import { Categories, MCQ, RequestModes } from "../types";
 
 const API_URL = import.meta.env.VITE_API_URL;
 

@@ -1,3 +1,5 @@
+export type RequestModes = 'TIMER' | 'NO-TIMER';
+
 export type OPTIONS = 'A' | 'B' | 'C' | 'D';
 
 export type VARIANT = 'TEST' | 'QUIZ';
@@ -43,4 +45,11 @@ export enum Categories {
     History = "HISTORY",
     Politics = "POLITICS",
     Sports = "SPORTS"
+}
+
+export type handleFormSubmitParams = {
+    category: Categories;
+    mcqCount?: number;
+    requestMode: RequestModes;
+    timer?: number;
 }
