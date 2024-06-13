@@ -21,7 +21,16 @@ export type TestResult = {
 }
 
 const TestPage = () => {
-    const { mcqList, setCategory, setMcqCount, category, variant, setVariant, WithTimer } = useTestQuestions({})
+    const {
+        mcqList,
+        setCategory,
+        setMcqCount,
+        category,
+        variant,
+        isFetching,
+        setVariant,
+        WithTimer
+    } = useTestQuestions({})
     const { fetchTimedQuestions } = WithTimer;
 
     const [renderComponent, setRenderComponent] = useState<ReactNode>()
@@ -52,7 +61,9 @@ const TestPage = () => {
                 meta={<>
                     <CompoundMcq.MetaData
                         children={<>
-                            <CompoundMcq.MetaData.TotalMcqs />
+                            <CompoundMcq.MetaData.TotalMcqs
+                                showLoading={isFetching}
+                            />
                             <CompoundMcq.MetaData.AttemptedCount />
                         </>}
                     />
@@ -78,6 +89,11 @@ const TestPage = () => {
 
     // to fetch more mcqs from the server if having a timed quiz 
     useEffect(() => {
+
+        if (isFetching) {
+            return;
+        }
+
         console.log(`unvisitedQuestions :${unvisitedQuestions}`);
         if (unvisitedQuestions && unvisitedQuestions <= 5) {
             fetchTimedQuestions();
@@ -157,7 +173,9 @@ const TestPage = () => {
                     mcqList={mcqList}
                     meta={<CompoundMcq.MetaData
                         children={[
-                            <CompoundMcq.MetaData.TotalMcqs />,
+                            <CompoundMcq.MetaData.TotalMcqs
+                                showLoading={isFetching}
+                            />,
                             <CompoundMcq.MetaData.AttemptedCount />
                         ]}
                     />}
@@ -174,7 +192,9 @@ const TestPage = () => {
                         meta={<>
                             <CompoundMcq.MetaData
                                 children={<>
-                                    <CompoundMcq.MetaData.TotalMcqs />
+                                    <CompoundMcq.MetaData.TotalMcqs
+                                        showLoading={isFetching}
+                                    />
                                     <CompoundMcq.MetaData.AttemptedCount />
                                 </>}
                             />

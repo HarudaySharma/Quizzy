@@ -19,12 +19,21 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
 
     const [initialRequest, setInitialRequest] = useState<boolean>(true);
 
+    const [isFetching, setIsFetching] = useState<boolean>(false);
+
+
     const fetchQuestions = useCallback(async () => {
         if (!category || !mcqCount) {
             setMcqList([]);
             return;
         }
+
+        if (isFetching) {
+            return;
+        }
+
         try {
+            setIsFetching(true);
             const res = await fetch(`${API_URL}/api/quiz/questions/`, {
                 method: 'POST',
                 headers: {
@@ -38,12 +47,16 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
                 return;
             }
             const data = await res.json() as MCQ[];
-            console.log(data);
+            //console.log(data);
+
             // set the MCQ LIST state
             setMcqList(data);
         }
         catch (err) {
             console.log(err);
+        }
+        finally {
+            setIsFetching(false);
         }
     }, [mcqCount, category])
 
@@ -52,8 +65,14 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
             setMcqList([]);
             return;
         }
+
+        if (isFetching) {
+            return;
+        }
+
         console.log('fetching timed questions');
         try {
+            setIsFetching(true);
             const res = await fetch(`${API_URL}/api/quiz/questions/timer`, {
                 method: 'POST',
                 headers: {
@@ -67,6 +86,7 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
                 return;
             }
             const data = await res.json() as MCQ[];
+
             // set the MCQ LIST state
             if (initialRequest) {
                 setInitialRequest(false);
@@ -79,6 +99,9 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         }
         catch (err) {
             console.log(err);
+        }
+        finally {
+            setIsFetching(false);
         }
     }, [variant, category, initialRequest])
 
@@ -100,6 +123,7 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         setMcqCount,
         variant,
         setVariant,
+        isFetching,
         timedRequests: {
             fetchTimedQuestions,
         }

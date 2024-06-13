@@ -16,14 +16,22 @@ const useTestQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
     const [mcqList, setMcqList] = useState<MCQ[]>([]);
     const [variant, setVariant] = useState<RequestModes | undefined>(defaultVariant);
 
-    const [initialRequest, setInitialRequest] = useState<boolean>(true);
+    const [initialRequest, setInitialRequest] = useState(true);
+
+    const [isFetching, setIsFetching] = useState(false);
 
     const fetchQuestions = useCallback(async () => {
         if (!category || !mcqCount) {
             setMcqList([]);
             return;
         }
+
+        if(isFetching) {
+            return;
+        }
+
         try {
+            setIsFetching(true);
             const res = await fetch(`${API_URL}/api/quiz/test/questions/`, {
                 method: 'POST',
                 headers: {
@@ -44,6 +52,9 @@ const useTestQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         catch (err) {
             console.log(err);
         }
+        finally {
+            setIsFetching(false);
+        }
     }, [mcqCount, category])
 
     const fetchTimedQuestions = useCallback(async () => {
@@ -51,7 +62,13 @@ const useTestQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
             setMcqList([]);
             return;
         }
+
+        if(isFetching) {
+            return;
+        }
+
         try {
+            setIsFetching(true);
             const res = await fetch(`${API_URL}/api/quiz/test/questions/timer`, {
                 method: 'POST',
                 headers: {
@@ -76,6 +93,9 @@ const useTestQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         catch (err) {
             console.log(err);
         }
+        finally {
+            setIsFetching(false);
+        }
     }, [variant, category, initialRequest])
 
     useEffect(() => {
@@ -96,6 +116,7 @@ const useTestQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         setCategory,
         setMcqCount,
         setVariant,
+        isFetching,
         WithTimer: {
             fetchTimedQuestions,
         }

@@ -6,7 +6,6 @@ import { Categories, VARIANT } from '../types';
 import QuizResult from '../components/QuizResult';
 import markedToCheckedQuestions from '../utils/markedToCheckedQuestions';
 import OverButtons from '../components/OverButtons';
-//import { TestResult } from './TestPage';
 
 
 /*
@@ -29,6 +28,7 @@ const QuizPage = () => {
         setMcqCount,
         variant,
         setVariant,
+        isFetching,
         timedRequests: {
             fetchTimedQuestions
         } } = useQuizQuestions({});
@@ -60,10 +60,12 @@ const QuizPage = () => {
                 mcqList={mcqList}
                 meta={<CompoundMcq.MetaData
                     children={[
-                        <CompoundMcq.MetaData.TotalMcqs key={"total mcq"} />,
+                        <CompoundMcq.MetaData.TotalMcqs
+                            showLoading={isFetching}
+                        />,
                         <div className='flex flex-row gap-2'>
-                            <CompoundMcq.MetaData.CorrectCount key={"correct count"} />
-                            <CompoundMcq.MetaData.InCorrectCount key={"incorrect count"} />
+                            <CompoundMcq.MetaData.CorrectCount />
+                            <CompoundMcq.MetaData.InCorrectCount />
                         </div>
                     ]}
                 />}
@@ -88,7 +90,12 @@ const QuizPage = () => {
 
     // to fetch more mcqs from the server if having a timed quiz 
     useEffect(() => {
-        console.log(`unvisitedQuestions :${unvisitedQuestions}`);
+        if (isFetching) {
+            return;
+        }
+
+        //console.log(`unvisitedQuestions :${unvisitedQuestions}`);
+
         if (unvisitedQuestions && unvisitedQuestions <= 5) {
             fetchTimedQuestions();
         }
@@ -151,10 +158,12 @@ const QuizPage = () => {
                     meta={<CompoundMcq.MetaData
                         className={``}
                         children={[
-                            <CompoundMcq.MetaData.TotalMcqs key={"total mcq"} />,
+                            <CompoundMcq.MetaData.TotalMcqs
+                                showLoading={isFetching}
+                            />,
                             <div className='flex flex-wrap justify-center flex-row gap-2'>
-                                <CompoundMcq.MetaData.CorrectCount key={"correct count"} />
-                                <CompoundMcq.MetaData.InCorrectCount key={"incorrect count"} />
+                                <CompoundMcq.MetaData.CorrectCount />
+                                <CompoundMcq.MetaData.InCorrectCount />
                             </div>
                         ]}
                     />}
@@ -170,10 +179,12 @@ const QuizPage = () => {
                         mcqList={mcqList}
                         meta={<CompoundMcq.MetaData
                             children={[
-                                <CompoundMcq.MetaData.TotalMcqs key={"total mcq"} />,
+                                <CompoundMcq.MetaData.TotalMcqs
+                                    showLoading={isFetching}
+                                />,
                                 <div className='flex flex-row gap-2'>
-                                    <CompoundMcq.MetaData.CorrectCount key={"correct count"} />
-                                    <CompoundMcq.MetaData.InCorrectCount key={"incorrect count"} />
+                                    <CompoundMcq.MetaData.CorrectCount />
+                                    <CompoundMcq.MetaData.InCorrectCount />
                                 </div>
                             ]}
                         />}
