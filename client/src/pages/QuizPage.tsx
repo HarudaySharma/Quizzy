@@ -1,5 +1,5 @@
 import UserForm from '../components/UserForm'
-import useQuizQuestions  from '../hooks/useQuizQuestions';
+import useQuizQuestions from '../hooks/useQuizQuestions';
 import { ReactNode, useEffect, useState, useCallback } from 'react';
 import CompoundMcq from '../components/CompoundMcq';
 import { VARIANT, handleFormSubmitParams } from '../types';

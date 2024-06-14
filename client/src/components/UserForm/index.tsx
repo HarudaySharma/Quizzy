@@ -17,7 +17,7 @@ export interface UserFormData {
 }
 
 interface Props {
-    onSubmit: (params :handleFormSubmitParams) => void;
+    onSubmit: (params: handleFormSubmitParams) => void;
     children: ReactNode | ReactNode[]
 }
 
@@ -32,13 +32,13 @@ const UserForm = ({
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        console.log(formData);
+        console.log({ formData });
         if (!formData)
             return;
         if (!formData.category || !formData.requestMode || (!formData.timer && !formData.mcqCount)) {
             return;
         }
-        console.log('form submitted');
+
         onSubmit({
             category: formData.category,
             requestMode: formData.requestMode,
@@ -48,14 +48,35 @@ const UserForm = ({
     }
 
     return (
-        <form
-            onSubmit={handleSubmit}
-            className='max-w-screen-xl mx-auto border-2 p-4 flex flex-col gap-12'
+        <div
+            className='
+                flex
+            '
         >
-            <UserFormContext.Provider value={{ formData, setFormData }}>
-                {children}
-            </UserFormContext.Provider>
-        </form>
+            <form
+                onSubmit={handleSubmit}
+                className='
+                    mx-auto
+                    p-4 
+                    flex 
+                    flex-col 
+                    basis-full
+                    flex-grow
+                    flex-wrap
+                    gap-12
+                    max-w-full
+                    m-2
+                    rounded-lg
+                    outline
+                    outline-2
+                    outline-gray-200
+                '
+            >
+                <UserFormContext.Provider value={{ formData, setFormData }}>
+                    {children}
+                </UserFormContext.Provider>
+            </form>
+        </div>
     )
 }
 

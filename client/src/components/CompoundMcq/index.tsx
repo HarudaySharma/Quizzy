@@ -160,6 +160,7 @@ const McqComponent = ({
                 content-center
                 items-center
                 bg-transparent 
+                max-w-[90vw]
                 sm:max-w-xl
                 w-11/12
                 mx-auto 
