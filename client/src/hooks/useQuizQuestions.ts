@@ -1,9 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
-import { Categories, MCQ } from "../types";
+import { Categories, MCQ, RequestModes } from "../types";
 
 const API_URL = import.meta.env.VITE_API_URL;
-
-export type RequestModes = 'TIMER' | 'NO-TIMER';
 
 type useQuizQuestionsParams = {
     defaultCategoryValue?: Categories,
