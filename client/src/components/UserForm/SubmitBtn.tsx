@@ -9,6 +9,7 @@ const SubmitBtn = () => {
     useEffect(() => {
         if (!formData)
             return;
+        console.log({ formData });
         if ((formData.timer || formData.mcqCount) && formData.category)
             setDisabled(false);
         else
@@ -19,8 +20,17 @@ const SubmitBtn = () => {
     return (
         <Button
             type='submit'
-            className='w-fit mx-auto py-8 px-12 text-xl uppercase cursor-pointer disabled:bg-gray-400'
             disabled={disabled}
+            className="
+                w-fit 
+                mx-auto
+                py-8
+                px-12 
+                text-xl 
+                uppercase 
+                cursor-pointer 
+                disabled:bg-gray-400
+            "
         >
             Start Quiz
         </Button>

@@ -5,7 +5,6 @@ import { Label } from '../../@/components/ui/label';
 
 const McqCountField = () => {
     const { formData, setFormData } = useUserFormContext();
-    //const [showLabel, setShowLabel] = useState(false);
     const [mcqCount, setMcqCount] = useState("");
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,14 +33,16 @@ const McqCountField = () => {
                     Number of Questions ?
                 </Label>
                 <Input
-                    className='p-4 mx-auto w-96 font-mono'
-                    // onBlur={() => setShowLabel(false)}
-                    // onFocus={() => setShowLabel(true)}
+                    className='
+                        p-4
+                        mx-auto 
+                        basis-11/12
+                        font-mono
+                    '
                     type='number'
                     id='mcqCount'
                     value={mcqCount}
                     onChange={handleChange}
-                   //placeholder={"Number of Questions ?"}
                 />
             </fieldset>
         )

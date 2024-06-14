@@ -8,10 +8,6 @@ const SetTimerField = () => {
     const [seconds, setSeconds] = useState('');
     const [minutes, setMinutes] = useState('');
 
-    //ui states
-    //const [showMinutesLabel, setShowMintuesLabel] = useState(false);
-    //const [showSecondsLabel, setShowSecondsLabel] = useState(false);
-
     useEffect(() => {
         const time = Number(minutes) * 60 + Number(seconds)
         setFormData({ ...formData, timer: time });
@@ -39,8 +35,8 @@ const SetTimerField = () => {
 
     if (formData?.requestMode === 'TIMER') {
         return (
-            <fieldset className='flex flex-col w-fit mx-auto gap-4'>
-                <fieldset className='flex flex-col gap-1 w-fit mx-auto'>
+            <fieldset className='flex flex-col w-full mx-auto gap-4'>
+                <fieldset className='flex flex-col w-full gap-1  mx-auto'>
                     <Label
                         className='w-fit py-2'
                         htmlFor='mcqCount'>
@@ -51,15 +47,17 @@ const SetTimerField = () => {
                         min={'0'}
                         max={'2'}
                         id={'timer-minutes'}
-                        //placeholder={"Minutes (0-2)"}
                         value={minutes}
-                        // onBlur={() => setShowMintuesLabel(false)}
-                        // onFocus={() => setShowMintuesLabel(true)}
                         onChange={handleMinutesChange}
-                        className='p-4 mx-auto w-96 font-mono'
+                        className='
+                            p-4 
+                            mx-auto 
+                            basis-11/12 
+                            font-mono
+                        '
                     />
                 </fieldset>
-                <fieldset className='flex flex-col w-fit gap-1 mx-auto'>
+                <fieldset className='flex flex-col w-full gap-1 mx-auto'>
                     <Label
                         className='w-fit py-2'
                         htmlFor='mcqCount'
@@ -71,12 +69,14 @@ const SetTimerField = () => {
                         min={'0'}
                         max={'60'}
                         id={'timer-seconds'}
-                        //placeholder={"Seconds (0-60)"}
                         value={seconds}
-                        //onBlur={() => setShowSecondsLabel(false)}
-                        //onFocus={() => setShowSecondsLabel(true)}
                         onChange={handleSecondsChange}
-                        className='p-4 mx-auto w-96 font-mono'
+                        className='
+                            p-4 
+                            mx-auto 
+                            basis-11/12 
+                            font-mono
+                        '
                     />
                 </fieldset>
             </fieldset>

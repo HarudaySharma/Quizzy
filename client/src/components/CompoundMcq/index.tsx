@@ -3,15 +3,12 @@ import McqCard from './McqCard';
 import { CompoundMcqContext } from '../../context/McqComponentContext';
 import { MCQ, MarkedQuestion, OPTIONS, VARIANT } from '../../types';
 import McqComponentMetaData from './McqComponentMetaData';
-//import { SimpleResult } from '../../pages/QuizPage';
-//import { TestResult } from '../../pages/TestPage';
 import QuizTimer from './QuizTimer';
 import { Button } from '../../@/components/ui/button';
 
 // will take mcqList, and setter to have all the markedAnswers at last,
 // checked Answers
 // what to show in QuizResult will be controlled by the Parent component of this one
-
 
 interface McqComponentProps {
     mcqList: MCQ[];
@@ -154,7 +151,6 @@ const McqComponent = ({
         variant: variant,
     }
 
-    //<h3 className="text-md uppercase "> Questions </h3>
     return (
         <div
             className={`
@@ -164,6 +160,7 @@ const McqComponent = ({
                 content-center
                 items-center
                 bg-transparent 
+                max-w-[90vw]
                 sm:max-w-xl
                 w-11/12
                 mx-auto 

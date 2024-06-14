@@ -77,8 +77,6 @@ const McqCard = ({
                 className='
                     flex
                     flex-col
-                    flex-wrap
-
                 '
             >
                 <CardHeader className='flex'>
