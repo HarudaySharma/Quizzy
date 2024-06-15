@@ -1,11 +1,13 @@
 import UserForm from '../components/UserForm'
-import useQuizQuestions  from '../hooks/useQuizQuestions';
+import useQuizQuestions from '../hooks/useQuizQuestions';
 import { ReactNode, useEffect, useState, useCallback } from 'react';
 import CompoundMcq from '../components/CompoundMcq';
 import { VARIANT, handleFormSubmitParams } from '../types';
 import QuizResult from '../components/QuizResult';
 import markedToCheckedQuestions from '../utils/markedToCheckedQuestions';
 import OverButtons from '../components/OverButtons';
+import changeLayoutColor from '../utils/changeCssVariables';
+import clsx from 'clsx';
 
 
 /*
@@ -30,6 +32,12 @@ const QuizPage = () => {
     const [unvisitedQuestions, setUnvisitedQuestions] = useState<number | undefined>(undefined);
     const [time, setTime] = useState<number | undefined>(undefined);
 
+    const [pageHeight, setPageHeight] = useState('h-screen');
+
+
+    useEffect(() => {
+        changeLayoutColor('white');
+    }, []);
 
     // after user submits the form
     const handleFormSubmit = useCallback(({ category, mcqCount, requestMode, timer }: handleFormSubmitParams) => {
@@ -105,6 +113,8 @@ const QuizPage = () => {
     const onQuizOver = (result: any) => {
         //setInitialRequest(true);
 
+        setPageHeight('');
+
         if (result.variant as VARIANT === 'TEST')
             return null;
 
@@ -134,6 +144,7 @@ const QuizPage = () => {
     // what UI to render 
     useEffect(() => {
         if (variant === undefined) {
+
             setRenderComponent(
                 <>
                     <h1 className="text-3xl text-center font-bold">
@@ -151,6 +162,9 @@ const QuizPage = () => {
                 </>)
         }
         if (variant === 'NO-TIMER' && mcqList.length !== 0) {
+
+            setPageHeight('h-screen');
+
             setRenderComponent(
                 <CompoundMcq
                     mcqList={mcqList}
@@ -175,7 +189,7 @@ const QuizPage = () => {
             )
         }
         if (variant === 'TIMER' && mcqList.length !== 0) {
-            console.log('here');
+            
             setRenderComponent(
                 <>
                     <CompoundMcq
@@ -205,13 +219,21 @@ const QuizPage = () => {
     }, [variant, mcqList, isFetching]);
 
     return (
-        <div className='w-full h-screen flex items-center justify-center'>
+        <div className={clsx(`
+                w-full  
+                flex 
+                items-center 
+                justify-center
+            `,
+                `sm:${pageHeight}`
+            )}
+        >
             <div
                 className="
-                flex 
-                flex-col 
-                gap-4
-            "
+                    flex 
+                    flex-col 
+                    gap-4
+                "
             >
                 {renderComponent}
             </div>

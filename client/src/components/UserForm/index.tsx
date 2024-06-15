@@ -64,8 +64,10 @@ const UserForm = ({
                     gap-12
                     max-w-full
                     m-2
-                    border-2
-                    border-black
+                    rounded-lg
+                    outline
+                    outline-2
+                    outline-gray-200
                 '
             >
                 <UserFormContext.Provider value={{ formData, setFormData }}>

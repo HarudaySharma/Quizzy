@@ -8,6 +8,8 @@ import useTestQuestions from '../hooks/useTestQuestions';
 import fetchCheckedAnswers from '../utils/fetchCheckedAnswers';
 import analyseCheckedQuestions from '../utils/analyseCheckedAnswers';
 import { Button } from '../@/components/ui/button';
+import changeLayoutColor from '../utils/changeCssVariables';
+import clsx from 'clsx';
 
 
 /*
@@ -28,15 +30,17 @@ const TestPage = () => {
         variant,
         isFetching,
         setVariant,
-        WithTimer
+        WithTimer: {
+            fetchTimedQuestions,
+        }
     } = useTestQuestions({})
-    const { fetchTimedQuestions } = WithTimer;
 
     const [renderComponent, setRenderComponent] = useState<ReactNode>()
 
     const [unvisitedQuestions, setUnvisitedQuestions] = useState<number | undefined>(undefined);
     const [time, setTime] = useState<number | undefined>(undefined);
 
+    const [pageHeight, setPageHeight] = useState('h-screen');
 
     const handleFormSubmit = useCallback(({ category, mcqCount, requestMode, timer }: handleFormSubmitParams) => {
 
@@ -86,6 +90,10 @@ const TestPage = () => {
         setVariant(undefined);
     }
 
+    useEffect(() => {
+        changeLayoutColor('white');
+    }, []);
+
     // to fetch more mcqs from the server if having a timed quiz 
     useEffect(() => {
 
@@ -104,7 +112,11 @@ const TestPage = () => {
     const onQuizOver = async ({ markedQuestions, totalMcqs }: TestResult) => {
         if (!category)
             return;
+
+        setPageHeight('');
+
         let checkedQuestions: CheckedQuestion[];
+
         try {
             checkedQuestions = await fetchCheckedAnswers(category, markedQuestions);
         }
@@ -210,13 +222,21 @@ const TestPage = () => {
     }, [variant, mcqList, isFetching]);
 
     return (
-        <div className='w-full h-screen flex items-center justify-center'>
+        <div className={clsx(`
+                w-full  
+                flex 
+                items-center 
+                justify-center
+            `,
+            `sm:${pageHeight}`
+        )}
+        >
             <div
                 className="
-                flex 
-                flex-col 
-                gap-4
-            "
+                    flex 
+                    flex-col 
+                    gap-4
+                "
             >
                 {renderComponent}
             </div>

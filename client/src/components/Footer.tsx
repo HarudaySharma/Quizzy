@@ -9,8 +9,6 @@ const Footer = () => {
                 bg-gray-200
                 border-t
                 border-gray-300
-                fixed
-                bottom-0
                 w-full 
                 text-center 
                 py-4
