@@ -1,27 +1,17 @@
 import { useNavigate } from "react-router";
 import { Button } from "../@/components/ui/button"
 import McqImage from "../assets/mcq-image.png"
-import Logo from "../assets/logo.png"
+import { useEffect } from "react";
+import changeLayoutColor from "../utils/changeCssVariables";
 
 const HomePage = () => {
     const navigate = useNavigate();
 
+    useEffect(() => {
+        changeLayoutColor('primary');
+    }, []);
+
     return (
-        <div>
-            <img
-                src={Logo}
-                className="
-                    top-2                            
-                    left-2                          
-                    object-cover                    
-                    w-16                            
-                    rounded-full                    
-                    h-16                            
-                    fixed                           
-                    z-10                            
-                    outline-offset-2                
-                "
-            />
             <div
                 className="
                     bg-page-primaryColor
@@ -152,7 +142,6 @@ const HomePage = () => {
                     </div>
                 </div>
             </div >
-        </div>
     )
 }
 

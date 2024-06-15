@@ -27,9 +27,12 @@ const SubmitBtn = () => {
                 py-8
                 px-12 
                 text-xl 
+                tracking-wider
                 uppercase 
                 cursor-pointer 
-                disabled:bg-gray-400
+                bg-sky-500
+                hover:bg-sky-400
+                disabled:bg-sky-300
             "
         >
             Start Quiz

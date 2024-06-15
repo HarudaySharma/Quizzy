@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useMcqComponentContext } from "../../../../context/McqComponentContext";
-import Loading from "../../../ui/Loading";
+import Loader from "../../../ui/Loader";
 
 interface TotalMcqsProps {
     showLoading?: boolean;
@@ -27,7 +27,7 @@ const TotalMcqs = ({ showLoading, className }: TotalMcqsProps) => {
             >
                 Total MCQs: {totalMcqs}
             </div>
-            {showLoading && <Loading />}
+            {showLoading && <Loader />}
         </>
     )
 }

@@ -18,6 +18,7 @@ module.exports = {
         },
         extend: {
             colors: {
+                layoutBg: 'hsl(var(--layout-background))',
                 page: {
                     primaryColor: "#D4D9DD",
                 },

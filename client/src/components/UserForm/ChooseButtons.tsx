@@ -76,6 +76,7 @@ const ChooseButtons = () => {
                     className="
                         underline
                         decoration-customGreen
+                        mx-1
                     "
                 >
                     "MCQ Count"
@@ -85,6 +86,7 @@ const ChooseButtons = () => {
                     className="
                         underline
                         decoration-customGreen
+                        mx-1
                     "
                 >
                     "Timer"
