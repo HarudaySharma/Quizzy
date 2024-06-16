@@ -11,14 +11,14 @@ import { Button } from '../@/components/ui/button';
 import changeLayoutColor from '../utils/changeCssVariables';
 import clsx from 'clsx';
 
-
 /*
  * responsibility to fetch mcqs
  * and fetch mcq whenever category or mcqCount are changed
  */
 export type TestResult = {
-    markedQuestions: MarkedQuestion[],
-    totalMcqs: number,
+    markedQuestions: MarkedQuestion[];
+    totalMcqs: number;
+    attemptedCount: number;
 }
 
 const TestPage = () => {
@@ -61,16 +61,19 @@ const TestPage = () => {
         setRenderComponent(
             <CompoundMcq
                 mcqList={mcqList}
+                category={category!}
                 meta={<>
-                    <CompoundMcq.MetaData
-                        children={<>
-                            <CompoundMcq.MetaData.TotalMcqs
-                                showLoading={isFetching}
-                            />
+                    <CompoundMcq.MetaData>
+                        <CompoundMcq.MetaData.TotalMcqs
+                            showLoading={isFetching}
+                        />
+                        <div className='flex flex-row gap-2'>
                             <CompoundMcq.MetaData.AttemptedCount />
-                        </>}
-                    />
+                            <CompoundMcq.MetaData.UnAttemptedCount />
+                        </div>
+                    </CompoundMcq.MetaData>
                     <CompoundMcq.Timer />
+                    <CompoundMcq.Category />
                 </>}
                 onQuizOver={onQuizOver}
                 setUnvisitedQuestions={setUnvisitedQuestions}
@@ -109,7 +112,8 @@ const TestPage = () => {
 
     // function to be executed after quiz is over
     // shows the result and reset any state that need to be reset
-    const onQuizOver = async ({ markedQuestions, totalMcqs }: TestResult) => {
+    const onQuizOver = async ({ markedQuestions, totalMcqs, attemptedCount }: TestResult) => {
+
         if (!category)
             return;
 
@@ -127,36 +131,40 @@ const TestPage = () => {
                 <div className='h-screen grid justify-center items-center'>
                     <div>
                         <div className='text-red-400 bold'> failed to fetch result</div>
-                        <Button
+                        {/*<Button
                             className={`w-fit py-4 px-12`}
                             onClick={() => onQuizOver({ markedQuestions, totalMcqs })}>
                             Retry
-                        </Button>
+                        </Button>*/}
                     </div>
                 </div>
             );
             return
         }
+
         const { correctCount, inCorrectCount } = analyseCheckedQuestions(checkedQuestions);
+
         setRenderComponent(<>
             <QuizResult
+                category={category}
                 checkedQuestions={checkedQuestions}
                 correctCount={correctCount}
                 inCorrectCount={inCorrectCount}
                 totalMcqs={totalMcqs}
+                attemptedCount={attemptedCount}
             />
             <OverButtons
                 className='flex flex-row justify-center gap-x-12'
-                children={[
-                    <OverButtons.RetryButton
-                        className='bg-gray-50 text-black'
-                        onClickHandler={handleRetry}
-                    />,
-                    <OverButtons.ResetButton
-                        className='bg-gray-50 text-black'
-                        onClickHandler={handleReset}
-                    />
-                ]} />
+            >
+                <OverButtons.RetryButton
+                    className='bg-gray-50 text-black'
+                    onClickHandler={handleRetry}
+                />
+                <OverButtons.ResetButton
+                    className='bg-gray-50 text-black'
+                    onClickHandler={handleReset}
+                />
+            </OverButtons >
         </>);
     }
 
@@ -182,14 +190,19 @@ const TestPage = () => {
             setRenderComponent(
                 <CompoundMcq
                     mcqList={mcqList}
-                    meta={<CompoundMcq.MetaData
-                        children={<>
+                    category={category!}
+                    meta={<>
+                        <CompoundMcq.MetaData>
                             <CompoundMcq.MetaData.TotalMcqs
                                 showLoading={isFetching}
                             />
-                            <CompoundMcq.MetaData.AttemptedCount />
-                        </>}
-                    />}
+                            <div className='flex flex-row gap-2'>
+                                <CompoundMcq.MetaData.AttemptedCount />
+                                <CompoundMcq.MetaData.UnAttemptedCount />
+                            </div>
+                        </CompoundMcq.MetaData>
+                        <CompoundMcq.Category />
+                    </>}
                     onQuizOver={onQuizOver}
                     variant='TEST'
                     setUnvisitedQuestions={setUnvisitedQuestions}
@@ -197,27 +210,27 @@ const TestPage = () => {
         }
         if (variant === 'TIMER' && mcqList.length !== 0) {
             setRenderComponent(
-                <>
-                    <CompoundMcq
-                        mcqList={mcqList}
-                        meta={<>
-                            <CompoundMcq.MetaData
-                                children={<>
-                                    <CompoundMcq.MetaData.TotalMcqs
-                                        showLoading={isFetching}
-                                    />
-                                    <CompoundMcq.MetaData.AttemptedCount />
-                                </>}
+                <CompoundMcq
+                    mcqList={mcqList}
+                    category={category!}
+                    meta={<>
+                        <CompoundMcq.MetaData>
+                            <CompoundMcq.MetaData.TotalMcqs
+                                showLoading={isFetching}
                             />
-                            <CompoundMcq.Timer />
-                        </>}
-                        onQuizOver={onQuizOver}
-                        variant='TEST'
-                        setUnvisitedQuestions={setUnvisitedQuestions}
-                        time={time}
-                    />
-                </>
-            )
+                            <div className='flex flex-row gap-2'>
+                                <CompoundMcq.MetaData.AttemptedCount />
+                                <CompoundMcq.MetaData.UnAttemptedCount />
+                            </div>
+                        </CompoundMcq.MetaData>
+                        <CompoundMcq.Category />
+                        <CompoundMcq.Timer />
+                    </>}
+                    onQuizOver={onQuizOver}
+                    variant='TEST'
+                    setUnvisitedQuestions={setUnvisitedQuestions}
+                    time={time}
+                />)
         }
     }, [variant, mcqList, isFetching]);
 

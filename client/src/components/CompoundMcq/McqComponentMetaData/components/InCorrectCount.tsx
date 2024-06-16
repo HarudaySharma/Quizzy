@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { useMcqComponentContext } from "../../../../context/McqComponentContext";
+import { GoXCircle } from "react-icons/go";
 
 const InCorrectCount = ({ className }: { className?: string }) => {
     const { inCorrectCount, variant } = useMcqComponentContext();
@@ -11,17 +12,33 @@ const InCorrectCount = ({ className }: { className?: string }) => {
     return (
         <div
             className={clsx(`
-                p-4
+                p-2
+                sm:p-4
                 bg-red-50
                 rounded-md
                 outline
+                size-fit
                 outline-1
                 outline-red-400
+                flex 
+                flex-row
+                gap-2
             `,
                 className
             )}
+            title='In-Correct Count'
         >
-            InCorrect: {inCorrectCount}
+            <GoXCircle
+                className='
+                    text-red-700
+                    inline-block
+                    w-6
+                    h-6
+                    sm:w-8
+                    sm:h-8
+                '
+            />
+            <span>{inCorrectCount}</span>
         </div>
     )
 }
