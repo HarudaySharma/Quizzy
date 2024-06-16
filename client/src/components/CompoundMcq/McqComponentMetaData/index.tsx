@@ -4,6 +4,7 @@ import TotalMcqs from "./components/TotalMcqs";
 import CorrectCount from "./components/CorrectCount";
 import InCorrectCount from "./components/InCorrectCount";
 import AttemptedCount from "./components/AttemptedCount";
+import UnAttemptedCount from "./components/UnAttemptedCount";
 
 interface Props {
     children: ReactNode;
@@ -15,7 +16,6 @@ const McqComponentMetaData = ({ children, className }: Props) => {
         <div
             className={clsx(`
                 w-full
-                m-4
                 ring
                 ring-gray-500
                 rounded-md
@@ -24,12 +24,13 @@ const McqComponentMetaData = ({ children, className }: Props) => {
                 flex 
                 flex-row 
                 flex-wrap
-                justify-center
-                sm:justify-between
+                justify-between
                 tracking-wider
                 font-bold
                 gap-4
                 backdrop-blur-md 
+                text-sm
+                sm:text-lg
             `,
                 className
             )}
@@ -43,5 +44,6 @@ McqComponentMetaData.TotalMcqs = TotalMcqs;
 McqComponentMetaData.CorrectCount = CorrectCount;
 McqComponentMetaData.InCorrectCount = InCorrectCount;
 McqComponentMetaData.AttemptedCount = AttemptedCount;
+McqComponentMetaData.UnAttemptedCount = UnAttemptedCount;
 
 export default McqComponentMetaData;

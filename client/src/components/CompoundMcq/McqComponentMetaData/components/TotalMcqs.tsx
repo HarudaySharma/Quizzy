@@ -11,15 +11,27 @@ const TotalMcqs = ({ showLoading, className }: TotalMcqsProps) => {
     const { totalMcqs } = useMcqComponentContext();
 
     return (
-        <>
+        <div className="
+                flex 
+                flex-wrap 
+                justify-center
+                items-center
+                flex-col
+                sm:flex-row
+                gap-2
+                relative
+            "
+        >
             <div
                 className={clsx(`
-                p-4
+                p-2
+                sm:p-4
                 bg-gray-50
                 rounded-md
                 outline
                 outline-1
                 outline-gray-400
+                size-fit
 
             `,
                     className
@@ -27,8 +39,16 @@ const TotalMcqs = ({ showLoading, className }: TotalMcqsProps) => {
             >
                 Total MCQs: {totalMcqs}
             </div>
-            {showLoading && <Loader />}
-        </>
+            {showLoading &&
+                <Loader
+                    className="
+                        relative
+                        top-[1px]
+                        sm:top-3
+                    "
+                />
+            }
+        </div>
     )
 }
 

@@ -12,7 +12,24 @@ const ResetButton = (props: Props) => {
     }
 
     return (
-        <Button {...props} onClick={handleOnClick} value={'Retry'}>
+        <Button
+            {...props}
+            onClick={handleOnClick}
+            value={'Retry'}
+            className="
+                bg-customGreen
+                text-white
+                font-bold
+                text-lg
+                hover:bg-button-green
+                md:flex-grow
+                xl:flex-grow-0
+                tracking-wider
+                rounded-lg
+                p-4
+                hover:bg-customGreen-light1
+            "
+        >
             Reset
         </Button>
 

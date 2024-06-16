@@ -118,6 +118,7 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
     return {
         mcqList,
         setCategory,
+        category,
         setMcqCount,
         variant,
         setVariant,

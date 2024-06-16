@@ -1,10 +1,11 @@
 import { ReactNode, useCallback, useEffect, useState } from 'react'
 import McqCard from './McqCard';
 import { CompoundMcqContext } from '../../context/McqComponentContext';
-import { MCQ, MarkedQuestion, OPTIONS, VARIANT } from '../../types';
+import { Categories, MCQ, MarkedQuestion, OPTIONS, VARIANT } from '../../types';
 import McqComponentMetaData from './McqComponentMetaData';
 import QuizTimer from './QuizTimer';
 import { Button } from '../../@/components/ui/button';
+import Category from './Category';
 
 // will take mcqList, and setter to have all the markedAnswers at last,
 // checked Answers
@@ -12,6 +13,7 @@ import { Button } from '../../@/components/ui/button';
 
 interface McqComponentProps {
     mcqList: MCQ[];
+    category: Categories;
     meta: ReactNode;
     setUnvisitedQuestions: React.Dispatch<React.SetStateAction<number | undefined>>;
     variant: VARIANT;
@@ -21,11 +23,12 @@ interface McqComponentProps {
 
 const McqComponent = ({
     mcqList,
+    category,
     meta,
     onQuizOver,
     setUnvisitedQuestions,
     variant,
-    time
+    time,
 }: McqComponentProps) => {
 
     const [mcqIndex, setMcqIndex] = useState(0);
@@ -45,7 +48,8 @@ const McqComponent = ({
             if (variant === 'TEST') {
                 onQuizOver({
                     markedQuestions,
-                    totalMcqs: mcqList.length
+                    totalMcqs: mcqList.length,
+                    attemptedCount: attempted
                 })
             }
             if (variant === 'QUIZ') {
@@ -53,7 +57,8 @@ const McqComponent = ({
                     markedQuestions,
                     correctCount,
                     inCorrectCount,
-                    totalMcqs: mcqList.length
+                    totalMcqs: mcqList.length,
+                    attemptedCount: attempted
                 });
             }
         }
@@ -71,13 +76,15 @@ const McqComponent = ({
                     markedQuestions,
                     correctCount,
                     inCorrectCount,
-                    totalMcqs: mcqList.length
+                    totalMcqs: mcqList.length,
+                    attemptedCount: attempted
                 });
             }
             if (variant === 'TEST') {
                 onQuizOver({
                     markedQuestions,
-                    totalMcqs: mcqList.length
+                    totalMcqs: mcqList.length,
+                    attemptedCount: attempted
                 });
             }
         }
@@ -126,7 +133,8 @@ const McqComponent = ({
         if (variant === 'TEST') {
             onQuizOver({
                 markedQuestions,
-                totalMcqs: mcqList.length
+                totalMcqs: mcqList.length,
+                attemptedCount: attempted
             });
         }
         if (variant === 'QUIZ') {
@@ -134,13 +142,15 @@ const McqComponent = ({
                 markedQuestions,
                 correctCount,
                 inCorrectCount,
-                totalMcqs: mcqList.length
+                totalMcqs: mcqList.length,
+                attemptedCount: attempted
             });
         }
     }
 
     const contextValues = {
         mcq: mcqList[mcqIndex],
+        category: category,
         timer: timer,
         setTimer: setTimer,
         totalMcqs: mcqList.length,
@@ -156,7 +166,6 @@ const McqComponent = ({
             className={`
                 flex
                 flex-col
-                gap-2
                 content-center
                 items-center
                 bg-transparent 
@@ -164,6 +173,7 @@ const McqComponent = ({
                 sm:max-w-xl
                 w-11/12
                 mx-auto 
+                gap-4
             `}
         >
             <CompoundMcqContext.Provider value={contextValues}>
@@ -197,6 +207,7 @@ const McqComponent = ({
 }
 
 McqComponent.MetaData = McqComponentMetaData;
+McqComponent.Category = Category;
 McqComponent.Timer = QuizTimer;
 
 export default McqComponent
