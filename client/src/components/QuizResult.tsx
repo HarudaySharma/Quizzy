@@ -1,7 +1,7 @@
-import { Card, CardContent, CardFooter, CardHeader } from '../@/components/ui/card';
+import { Card, CardContent, CardHeader } from '../@/components/ui/card';
 import { CheckedQuestion } from '../types';
-import { ArrowLeft, CheckIcon, LayoutListIcon, XIcon } from 'lucide-react';
-import { Categories } from '../types/MCQ';
+import { LayoutListIcon } from 'lucide-react';
+import { Categories } from '../types/index';
 import clsx from 'clsx';
 import { BiCategory } from 'react-icons/bi';
 import { GoCheckCircle, GoXCircle } from 'react-icons/go';
@@ -91,7 +91,7 @@ const QuizResult = ({
                                 <div className='w-fit font-bold self-center'>
                                     {idx + 1}.
                                 </div>
-                                <div
+                                {Boolean(obj.question) && <div
                                     className='
                                         w-fit 
                                         flex-start
@@ -103,7 +103,23 @@ const QuizResult = ({
                                     '
                                 >
                                     {obj.question}
-                                </div>
+                                </div>}
+                                {Boolean(obj.image) &&
+                                    <img
+                                        src={`http://localhost:3000${obj.image}`}
+                                        alt="image"
+                                        className="
+                                            w-[16em]
+                                            h-[8em]
+                                            sm:w-[24em]
+                                            sm:h-[12em]
+                                            outline
+                                            outline-1
+                                            outline-gray-400
+                                            rounded-md
+                                            p-2
+                                        "
+                                    />}
                             </CardHeader>
                             <CardContent
                                 className='

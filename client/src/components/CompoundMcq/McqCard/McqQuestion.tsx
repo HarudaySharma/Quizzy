@@ -1,12 +1,16 @@
 import clsx from "clsx";
 import { CardTitle } from "../../../@/components/ui/card";
-import { useMcqComponentContext } from "../../../context/McqComponentContext";
+import { useMcqCardContext } from "../../../context/MCQCardContext";
 
 function McqQuestion({ className }: { className?: string }) {
-    const { mcq } = useMcqComponentContext();
+    const { question } = useMcqCardContext();
+
+    if (!question)
+        return null;
+
     return (
-        <CardTitle 
-        className={clsx(`
+        <CardTitle
+            className={clsx(`
                 text-md
                 text-gray-900
                 leading-6
@@ -18,12 +22,12 @@ function McqQuestion({ className }: { className?: string }) {
                 rounded-md
                 p-2
             `,
-            className
-        )}
-            >
-            { mcq.question }
+                className
+            )}
+        >
+            {question}
         </ CardTitle>
-            )
+    )
 }
 
-            export default McqQuestion;
+export default McqQuestion;

@@ -3,7 +3,8 @@ import { Request } from "express";
 export type Options = 'A' | 'B' | 'C' | 'D';
 
 export interface MCQ {
-    question: string,
+    question?: string,
+    image?: string,
     A: string,
     B: string,
     C: string,
@@ -12,7 +13,8 @@ export interface MCQ {
 }
 
 export interface MarkedQuestion {
-    question: string;
+    question?: string;
+    image?: string;
     userAnswer: {
         option: Options,
         text: string
@@ -20,7 +22,8 @@ export interface MarkedQuestion {
 }
 
 export interface CheckedQuestion {
-    question: string;
+    question?: string;
+    image?: string;
     correctAnswer: {
         option: Options,
         text: string

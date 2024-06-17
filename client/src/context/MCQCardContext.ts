@@ -2,7 +2,8 @@ import { createContext, useContext } from "react";
 import { OPTIONS, VARIANT } from "../types";
 
 export type McqCardContextTypes = {
-    question: string,
+    question?: string,
+    image?: string,
     options: {
         A: string,
         B: string,
@@ -26,6 +27,7 @@ export const useMcqCardContext = () => {
     }
     return {
         question: context.question,
+        image: context.image,
         options: context.options,
         selectedOption: context.selectedOption,
         optionChooseHandler: context.optionChooseHandler,

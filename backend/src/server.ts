@@ -14,6 +14,7 @@ const app: Application = express();
 
 const PORT: string = process.env.PORT || "3000";
 
+app.use(express.static('files/images'));
 
 app.listen(PORT, () => { 
     console.log(`server listening on http://localhost:${PORT}`);

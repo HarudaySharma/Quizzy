@@ -7,6 +7,7 @@ import McqQuestion from './McqQuestion';
 import McqOption from './McqOption';
 import McqNextButton from './McqNextButton';
 import McqPrevButton from './McqPrevButton';
+import McqImage from './McqImage';
 
 interface Props {
     header: ReactNode;
@@ -61,6 +62,7 @@ const McqCard = ({
 
     const contextValues: McqCardContextTypes = {
         question: mcq.question,
+        image: mcq.image,
         options: {
             A: mcq.A,
             B: mcq.B,
@@ -104,6 +106,7 @@ const McqCard = ({
 }
 
 McqCard.Question = McqQuestion;
+McqCard.Image = McqImage;
 McqCard.Option = McqOption;
 McqCard.NextButton = McqNextButton;
 McqCard.PrevButton = McqPrevButton;
