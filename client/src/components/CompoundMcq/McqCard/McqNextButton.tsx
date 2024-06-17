@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { Button } from "../../../@/components/ui/button";
 import { useMcqCardContext } from "../../../context/MCQCardContext";
-import { ArrowRightIcon } from "lucide-react";
+import { FaArrowRight } from "react-icons/fa6";
 
 function McqButton({ className }: { className?: string }) {
     const { selectedOption } = useMcqCardContext();
@@ -25,7 +25,7 @@ function McqButton({ className }: { className?: string }) {
             )}
         >
             <span>Next</span>
-            <ArrowRightIcon
+            <FaArrowRight
                 size={16}
                 className="
                     relative

@@ -2,10 +2,11 @@ import React, { ReactNode, useState } from 'react'
 import { useMcqComponentContext } from '../../../context/McqComponentContext';
 import { OPTIONS } from '../../../types';
 import { Card, CardContent, CardFooter, CardHeader } from '../../../@/components/ui/card';
-import { McqCardContext, McqComponentContextTypes } from '../../../context/MCQCardContext';
+import { McqCardContext, McqCardContextTypes } from '../../../context/MCQCardContext';
 import McqQuestion from './McqQuestion';
 import McqOption from './McqOption';
-import McqButton from './McqButton';
+import McqNextButton from './McqNextButton';
+import McqPrevButton from './McqPrevButton';
 
 interface Props {
     header: ReactNode;
@@ -13,11 +14,13 @@ interface Props {
     options: ReactNode;
     getCorrectOption?: () => OPTIONS;
     answerSubmitHandler: (markedOption: OPTIONS) => void;
+    prevButtonClickHandler: () => void;
 }
 
 const McqCard = ({
     getCorrectOption,
     answerSubmitHandler,
+    prevButtonClickHandler,
     header,
     footer,
     options,
@@ -56,7 +59,7 @@ const McqCard = ({
         setCorrectOption(null);
     }
 
-    const contextValues: McqComponentContextTypes = {
+    const contextValues: McqCardContextTypes = {
         question: mcq.question,
         options: {
             A: mcq.A,
@@ -65,6 +68,7 @@ const McqCard = ({
             D: mcq.D
         },
         optionChooseHandler,
+        prevButtonClickHandler,
         selectedOption,
         optionChoosed: null,
         correctOption,
@@ -101,7 +105,8 @@ const McqCard = ({
 
 McqCard.Question = McqQuestion;
 McqCard.Option = McqOption;
-McqCard.SubmitButton = McqButton;
+McqCard.NextButton = McqNextButton;
+McqCard.PrevButton = McqPrevButton;
 
 export default McqCard;
 

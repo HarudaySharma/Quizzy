@@ -56,8 +56,6 @@ function McqOption({ className, option }: { className?: string, option: OPTIONS 
     }, [bold, color]);
 
     useEffect(() => {
-        console.log({ selectedOption, correctOption });
-
         // reset to default 
         if (selectedOption === null) {
             setColor('gray');
