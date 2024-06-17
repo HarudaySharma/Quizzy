@@ -28,6 +28,8 @@ app.options('*', cors({
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
+app.use(express.static('files/images'));
+
 app.use(express.json());
 app.use(cookieParser());
 

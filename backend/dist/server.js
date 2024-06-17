@@ -21,6 +21,7 @@ app.options('*', cors({
     methods: ['GET', 'POST', 'PUT', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
+app.use(express.static('files/images'));
 app.use(express.json());
 app.use(cookieParser());
 app.listen(PORT, () => {

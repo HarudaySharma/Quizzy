@@ -7,6 +7,7 @@ export var Categories;
     Categories["HISTORY"] = "historyQuestions.json";
     Categories["POLITICS"] = "politicsQuestions.json";
     Categories["SPORTS"] = "sportsQuestions.json";
+    Categories["FLAGS"] = "flags.json";
 })(Categories || (Categories = {}));
 ;
 export const getQuestionFileLoc = (category) => {

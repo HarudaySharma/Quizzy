@@ -112,6 +112,7 @@ const McqComponent = ({
 
             const markedQuestion: MarkedQuestion = {
                 question: mcqList[mcqIndex].question,
+                image: mcqList[mcqIndex].image,
                 correctAnswer: {
                     option: mcqList[mcqIndex].answer,
                     text: mcqList[mcqIndex][mcqList[mcqIndex].answer],
@@ -213,6 +214,7 @@ const McqComponent = ({
                     getCorrectOption={getCorrectOption}
                     header={<>
                         <McqCard.Question />
+                        <McqCard.Image />
                     </>}
                     options={<>
                         <McqCard.Option option='A' />

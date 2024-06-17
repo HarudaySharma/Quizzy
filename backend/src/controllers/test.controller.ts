@@ -113,7 +113,14 @@ export const checkAnswers = async (req: CustomRequest, res: Response, next: Next
         //console.log(selectedQuestions);
         try {
             const checkedQuestions: CheckedQuestion[] = markedQuestions.map((element) => {
-                const selQuestion = selectedQuestions.find((mcq) => mcq.question === element.question);
+                const selQuestion = selectedQuestions.find((mcq) => {
+                    if (mcq.question) {
+                        return mcq.question === element.question
+                    }
+                    if (mcq.image) {
+                        return mcq.image === element.image
+                    }
+                });
                 if (!selQuestion) {
                     throw new ErrorHandler("Questions didn't matched", 401);
                 }

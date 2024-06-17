@@ -5,7 +5,8 @@ export type OPTIONS = 'A' | 'B' | 'C' | 'D';
 export type VARIANT = 'TEST' | 'QUIZ';
 
 export interface MCQ {
-    question: string,
+    question?: string,
+    image?: string,
     A: string,
     B: string,
     C: string,
@@ -14,7 +15,8 @@ export interface MCQ {
 }
 
 export interface CheckedQuestion {
-    question: string;
+    question?: string;
+    image?: string,
     correctAnswer: {
         option: OPTIONS,
         text: string
@@ -26,7 +28,8 @@ export interface CheckedQuestion {
 }
 
 export interface MarkedQuestion {
-    question: string;
+    question?: string;
+    image?: string,
     correctAnswer?: {
         option: OPTIONS,
         text: string
@@ -37,6 +40,13 @@ export interface MarkedQuestion {
     };
 }
 
+export type handleFormSubmitParams = {
+    category: Categories;
+    mcqCount?: number;
+    requestMode: RequestModes;
+    timer?: number;
+}
+
 export enum Categories {
     MixedQuestions = "ALL",
     Anime = "ANIME",
@@ -44,12 +54,7 @@ export enum Categories {
     Football = "FOOTBALL",
     History = "HISTORY",
     Politics = "POLITICS",
-    Sports = "SPORTS"
+    Sports = "SPORTS",
+    Flags = "FLAGS",
 }
 
-export type handleFormSubmitParams = {
-    category: Categories;
-    mcqCount?: number;
-    requestMode: RequestModes;
-    timer?: number;
-}
