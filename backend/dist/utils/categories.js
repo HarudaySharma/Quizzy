@@ -11,5 +11,5 @@ export var Categories;
 })(Categories || (Categories = {}));
 ;
 export const getQuestionFileLoc = (category) => {
-    return new URL(`../../files/${category}`, import.meta.url);
+    return new URL(`../../static/${category}`, import.meta.url);
 };

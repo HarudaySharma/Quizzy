@@ -3,6 +3,7 @@ import { config } from 'dotenv';
 import cookieParser from 'cookie-parser'
 import cors from 'cors';
 
+import flagRoutes from './routes/flags.route.js'
 import testRoutes from './routes/test.route.js'
 import quizRoutes from './routes/quiz.route.js'
 
@@ -28,8 +29,6 @@ app.options('*', cors({
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
-app.use(express.static('files/images'));
-
 app.use(express.json());
 app.use(cookieParser());
 
@@ -41,6 +40,7 @@ app.get("/", (_, res: Response) => {
     res.json({status: "server running"});
 })
 
+app.use('/', flagRoutes);
 app.use('/api/quiz/test', testRoutes);
 app.use('/api/quiz', quizRoutes);
 

@@ -10,6 +10,6 @@ export enum Categories{
 };
 
 export const getQuestionFileLoc = (category: Categories) => {
-    return new URL(`../../files/${category}`, import.meta.url);
+    return new URL(`../../static/${category}`, import.meta.url);
 
 }
