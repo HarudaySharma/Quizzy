@@ -95,28 +95,56 @@ const McqComponent = ({
         return mcqList[mcqIndex].answer;
     }, [mcqList, mcqIndex]);
 
+    function prevButtonClickHandler() {
+        if (mcqIndex === 0) {
+            return;
+        }
+        setMcqIndex(prev => prev - 1);
+    }
+
     //checks each submitted answer and saves it
     function answerSubmitHandler(markedOption: OPTIONS) {
 
-        setAttempted(prev => prev + 1);
+        // if previously not marked
+        if (markedQuestions.length === mcqIndex) {
+            // new Question
+            setAttempted(prev => prev + 1);
 
-        const markedQuestion: MarkedQuestion = {
-            question: mcqList[mcqIndex].question,
-            correctAnswer: {
-                option: mcqList[mcqIndex].answer,
-                text: mcqList[mcqIndex][mcqList[mcqIndex].answer],
-            },
-            userAnswer: {
+            const markedQuestion: MarkedQuestion = {
+                question: mcqList[mcqIndex].question,
+                correctAnswer: {
+                    option: mcqList[mcqIndex].answer,
+                    text: mcqList[mcqIndex][mcqList[mcqIndex].answer],
+                },
+                userAnswer: {
+                    option: markedOption,
+                    text: mcqList[mcqIndex][markedOption],
+                }
+            };
+
+            setMarkedQuestions([...markedQuestions, markedQuestion]);
+        }
+        else {
+            // update the previously answered question
+            // {Exclusive for Test questions}
+            const userAnswer = {
                 option: markedOption,
                 text: mcqList[mcqIndex][markedOption],
             }
-        };
+
+            setMarkedQuestions(markedQuestions.map((obj, idx) => {
+                return (
+                    idx === mcqIndex
+                        ? { ...obj, userAnswer: userAnswer }
+                        : obj
+                )
+            }))
+
+        }
 
         if (mcqIndex < mcqList.length - 1) {
             setMcqIndex(prev => prev + 1);
         }
-
-        setMarkedQuestions([...markedQuestions, markedQuestion]);
 
         if (variant === 'TEST') {
             return;
@@ -181,6 +209,7 @@ const McqComponent = ({
                 <McqCard
                     key={mcqList[mcqIndex].question}
                     answerSubmitHandler={answerSubmitHandler}
+                    prevButtonClickHandler={prevButtonClickHandler}
                     getCorrectOption={getCorrectOption}
                     header={<>
                         <McqCard.Question />
@@ -191,9 +220,12 @@ const McqComponent = ({
                         <McqCard.Option option='C' />
                         <McqCard.Option option='D' />
                     </>}
-                    footer={<>
-                        <McqCard.SubmitButton />
-                    </>}
+                    footer={<div className='flex flex-col gap-2 w-full '>
+                        <McqCard.PrevButton
+                            show={Boolean(variant === 'TEST' && mcqIndex > 0)}
+                        />
+                        <McqCard.NextButton />
+                    </div>}
                 />
                 <Button
                     onClick={handleQuizTerminate}
