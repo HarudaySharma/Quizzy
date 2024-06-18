@@ -16,11 +16,14 @@ const randomQuestions = async (category, mcqCount, indicesUsed) => {
         }
         for (let i = 0; i < mcqCount;) {
             if (mcqCount >= questions.length) {
-                usedIndices.add(i);
-                newSelectedIndices.push(`${i}`);
-                selectedQuestions.push(questions[i]);
-                i++;
-                continue;
+                // send all the questions
+                while (i < questions.length) {
+                    usedIndices.add(i);
+                    newSelectedIndices.push(`${i}`);
+                    selectedQuestions.push(questions[i]);
+                    i++;
+                }
+                break;
             }
             const idx = getRandomIndex(usedIndices, questions.length);
             usedIndices.add(idx);
