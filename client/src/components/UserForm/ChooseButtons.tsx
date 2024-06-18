@@ -1,9 +1,37 @@
 import { useUserFormContext } from '../../context/userFormContext'
 import { Button } from '../../@/components/ui/button';
 import { Label } from '../../@/components/ui/label';
+import { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 
 const ChooseButtons = () => {
     const { formData, setFormData } = useUserFormContext();
+
+    const [disabled, setDisabled] = useState(true);
+
+    useEffect(() => {
+        formData?.category ? setDisabled(false) : setDisabled(true);
+    }, [formData?.category])
+
+    const setMcqCountBtnClickHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        e.preventDefault();
+
+        if (disabled) {
+            toast.error('please select a category first');
+            return;
+        }
+        setFormData({ ...formData, requestMode: "NO-TIMER" })
+    }
+
+    const setTimerBtnClickHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        e.preventDefault();
+
+        if (disabled) {
+            toast.error('please select a category first');
+            return;
+        }
+        setFormData({ ...formData, requestMode: "TIMER" })
+    }
 
     return (
         <div
@@ -28,10 +56,7 @@ const ChooseButtons = () => {
                 `}
             >
                 <Button
-                    onClick={(e) => {
-                        e.preventDefault();
-                        setFormData({ ...formData, requestMode: "NO-TIMER" })
-                    }}
+                    onClick={setMcqCountBtnClickHandler}
                     className='
                         bg-customGreen-dark1
                         font-bold
@@ -44,10 +69,7 @@ const ChooseButtons = () => {
                     Set No. of Mcqs ?
                 </Button>
                 <Button
-                    onClick={(e) => {
-                        e.preventDefault();
-                        setFormData({ ...formData, requestMode: "TIMER" })
-                    }}
+                    onClick={setTimerBtnClickHandler}
                     className='
                         bg-customGreen-dark1
                         outline-none

@@ -79,8 +79,8 @@ const UserForm = ({
 }
 
 UserForm.CategoryList = CategoryList;
-UserForm.McqCountField = McqCountField;
 UserForm.ChooseButtons = ChooseButtons;
+UserForm.McqCountField = McqCountField;
 UserForm.SetTimerField = SetTimerField;
 UserForm.SubmitBtn = SubmitBtn;
 

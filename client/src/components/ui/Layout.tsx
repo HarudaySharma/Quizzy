@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Footer from '../Footer'
 import Header from '../Header'
+import ToasterContext from '../../context/ToasterContext'
 
 export const Layout = () => {
     return (
@@ -15,6 +16,7 @@ export const Layout = () => {
                 justify-between
             '
         >
+            <ToasterContext />
             <Header />
             <Outlet />
             <Footer />

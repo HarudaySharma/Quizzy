@@ -3,7 +3,9 @@ import { UserFormData } from "../components/UserForm";
 
 type UserFormContextType = {
     formData: UserFormData | undefined;
-    setFormData: React.Dispatch<React.SetStateAction<UserFormData | undefined>>}
+    setFormData: React.Dispatch<React.SetStateAction<UserFormData | undefined>>;
+}
+
 
 export const UserFormContext = createContext<UserFormContextType | undefined>(undefined);
 
@@ -14,5 +16,8 @@ export function useUserFormContext() {
         throw Error("wtf you doing pass the formData state and its setter in the context provider");
     }
 
-    return { formData: context.formData, setFormData: context.setFormData };
+    return { 
+        formData: context.formData,
+        setFormData: context.setFormData,
+    };
 }

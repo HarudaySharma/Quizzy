@@ -1,5 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
 import { Categories, MCQ, RequestModes } from "../types";
+import toast from "react-hot-toast";
+
+const notify = (message: string) => (toast.error(message, {
+    style: {
+        textAlign: 'center'
+    }
+}))
 
 type useTestQuestionsParams = {
     defaultCategoryValue?: Categories,
@@ -22,6 +29,11 @@ const useTestQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
             setMcqList([]);
             return;
         }
+
+        if (isFetching) {
+            return;
+        }
+
         try {
             setIsFetching(true);
             const res = await fetch('/api/quiz/test/questions/', {
@@ -33,6 +45,8 @@ const useTestQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
             });
             if (!res.ok) {
                 console.log("failed");
+                notify(`error getting questions \n please try again`);
+                setVariant(undefined);
                 return;
             }
             const data = await res.json() as MCQ[];
@@ -42,6 +56,8 @@ const useTestQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         }
         catch (err) {
             console.log(err);
+            notify(`error getting questions \n please try again`);
+            setVariant(undefined);
         }
         finally {
             setIsFetching(false);
@@ -54,7 +70,7 @@ const useTestQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
             return;
         }
 
-        if(isFetching) {
+        if (isFetching) {
             return;
         }
 
@@ -69,6 +85,8 @@ const useTestQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
             });
             if (!res.ok) {
                 console.log("failed");
+                notify(`error getting questions \n please try again`);
+                setVariant(undefined);
                 return;
             }
             const data = await res.json() as MCQ[];
@@ -82,6 +100,8 @@ const useTestQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         }
         catch (err) {
             console.log(err);
+            notify(`error getting questions \n please try again`);
+            setVariant(undefined);
         }
         finally {
             setIsFetching(false);

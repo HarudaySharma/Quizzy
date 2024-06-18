@@ -32,7 +32,8 @@ const SubmitBtn = () => {
                 cursor-pointer 
                 bg-sky-500
                 hover:bg-sky-400
-                disabled:bg-sky-300
+                disabled:bg-sky-200
+                relative
             "
         >
             Start Quiz

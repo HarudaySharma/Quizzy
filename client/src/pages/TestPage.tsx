@@ -10,6 +10,7 @@ import analyseCheckedQuestions from '../utils/analyseCheckedAnswers';
 import { Button } from '../@/components/ui/button';
 import changeLayoutColor from '../utils/changeCssVariables';
 import clsx from 'clsx';
+import LoadingModal from '../components/LoadingModal';
 
 /*
  * responsibility to fetch mcqs
@@ -169,23 +170,6 @@ const TestPage = () => {
     }
 
     useEffect(() => {
-        if (variant === undefined) {
-            setRenderComponent(
-                <>
-                    <h1 className="text-3xl text-center font-bold">
-                        Take a TEST
-                    </h1>
-                    <UserForm
-                        onSubmit={handleFormSubmit}
-                    >
-                        <UserForm.CategoryList />
-                        <UserForm.ChooseButtons />
-                        <UserForm.McqCountField />
-                        <UserForm.SetTimerField />
-                        <UserForm.SubmitBtn />
-                    </UserForm>
-                </>)
-        }
         if (variant === 'NO-TIMER' && mcqList.length !== 0) {
             setRenderComponent(
                 <CompoundMcq
@@ -207,6 +191,7 @@ const TestPage = () => {
                     variant='TEST'
                     setUnvisitedQuestions={setUnvisitedQuestions}
                 />)
+            return;
         }
         if (variant === 'TIMER' && mcqList.length !== 0) {
             setRenderComponent(
@@ -231,7 +216,27 @@ const TestPage = () => {
                     setUnvisitedQuestions={setUnvisitedQuestions}
                     time={time}
                 />)
+            return;
         }
+
+        // Test Form
+        setRenderComponent(
+            <>
+                <h1 className="text-3xl text-center font-bold">
+                    Take a TEST
+                </h1>
+                <UserForm
+                    onSubmit={handleFormSubmit}
+                >
+                    <UserForm.CategoryList />
+                    <UserForm.ChooseButtons />
+                    <UserForm.McqCountField />
+                    <UserForm.SetTimerField />
+                    <UserForm.SubmitBtn />
+                </UserForm>
+                {isFetching && <LoadingModal />}
+            </>)
+        return;
     }, [variant, mcqList, isFetching]);
 
     return (

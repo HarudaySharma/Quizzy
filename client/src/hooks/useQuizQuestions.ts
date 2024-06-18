@@ -1,12 +1,20 @@
 import { useCallback, useEffect, useState } from "react";
 import { Categories, MCQ, RequestModes } from "../types";
+import toast from "react-hot-toast";
 
+
+const notify = (message: string) => (toast.error(message, {
+    style: {
+        textAlign: 'center'
+    }
+}))
 
 type useQuizQuestionsParams = {
     defaultCategoryValue?: Categories,
     defaultMCQCount?: number,
     defaultVariant?: RequestModes,
 }
+
 
 const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVariant }: useQuizQuestionsParams) => {
     const [category, setCategory] = useState<Categories | undefined>(defaultCategoryValue);
@@ -40,6 +48,8 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
             });
             if (!res.ok) {
                 console.log("failed");
+                notify(`error getting questions \n please try again`);
+                setVariant(undefined);
                 return;
             }
             const data = await res.json() as MCQ[];
@@ -49,6 +59,8 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         }
         catch (err) {
             console.log(err);
+            notify(`error getting questions \n please try again`);
+            setVariant(undefined);
         }
         finally {
             setIsFetching(false);
@@ -77,6 +89,8 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
             });
             if (!res.ok) {
                 console.log("failed");
+                notify(`error getting questions \n please try again`);
+                setVariant(undefined);
                 return;
             }
             const data = await res.json() as MCQ[];
@@ -92,6 +106,8 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         }
         catch (err) {
             console.log(err);
+            notify(`error getting questions \n please try again`);
+            setVariant(undefined);
         }
         finally {
             setIsFetching(false);
