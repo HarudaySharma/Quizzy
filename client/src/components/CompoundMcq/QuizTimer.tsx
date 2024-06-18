@@ -4,20 +4,28 @@ import { Timer } from 'lucide-react';
 
 const QuizTimer = () => {
     const { timer, setTimer } = useMcqComponentContext();
+    let timerInterval: NodeJS.Timeout | undefined = undefined;
 
     useEffect(() => {
         if (timer === undefined || setTimer === undefined) {
             return;
         }
-        setInterval(() => {
+
+        timerInterval = setInterval(() => {
             setTimer(prev => {
                 if (prev !== null)
                     return prev - 1
                 return prev;
             });
         }, 1000);
+
     }, []);
 
+    useEffect(() => {
+        if(timer === 0) {
+            clearInterval(timerInterval);
+        }
+    }, [timer])
 
     if (timer !== null) {
         return (

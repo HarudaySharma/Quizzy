@@ -280,7 +280,7 @@ const QuizResult = ({
                         sm:flex-col
                     '
                 >
-                    {attemptedCount &&
+                    {(attemptedCount === 0 || attemptedCount) &&
                         <div
                             className={clsx(`
                                     p-4
@@ -302,7 +302,7 @@ const QuizResult = ({
                             <span>{attemptedCount}</span>
                         </div>
                     }
-                    {attemptedCount &&
+                    {(attemptedCount === 0 || attemptedCount) &&
                         <div
                             className={clsx(`
                                     p-4
