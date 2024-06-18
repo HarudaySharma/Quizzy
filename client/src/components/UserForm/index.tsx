@@ -1,9 +1,8 @@
-import React, { ReactNode, useState } from 'react'
-import { Categories } from '../../types';
+import React, { ReactNode, useEffect, useState } from 'react'
 import CategoryList from './CategoryList'
 import McqCountField from './McqCountField';
 import { UserFormContext } from '../../context/userFormContext';
-import { handleFormSubmitParams, RequestModes } from '../../types';
+import {Categories, handleFormSubmitParams, RequestModes } from '../../types';
 import SubmitBtn from './SubmitBtn';
 import ChooseButtons from './ChooseButtons';
 import SetTimerField from './SetTimerField';
@@ -45,6 +44,13 @@ const UserForm = ({
             mcqCount: formData.mcqCount,
         });
     }
+
+    useEffect(() => {
+        if (!formData?.category) {
+            // reset formData
+            setFormData(undefined);
+        }
+    }, [formData?.category])
 
     return (
         <div
