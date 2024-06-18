@@ -13,12 +13,13 @@ const fetchCheckedAnswers = async (category: Categories, markedQuestions: Marked
         if (!res.ok) {
             throw Error("response not OK");
         }
+
         const data = await res.json() as CheckedQuestion[];
         return data;
     }
     catch (err) {
-        console.log(err);
-        throw Error("Checking of Questions Failed");
+        console.log("Checking of Questions Failed")
+        throw err;
     }
 }
 

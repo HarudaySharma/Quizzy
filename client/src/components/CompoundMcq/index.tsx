@@ -232,6 +232,12 @@ const McqComponent = ({
                 <Button
                     onClick={handleQuizTerminate}
                     variant={'destructive'}
+                    className={`
+                            w-fit 
+                            tracking-wider
+                            text-lg
+                            p-4
+                        `}
                 >
                     Terminate Quiz
                 </Button>

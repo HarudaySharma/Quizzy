@@ -11,6 +11,8 @@ import { Button } from '../@/components/ui/button';
 import changeLayoutColor from '../utils/changeCssVariables';
 import clsx from 'clsx';
 import LoadingModal from '../components/LoadingModal';
+import toast from 'react-hot-toast';
+import { Loader } from 'lucide-react';
 
 /*
  * responsibility to fetch mcqs
@@ -42,6 +44,8 @@ const TestPage = () => {
     const [time, setTime] = useState<number | undefined>(undefined);
 
     const [pageHeight, setPageHeight] = useState('h-screen');
+
+    const [showLoadingModal, setShowLoadingModal] = useState(false);
 
     const handleFormSubmit = useCallback(({ category, mcqCount, requestMode, timer }: handleFormSubmitParams) => {
 
@@ -118,29 +122,47 @@ const TestPage = () => {
         if (!category)
             return;
 
+        const toastId = toast.loading("generating result...")
         setPageHeight('');
+
 
         let checkedQuestions: CheckedQuestion[];
 
         try {
+            setShowLoadingModal(true);
+
             checkedQuestions = await fetchCheckedAnswers(category, markedQuestions);
         }
         catch (err) {
             console.log(err);
+            toast.error('failed to fetch result')
+
             // show retry connection btn
             setRenderComponent(() =>
-                <div className='h-screen grid justify-center items-center'>
-                    <div>
-                        <div className='text-red-400 bold'> failed to fetch result</div>
-                        {/*<Button
-                            className={`w-fit py-4 px-12`}
-                            onClick={() => onQuizOver({ markedQuestions, totalMcqs })}>
-                            Retry
-                        </Button>*/}
-                    </div>
+                <div className='h-fit grid justify-center items-center'>
+                    <Button
+                        variant={'destructive'}
+                        className={`
+                            w-fit 
+                            tracking-wider
+                            text-lg
+                            p-4
+                        `}
+                        onClick={() => onQuizOver({
+                            markedQuestions,
+                            totalMcqs,
+                            attemptedCount
+                        })}
+                    >
+                        Fetch Result Again?
+                    </Button>
                 </div>
             );
             return
+        }
+        finally {
+            toast.remove(toastId);
+            setShowLoadingModal(false);
         }
 
         const { correctCount, inCorrectCount } = analyseCheckedQuestions(checkedQuestions);
@@ -256,6 +278,7 @@ const TestPage = () => {
                     gap-4
                 "
             >
+                {showLoadingModal && <LoadingModal />}
                 {renderComponent}
             </div>
         </div >
