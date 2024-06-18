@@ -2,11 +2,24 @@ import React, { useEffect, useState } from 'react'
 import { useUserFormContext } from '../../context/userFormContext';
 import { Input } from '../../@/components/ui/input';
 import { Label } from '../../@/components/ui/label';
+import toast from 'react-hot-toast';
 
 const SetTimerField = () => {
     const { formData, setFormData } = useUserFormContext();
     const [seconds, setSeconds] = useState('');
     const [minutes, setMinutes] = useState('');
+
+    const [disabled, setDisabled] = useState(true);
+
+    useEffect(() => {
+        if (!formData?.category) {
+            setSeconds('');
+            setMinutes('');
+        }
+
+        formData?.category ? setDisabled(false) : setDisabled(true);
+
+    }, [formData?.category])
 
     useEffect(() => {
         const time = Number(minutes) * 60 + Number(seconds)
@@ -14,6 +27,11 @@ const SetTimerField = () => {
     }, [seconds, minutes])
 
     const handleSecondsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (disabled) {
+            toast.error('please select a category first');
+            return;
+        }
+
         let s = e.target.value;
         s = Number(s).toFixed(0);
         if (Number(s) < 0)
@@ -24,6 +42,11 @@ const SetTimerField = () => {
     }
 
     const handleMinutesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (disabled) {
+            toast.error('please select a category first');
+            return;
+        }
+
         let m = e.target.value;
         m = Number(m).toFixed(0);
         if (Number(m) < 0)

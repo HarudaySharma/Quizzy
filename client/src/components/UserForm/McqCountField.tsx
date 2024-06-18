@@ -1,13 +1,30 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useUserFormContext } from '../../context/userFormContext';
 import { Input } from '../../@/components/ui/input';
 import { Label } from '../../@/components/ui/label';
+import toast from 'react-hot-toast';
 
 const McqCountField = () => {
     const { formData, setFormData } = useUserFormContext();
     const [mcqCount, setMcqCount] = useState("");
 
+    const [disabled, setDisabled] = useState(true);
+
+    useEffect(() => {
+        if (!formData?.category) {
+            setMcqCount("");
+        }
+
+        formData?.category ? setDisabled(false) : setDisabled(true);
+
+    }, [formData?.category])
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (disabled) {
+            toast.error('please select a category first');
+            return;
+        }
+
         const num = e.target.value;
         //console.log(num);
         if (num === "") {

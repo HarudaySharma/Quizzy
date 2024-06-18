@@ -3,8 +3,7 @@ import { Categories } from '../../types';
 import CategoryList from './CategoryList'
 import McqCountField from './McqCountField';
 import { UserFormContext } from '../../context/userFormContext';
-import { handleFormSubmitParams } from '../../pages/QuizPage';
-import { RequestModes } from '../../hooks/useQuizQuestions';
+import { handleFormSubmitParams, RequestModes } from '../../types';
 import SubmitBtn from './SubmitBtn';
 import ChooseButtons from './ChooseButtons';
 import SetTimerField from './SetTimerField';
@@ -81,8 +80,8 @@ const UserForm = ({
 }
 
 UserForm.CategoryList = CategoryList;
-UserForm.McqCountField = McqCountField;
 UserForm.ChooseButtons = ChooseButtons;
+UserForm.McqCountField = McqCountField;
 UserForm.SetTimerField = SetTimerField;
 UserForm.SubmitBtn = SubmitBtn;
 
