@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react'
+import React, { ReactNode, useEffect, useState } from 'react'
 import { Categories, RequestModes, handleFormSubmitParams } from '../../types';
 import CategoryList from './CategoryList'
 import McqCountField from './McqCountField';
@@ -44,6 +44,13 @@ const UserForm = ({
             mcqCount: formData.mcqCount,
         });
     }
+
+    useEffect(() => {
+        if (!formData?.category) {
+            // reset formData
+            setFormData(undefined);
+        }
+    }, [formData?.category])
 
     return (
         <div
