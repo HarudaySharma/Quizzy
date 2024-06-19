@@ -53,7 +53,6 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
                 return;
             }
             const data = await res.json() as MCQ[];
-            console.log(data);
             // set the MCQ LIST state
             setMcqList(data);
         }
