@@ -47,6 +47,7 @@ const TestPage = () => {
     const [showLoadingModal, setShowLoadingModal] = useState(false);
 
     const handleFormSubmit = useCallback(({ category, mcqCount, requestMode, timer }: handleFormSubmitParams) => {
+        console.log({ category, mcqCount, requestMode, timer });
 
         setCategory(category);
 
@@ -239,7 +240,8 @@ const TestPage = () => {
             return;
         }
 
-        if (variant === undefined && mcqList.length === 0) {
+        if ((variant === undefined && mcqList.length === 0)
+            || (unvisitedQuestions === undefined && mcqList.length === 0)) {
             // Test Form
             setRenderComponent(
                 <>
@@ -255,6 +257,7 @@ const TestPage = () => {
                         <UserForm.SetTimerField />
                         <UserForm.SubmitBtn />
                     </UserForm>
+                    {isFetching && <LoadingModal />}
                 </>)
             return;
         }
@@ -278,8 +281,7 @@ const TestPage = () => {
                 "
             >
                 {renderComponent}
-                {(isFetching || showLoadingModal)
-                    && <LoadingModal />}
+                {showLoadingModal && <LoadingModal />}
             </div>
         </div >
     )
