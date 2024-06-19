@@ -8,7 +8,6 @@ function McqImage({ className }: { className?: string }) {
         return null;
     }
 
-    console.log({image});
     return (
         <img
             src={`http://localhost:3000${image}`}

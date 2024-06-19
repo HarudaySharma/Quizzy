@@ -38,6 +38,7 @@ const McqComponent = ({
     const [inCorrectCount, setInCorrectCount] = useState(0);
     const [markedQuestions, setMarkedQuestions] = useState<MarkedQuestion[]>([]);
     const [timer, setTimer] = useState(time ? time : null);
+    const [selectedOptions, setSelectedOptions] = useState<(OPTIONS | null)[]>([]);
 
     const [options, setOptions] = useState<OPTIONS[]>(['A', 'B', 'C', 'D']);
 
@@ -71,7 +72,6 @@ const McqComponent = ({
     useEffect(() => {
 
         setUnvisitedQuestions(mcqList.length - attempted);
-        //console.log(`mcqList-Len : ${mcqList.length}`);
 
         if (attempted === mcqList.length) {
             if (variant === 'QUIZ') {
@@ -123,7 +123,7 @@ const McqComponent = ({
                 userAnswer: {
                     option: markedOption,
                     text: mcqList[mcqIndex][markedOption],
-                }
+                },
             };
 
             setMarkedQuestions([...markedQuestions, markedQuestion]);
@@ -153,9 +153,21 @@ const McqComponent = ({
         }
 
         if (variant === 'TEST') {
+            // save marked option
+            if (mcqIndex >= selectedOptions.length) {
+                setSelectedOptions(prev => [...prev, markedOption]);
+            }
+            else {
+                setSelectedOptions(prev =>
+                    prev.map((option, index) =>
+                        index === mcqIndex ? markedOption : option
+                    )
+                );
+            }
             return;
         }
 
+        // for simple quiz
         if (markedOption === mcqList[mcqIndex].answer) {
             setCorrectCount(prev => prev + 1);
         } else {
@@ -182,10 +194,6 @@ const McqComponent = ({
         }
     }
 
-    useEffect(() => {
-        console.log({ options });
-    }, [options])
-
     const contextValues = {
         mcq: mcqList[mcqIndex],
         category: category,
@@ -198,6 +206,14 @@ const McqComponent = ({
         attemptedCount: attempted,
         variant: variant,
     }
+
+    useEffect(() => {
+        console.log(selectedOptions);
+    }, [selectedOptions])
+
+    useEffect(() => {
+        console.log(markedQuestions);
+    }, [markedQuestions])
 
     return (
         <div
@@ -219,6 +235,11 @@ const McqComponent = ({
                 <McqCard
                     key={mcqList[mcqIndex].question}
                     answerSubmitHandler={answerSubmitHandler}
+                    defaultSelectedOption={
+                        selectedOptions[mcqIndex]
+                            ? selectedOptions[mcqIndex]
+                            : null
+                    }
                     prevButtonClickHandler={prevButtonClickHandler}
                     getCorrectOption={getCorrectOption}
                     header={<>
