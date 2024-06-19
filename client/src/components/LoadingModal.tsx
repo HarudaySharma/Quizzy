@@ -50,7 +50,7 @@ const LoadingModal = () => {
                         "
                     >
                         <Dialog.Panel>
-                            <ClipLoader size={40} color="#4267B2" />
+                            <ClipLoader size={40} color="#4CAF50" />
                         </Dialog.Panel>
                     </div>
                 </div>
