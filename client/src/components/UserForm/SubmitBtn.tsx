@@ -9,7 +9,7 @@ const SubmitBtn = () => {
     useEffect(() => {
         if (!formData)
             return;
-        console.log({ formData });
+
         if ((formData.timer || formData.mcqCount) && formData.category)
             setDisabled(false);
         else

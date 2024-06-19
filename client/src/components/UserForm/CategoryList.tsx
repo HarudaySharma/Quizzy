@@ -17,7 +17,7 @@ const CategoryList = () => {
         }
         const { value } = option;
 
-        console.log({ category: value });
+        //console.log({ category: value });
 
         setFormData((prev) => ({ ...prev, category: value }));
     }

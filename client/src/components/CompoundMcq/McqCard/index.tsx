@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react'
+import React, { ReactNode, useEffect, useState } from 'react'
 import { useMcqComponentContext } from '../../../context/McqComponentContext';
 import { OPTIONS } from '../../../types';
 import { Card, CardContent, CardFooter, CardHeader } from '../../../@/components/ui/card';
@@ -13,6 +13,7 @@ interface Props {
     header: ReactNode;
     footer?: ReactNode;
     options: ReactNode;
+    defaultSelectedOption: OPTIONS | null;
     getCorrectOption?: () => OPTIONS;
     answerSubmitHandler: (markedOption: OPTIONS) => void;
     prevButtonClickHandler: () => void;
@@ -22,15 +23,23 @@ const McqCard = ({
     getCorrectOption,
     answerSubmitHandler,
     prevButtonClickHandler,
+    defaultSelectedOption,
     header,
     footer,
     options,
 }: Props) => {
 
-    const [selectedOption, setSelectedOption] = useState<OPTIONS | null>(null);
+    const [selectedOption, setSelectedOption] = useState<OPTIONS | null>(defaultSelectedOption);
     const [correctOption, setCorrectOption] = useState<OPTIONS | null>(null);
 
-    const { mcq, variant } = useMcqComponentContext();
+    const {
+        mcq,
+        variant,
+    } = useMcqComponentContext();
+
+    useEffect(() => {
+        setSelectedOption(defaultSelectedOption);
+    }, [defaultSelectedOption]);
 
     const optionChooseHandler = (option: OPTIONS): boolean | null => {
         if (variant === 'TEST' || !getCorrectOption) {

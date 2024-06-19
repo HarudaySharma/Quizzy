@@ -43,8 +43,8 @@ const QuizPage = () => {
 
     // after user submits the form
     const handleFormSubmit = useCallback(({ category, mcqCount, requestMode, timer }: handleFormSubmitParams) => {
-
         console.log({ category, mcqCount, requestMode, timer });
+
         setCategory(category);
 
         if (requestMode === 'TIMER') {
@@ -207,7 +207,8 @@ const QuizPage = () => {
             return;
         }
 
-        if (variant === undefined && mcqList.length === 0) {
+        if ((variant === undefined && mcqList.length === 0)
+            || (unvisitedQuestions === undefined && mcqList.length === 0)) {
             setRenderComponent(
                 <>
                     <h1 className="text-3xl text-center font-bold">
@@ -222,6 +223,7 @@ const QuizPage = () => {
                         <UserForm.SetTimerField />
                         <UserForm.SubmitBtn />
                     </UserForm>
+                    {isFetching && <LoadingModal />}
                 </>)
             return;
         }
@@ -245,7 +247,6 @@ const QuizPage = () => {
                 "
             >
                 {renderComponent}
-                {isFetching && <LoadingModal />}
             </div>
         </div>
     )

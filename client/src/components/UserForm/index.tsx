@@ -30,7 +30,6 @@ const UserForm = ({
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        console.log({ formData });
         if (!formData)
             return;
         if (!formData.category || !formData.requestMode || (!formData.timer && !formData.mcqCount)) {

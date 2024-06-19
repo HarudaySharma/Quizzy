@@ -8,7 +8,14 @@ type ButtonColors = 'gray' | "blue" | "green" | "red";
 type ButtonBoldness = 200 | 100;
 
 function McqOption({ className, option }: { className?: string, option: OPTIONS }) {
-    const { optionChooseHandler, options, correctOption, selectedOption, variant } = useMcqCardContext();
+    const {
+        optionChooseHandler,
+        options,
+        correctOption,
+        selectedOption,
+        variant,
+    } = useMcqCardContext();
+
     const [color, setColor] = useState<ButtonColors>("gray");
     const [bold, setBoldness] = useState<ButtonBoldness>(200);
     const [disable, setDisable] = useState<boolean>(false);

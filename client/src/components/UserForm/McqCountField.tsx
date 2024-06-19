@@ -26,7 +26,7 @@ const McqCountField = () => {
         }
 
         const num = e.target.value;
-        //console.log(num);
+
         if (num === "") {
             setMcqCount("");
             setFormData({ ...formData, mcqCount: undefined });
