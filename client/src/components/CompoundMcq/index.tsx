@@ -6,6 +6,7 @@ import McqComponentMetaData from './McqComponentMetaData';
 import QuizTimer from './QuizTimer';
 import { Button } from '../../@/components/ui/button';
 import Category from './Category';
+import shuffleOptions from '../../utils/shuffleOptions';
 
 // will take mcqList, and setter to have all the markedAnswers at last,
 // checked Answers
@@ -38,6 +39,8 @@ const McqComponent = ({
     const [markedQuestions, setMarkedQuestions] = useState<MarkedQuestion[]>([]);
     const [timer, setTimer] = useState(time ? time : null);
 
+    const [options, setOptions] = useState<OPTIONS[]>(['A', 'B', 'C', 'D']);
+
     // if quiz is a timed one
     useEffect(() => {
         if (timer === null) {
@@ -68,7 +71,7 @@ const McqComponent = ({
     useEffect(() => {
 
         setUnvisitedQuestions(mcqList.length - attempted);
-        console.log(`mcqList-Len : ${mcqList.length}`);
+        //console.log(`mcqList-Len : ${mcqList.length}`);
 
         if (attempted === mcqList.length) {
             if (variant === 'QUIZ') {
@@ -145,6 +148,8 @@ const McqComponent = ({
 
         if (mcqIndex < mcqList.length - 1) {
             setMcqIndex(prev => prev + 1);
+            // shuffle options
+            setOptions(prev => [...shuffleOptions(prev, options.length)]);
         }
 
         if (variant === 'TEST') {
@@ -176,6 +181,10 @@ const McqComponent = ({
             });
         }
     }
+
+    useEffect(() => {
+        console.log({ options });
+    }, [options])
 
     const contextValues = {
         mcq: mcqList[mcqIndex],
@@ -217,16 +226,16 @@ const McqComponent = ({
                         <McqCard.Image />
                     </>}
                     options={<>
-                        <McqCard.Option option='A' />
-                        <McqCard.Option option='B' />
-                        <McqCard.Option option='C' />
-                        <McqCard.Option option='D' />
+                        <McqCard.Option option={options[0]} />
+                        <McqCard.Option option={options[1]} />
+                        <McqCard.Option option={options[2]} />
+                        <McqCard.Option option={options[3]} />
                     </>}
                     footer={<div className='flex flex-col gap-2 w-full '>
+                        <McqCard.NextButton />
                         <McqCard.PrevButton
                             show={Boolean(variant === 'TEST' && mcqIndex > 0)}
                         />
-                        <McqCard.NextButton />
                     </div>}
                 />
                 <Button
