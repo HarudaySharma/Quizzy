@@ -12,7 +12,6 @@ import changeLayoutColor from '../utils/changeCssVariables';
 import clsx from 'clsx';
 import LoadingModal from '../components/LoadingModal';
 import toast from 'react-hot-toast';
-import { Loader } from 'lucide-react';
 
 /*
  * responsibility to fetch mcqs
@@ -124,7 +123,6 @@ const TestPage = () => {
 
         const toastId = toast.loading("generating result...")
         setPageHeight('');
-
 
         let checkedQuestions: CheckedQuestion[];
 
@@ -241,24 +239,25 @@ const TestPage = () => {
             return;
         }
 
-        // Test Form
-        setRenderComponent(
-            <>
-                <h1 className="text-3xl text-center font-bold">
-                    Take a TEST
-                </h1>
-                <UserForm
-                    onSubmit={handleFormSubmit}
-                >
-                    <UserForm.CategoryList />
-                    <UserForm.ChooseButtons />
-                    <UserForm.McqCountField />
-                    <UserForm.SetTimerField />
-                    <UserForm.SubmitBtn />
-                </UserForm>
-                {isFetching && <LoadingModal />}
-            </>)
-        return;
+        if (variant === undefined && mcqList.length === 0) {
+            // Test Form
+            setRenderComponent(
+                <>
+                    <h1 className="text-3xl text-center font-bold">
+                        Take a TEST
+                    </h1>
+                    <UserForm
+                        onSubmit={handleFormSubmit}
+                    >
+                        <UserForm.CategoryList />
+                        <UserForm.ChooseButtons />
+                        <UserForm.McqCountField />
+                        <UserForm.SetTimerField />
+                        <UserForm.SubmitBtn />
+                    </UserForm>
+                </>)
+            return;
+        }
     }, [variant, mcqList, isFetching]);
 
     return (
@@ -278,8 +277,9 @@ const TestPage = () => {
                     gap-4
                 "
             >
-                {showLoadingModal && <LoadingModal />}
                 {renderComponent}
+                {(isFetching || showLoadingModal)
+                    && <LoadingModal />}
             </div>
         </div >
     )
