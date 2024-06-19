@@ -207,25 +207,24 @@ const QuizPage = () => {
             return;
         }
 
-        // Quiz Form
-        setRenderComponent(
-            <>
-                <h1 className="text-3xl text-center font-bold">
-                    Take a QUIZ
-                </h1>
-                <UserForm
-                    onSubmit={handleFormSubmit}
-                >
-                    <UserForm.CategoryList />
-                    <UserForm.ChooseButtons />
-                    <UserForm.McqCountField />
-                    <UserForm.SetTimerField />
-                    <UserForm.SubmitBtn />
-                </UserForm>
-                {isFetching && <LoadingModal />}
-            </>)
-        return;
-
+        if (variant === undefined && mcqList.length === 0) {
+            setRenderComponent(
+                <>
+                    <h1 className="text-3xl text-center font-bold">
+                        Take a QUIZ
+                    </h1>
+                    <UserForm
+                        onSubmit={handleFormSubmit}
+                    >
+                        <UserForm.CategoryList />
+                        <UserForm.ChooseButtons />
+                        <UserForm.McqCountField />
+                        <UserForm.SetTimerField />
+                        <UserForm.SubmitBtn />
+                    </UserForm>
+                </>)
+            return;
+        }
     }, [variant, mcqList, isFetching]);
 
     return (
@@ -246,6 +245,7 @@ const QuizPage = () => {
                 "
             >
                 {renderComponent}
+                {isFetching && <LoadingModal />}
             </div>
         </div>
     )
