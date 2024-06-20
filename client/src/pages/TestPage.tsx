@@ -87,14 +87,17 @@ const TestPage = () => {
             />)
     }
 
+    // user want to retake form
     const handleReset = () => {
+        // reset all the states
+        setCategory(undefined);
+        setUnvisitedQuestions(undefined);
         if (variant === 'TIMER') {
             setTime(undefined);
         }
         if (variant === 'NO-TIMER') {
             setMcqCount(undefined);
         }
-        setCategory(undefined);
         setVariant(undefined);
     }
 
