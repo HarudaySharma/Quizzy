@@ -1,0 +1,466 @@
+[
+    {
+        "question": "What is the capital of Democratic Republic of the Congo?",
+        "A": "Mogadishu",
+        "B": "Ouagadougou",
+        "C": "Kinshasa",
+        "D": "Conakry",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Egypt?",
+        "A": "Tunis",
+        "B": "Accra",
+        "C": "Cairo",
+        "D": "Algiers",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Kenya?",
+        "A": "Libreville",
+        "B": "Nairobi",
+        "C": "Bamako",
+        "D": "Luanda",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Ethiopia?",
+        "A": "Pretoria",
+        "B": "Khartoum",
+        "C": "Addis Ababa",
+        "D": "Harare",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Zimbabwe?",
+        "A": "Brazzaville",
+        "B": "Banjul",
+        "C": "Yaoundé",
+        "D": "Harare",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Cameroon?",
+        "A": "Abuja",
+        "B": "Monrovia",
+        "C": "Yaoundé",
+        "D": "Bangui",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Nigeria?",
+        "A": "Abuja",
+        "B": "Nouakchott",
+        "C": "Yamoussoukro",
+        "D": "Kampala",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Mali?",
+        "A": "Bamako",
+        "B": "Tripoli",
+        "C": "Bujumbura",
+        "D": "Mogadishu",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Algeria?",
+        "A": "Niamey",
+        "B": "Algiers",
+        "C": "Lilongwe",
+        "D": "Conakry",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Angola?",
+        "A": "Maseru",
+        "B": "Maputo",
+        "C": "Luanda",
+        "D": "Porto-Novo",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Ghana?",
+        "A": "Accra",
+        "B": "Antananarivo",
+        "C": "Libreville",
+        "D": "Juba",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Burkina Faso?",
+        "A": "Brazzaville",
+        "B": "Ouagadougou",
+        "C": "Freetown",
+        "D": "Bissau",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Somalia?",
+        "A": "Nairobi",
+        "B": "Mogadishu",
+        "C": "N'Djamena",
+        "D": "Mbabane",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Republic of the Congo?",
+        "A": "Brazzaville",
+        "B": "Porto-Novo",
+        "C": "Moroni",
+        "D": "Lusaka",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Zambia?",
+        "A": "Dodoma",
+        "B": "Lusaka",
+        "C": "Djibouti",
+        "D": "Gaborone",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Guinea?",
+        "A": "Conakry",
+        "B": "Dar es Salaam",
+        "C": "Antananarivo",
+        "D": "Bamako",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Uganda?",
+        "A": "Maseru",
+        "B": "Kampala",
+        "C": "Bujumbura",
+        "D": "Kigali",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Madagascar?",
+        "A": "Antananarivo",
+        "B": "Khartoum",
+        "C": "Windhoek",
+        "D": "Pretoria",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Senegal?",
+        "A": "Bangui",
+        "B": "Niamey",
+        "C": "Dakar",
+        "D": "Kinshasa",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Libya?",
+        "A": "Tripoli",
+        "B": "Benghazi",
+        "C": "Rabat",
+        "D": "Tunis",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Chad?",
+        "A": "N'Djamena",
+        "B": "Nairobi",
+        "C": "Bamako",
+        "D": "Nouakchott",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Mozambique?",
+        "A": "Maputo",
+        "B": "Maseru",
+        "C": "Libreville",
+        "D": "Luanda",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Tunisia?",
+        "A": "Rabat",
+        "B": "Tunis",
+        "C": "Algiers",
+        "D": "Tripoli",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Sierra Leone?",
+        "A": "Yamoussoukro",
+        "B": "Freetown",
+        "C": "Monrovia",
+        "D": "Accra",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Niger?",
+        "A": "Niamey",
+        "B": "Bangui",
+        "C": "Ouagadougou",
+        "D": "Abuja",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Liberia?",
+        "A": "Monrovia",
+        "B": "Mogadishu",
+        "C": "Maseru",
+        "D": "Banjul",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Malawi?",
+        "A": "Lilongwe",
+        "B": "Gaborone",
+        "C": "Johannesburg",
+        "D": "Lusaka",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Eritrea?",
+        "A": "Asmara",
+        "B": "Khartoum",
+        "C": "Addis Ababa",
+        "D": "El Aaiún",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Mauritania?",
+        "A": "Maputo",
+        "B": "Lomé",
+        "C": "Windhoek",
+        "D": "Nouakchott",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Central African Republic?",
+        "A": "Bangui",
+        "B": "Kigali",
+        "C": "Libreville",
+        "D": "Bujumbura",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Togo?",
+        "A": "Yamoussoukro",
+        "B": "Maseru",
+        "C": "Lomé",
+        "D": "Moroni",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Rwanda?",
+        "A": "Kigali",
+        "B": "Pretoria",
+        "C": "Niamey",
+        "D": "Bissau",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of South Africa?",
+        "A": "Pretoria",
+        "B": "Cape Town",
+        "C": "Johannesburg",
+        "D": "Durban",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Gabon?",
+        "A": "Libreville",
+        "B": "Brazzaville",
+        "C": "Khartoum",
+        "D": "Banjul",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Sudan?",
+        "A": "Nouakchott",
+        "B": "Khartoum",
+        "C": "Addis Ababa",
+        "D": "Juba",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Morocco?",
+        "A": "Algiers",
+        "B": "Rabat",
+        "C": "Casablanca",
+        "D": "Fez",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Burundi?",
+        "A": "Bujumbura",
+        "B": "Kigali",
+        "C": "Kampala",
+        "D": "Nairobi",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of South Sudan?",
+        "A": "Juba",
+        "B": "Khartoum",
+        "C": "Addis Ababa",
+        "D": "Mogadishu",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Guinea-Bissau?",
+        "A": "Bissau",
+        "B": "Conakry",
+        "C": "Dakar",
+        "D": "Banjul",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Lesotho?",
+        "A": "Maseru",
+        "B": "Mbabane",
+        "C": "Gaborone",
+        "D": "Windhoek",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Namibia?",
+        "A": "Windhoek",
+        "B": "Gaborone",
+        "C": "Lusaka",
+        "D": "Harare",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Ivory Coast?",
+        "A": "Abidjan",
+        "B": "Yamoussoukro",
+        "C": "Accra",
+        "D": "Lome",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Benin?",
+        "A": "Porto-Novo",
+        "B": "Cotonou",
+        "C": "Lomé",
+        "D": "Accra",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Botswana?",
+        "A": "Gaborone",
+        "B": "Maseru",
+        "C": "Mbabane",
+        "D": "Windhoek",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Djibouti?",
+        "A": "Djibouti",
+        "B": "Mogadishu",
+        "C": "Asmara",
+        "D": "Addis Ababa",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Tanzania?",
+        "A": "Dar es Salaam",
+        "B": "Dodoma",
+        "C": "Nairobi",
+        "D": "Mombasa",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Western Sahara?",
+        "A": "El Aaiún",
+        "B": "Laâyoune",
+        "C": "Rabat",
+        "D": "Algiers",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Equatorial Guinea?",
+        "A": "Malabo",
+        "B": "Libreville",
+        "C": "Yaoundé",
+        "D": "Brazzaville",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Reunion?",
+        "A": "Saint-Denis",
+        "B": "Port Louis",
+        "C": "Victoria",
+        "D": "Mamoudzou",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Mauritius?",
+        "A": "Port Louis",
+        "B": "Saint-Denis",
+        "C": "Praia",
+        "D": "Victoria",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Cape Verde?",
+        "A": "Praia",
+        "B": "Mindelo",
+        "C": "Sal",
+        "D": "Boa Vista",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Eswatini?",
+        "A": "Mbabane",
+        "B": "Maseru",
+        "C": "Lobamba",
+        "D": "Manzini",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Mayotte?",
+        "A": "Mamoudzou",
+        "B": "Saint-Denis",
+        "C": "Port Louis",
+        "D": "Victoria",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Sao Tome and Principe?",
+        "A": "São Tomé",
+        "B": "Santo António",
+        "C": "Neves",
+        "D": "Trindade",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Comoros?",
+        "A": "Moroni",
+        "B": "Mutsamudu",
+        "C": "Mamoudzou",
+        "D": "Dzaoudzi",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Gambia?",
+        "A": "Banjul",
+        "B": "Serrekunda",
+        "C": "Brikama",
+        "D": "Bakau",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Seychelles?",
+        "A": "Victoria",
+        "B": "Anse Royale",
+        "C": "Anse Boileau",
+        "D": "Beau Vallon",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Saint Helena, Ascension and Tristan da Cunha?",
+        "A": "Jamestown",
+        "B": "Georgetown",
+        "C": "Edinburgh",
+        "D": "HalfTree Hollow",
+        "answer": "A"
+    }
+]

@@ -23,12 +23,12 @@ interface Props {
     inCorrectCount: number;
     totalMcqs: number;
     attemptedCount?: number;
-    category: Categories;
+    categoryKey: keyof typeof Categories;
 }
 
 const QuizResult = ({
     checkedQuestions,
-    category,
+    categoryKey,
     correctCount,
     inCorrectCount,
     totalMcqs,
@@ -343,7 +343,7 @@ const QuizResult = ({
                     onTouchStart={(event) => handleTap(event, 'Category')}
                 >
                     <BiCategory size={24} className='inline-block' />
-                    <span>{category.toLocaleLowerCase()}</span>
+                    <span>{categoryKey.toLocaleLowerCase()}</span>
                 </div>
                 <ToolTip
                     title={tooltip.title}

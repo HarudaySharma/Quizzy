@@ -12,14 +12,14 @@ const CategoryList = () => {
 
     const handleChange = (option: any) => {
         if (!option) {
-            setFormData((prev) => ({ ...prev, category: undefined }));
+            setFormData((prev) => ({ ...prev, categoryKey: undefined }));
             return;
         }
         const { value } = option;
 
-        //console.log({ category: value });
-
-        setFormData((prev) => ({ ...prev, category: value }));
+        //console.log({ categoryKey: value });
+        
+        setFormData((prev) => ({ ...prev, categoryKey: value }));
     }
 
     useEffect(() => {
@@ -28,7 +28,7 @@ const CategoryList = () => {
 
     const categoryOptions = categories.map((category: keyof typeof Categories) => ({
         label: category,
-        value: Categories[category],
+        value: category,
     }));
 
     return (

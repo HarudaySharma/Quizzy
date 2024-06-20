@@ -1,6 +1,6 @@
 import { ReactNode, useCallback, useEffect, useState } from 'react'
 import McqCard from './McqCard';
-import { CompoundMcqContext } from '../../context/McqComponentContext';
+import { CompoundMcqContext, CompoundMcqContextType } from '../../context/McqComponentContext';
 import { Categories, MCQ, MarkedQuestion, OPTIONS, VARIANT } from '../../types';
 import McqComponentMetaData from './McqComponentMetaData';
 import QuizTimer from './QuizTimer';
@@ -14,7 +14,7 @@ import shuffleOptions from '../../utils/shuffleOptions';
 
 interface McqComponentProps {
     mcqList: MCQ[];
-    category: Categories;
+    categoryKey: keyof typeof Categories;
     meta: ReactNode;
     setUnvisitedQuestions: React.Dispatch<React.SetStateAction<number | undefined>>;
     variant: VARIANT;
@@ -24,7 +24,7 @@ interface McqComponentProps {
 
 const McqComponent = ({
     mcqList,
-    category,
+    categoryKey,
     meta,
     onQuizOver,
     setUnvisitedQuestions,
@@ -200,9 +200,9 @@ const McqComponent = ({
         }
     }
 
-    const contextValues = {
+    const contextValues: CompoundMcqContextType = {
         mcq: mcqList[mcqIndex],
-        category: category,
+        categoryKey: categoryKey,
         timer: timer,
         setTimer: setTimer,
         totalMcqs: mcqList.length,
@@ -223,7 +223,7 @@ const McqComponent = ({
                 bg-transparent 
                 max-w-[90vw]
                 sm:max-w-xl
-                w-11/12
+                w-auto
                 mx-auto 
                 gap-4
             `}

@@ -1,7 +1,7 @@
 import { ReactNode, useCallback, useEffect, useState } from 'react';
 import UserForm from '../components/UserForm'
 import CompoundMcq from '../components/CompoundMcq';
-import { CheckedQuestion, MarkedQuestion, handleFormSubmitParams } from '../types';
+import { Categories, CheckedQuestion, MarkedQuestion, handleFormSubmitParams } from '../types';
 import QuizResult from '../components/QuizResult';
 import OverButtons from '../components/OverButtons';
 import useTestQuestions from '../hooks/useTestQuestions';
@@ -46,10 +46,13 @@ const TestPage = () => {
 
     const [showLoadingModal, setShowLoadingModal] = useState(false);
 
-    const handleFormSubmit = useCallback(({ category, mcqCount, requestMode, timer }: handleFormSubmitParams) => {
-        console.log({ category, mcqCount, requestMode, timer });
+    const [categoryKey, setCategoryKey] = useState<keyof typeof Categories | undefined>(undefined);
 
-        setCategory(category);
+    const handleFormSubmit = useCallback(({ categoryKey, mcqCount, requestMode, timer }: handleFormSubmitParams) => {
+        console.log({ categoryKey, mcqCount, requestMode, timer });
+
+        setCategory(Categories[categoryKey]);
+        setCategoryKey(categoryKey);
 
         if (requestMode === 'TIMER') {
             setVariant('TIMER');
@@ -66,7 +69,7 @@ const TestPage = () => {
         setRenderComponent(
             <CompoundMcq
                 mcqList={mcqList}
-                category={category!}
+                categoryKey={categoryKey!}
                 meta={<>
                     <CompoundMcq.MetaData>
                         <CompoundMcq.MetaData.TotalMcqs
@@ -171,7 +174,7 @@ const TestPage = () => {
 
         setRenderComponent(<>
             <QuizResult
-                category={category}
+                categoryKey={categoryKey!}
                 checkedQuestions={checkedQuestions}
                 correctCount={correctCount}
                 inCorrectCount={inCorrectCount}
@@ -198,7 +201,7 @@ const TestPage = () => {
             setRenderComponent(
                 <CompoundMcq
                     mcqList={mcqList}
-                    category={category!}
+                    categoryKey={categoryKey!}
                     meta={<>
                         <CompoundMcq.MetaData>
                             <CompoundMcq.MetaData.TotalMcqs
@@ -221,7 +224,7 @@ const TestPage = () => {
             setRenderComponent(
                 <CompoundMcq
                     mcqList={mcqList}
-                    category={category!}
+                    categoryKey={categoryKey!}
                     meta={<>
                         <CompoundMcq.MetaData>
                             <CompoundMcq.MetaData.TotalMcqs

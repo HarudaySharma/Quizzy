@@ -1,0 +1,442 @@
+[
+    {
+        "question": "What is the capital of Peru?",
+        "A": "Kingstown",
+        "B": "Oranjestad",
+        "C": "Gustavia",
+        "D": "Lima",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Mexico?",
+        "A": "Mexico City",
+        "B": "Kingstown",
+        "C": "Gustavia",
+        "D": "Santo Domingo",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Colombia?",
+        "A": "Santo Domingo",
+        "B": "Bogot\u00e1",
+        "C": "Gustavia",
+        "D": "Kingstown",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Chile?",
+        "A": "Oranjestad",
+        "B": "Santo Domingo",
+        "C": "Gustavia",
+        "D": "Santiago",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Brazil?",
+        "A": "Kingstown",
+        "B": "Santo Domingo",
+        "C": "Bras\u00edlia",
+        "D": "Gustavia",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Argentina?",
+        "A": "Gustavia",
+        "B": "Kingstown",
+        "C": "Oranjestad",
+        "D": "Buenos Aires",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Venezuela?",
+        "A": "Oranjestad",
+        "B": "Kingstown",
+        "C": "Caracas",
+        "D": "Gustavia",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Cuba?",
+        "A": "Gustavia",
+        "B": "Oranjestad",
+        "C": "Kingstown",
+        "D": "Havana",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Ecuador?",
+        "A": "Santo Domingo",
+        "B": "Oranjestad",
+        "C": "Gustavia",
+        "D": "Quito",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Uruguay?",
+        "A": "Oranjestad",
+        "B": "Santo Domingo",
+        "C": "Gustavia",
+        "D": "Montevideo",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Honduras?",
+        "A": "Tegucigalpa",
+        "B": "Santo Domingo",
+        "C": "Gustavia",
+        "D": "Oranjestad",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Nicaragua?",
+        "A": "Managua",
+        "B": "Santo Domingo",
+        "C": "Kingstown",
+        "D": "Gustavia",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Canada?",
+        "A": "Gustavia",
+        "B": "Kingstown",
+        "C": "Ottawa",
+        "D": "Oranjestad",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Haiti?",
+        "A": "Gustavia",
+        "B": "Kingstown",
+        "C": "Oranjestad",
+        "D": "Port-au-Prince",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Dominican Republic?",
+        "A": "Santo Domingo",
+        "B": "Kingstown",
+        "C": "Gustavia",
+        "D": "Oranjestad",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Guatemala?",
+        "A": "Oranjestad",
+        "B": "Gustavia",
+        "C": "Guatemala City",
+        "D": "Santo Domingo",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of United States?",
+        "A": "Gustavia",
+        "B": "Kingstown",
+        "C": "Oranjestad",
+        "D": "Washington, D.C.",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Jamaica?",
+        "A": "Gustavia",
+        "B": "Santo Domingo",
+        "C": "Oranjestad",
+        "D": "Kingston",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Paraguay?",
+        "A": "Gustavia",
+        "B": "Asunci\u00f3n",
+        "C": "Santo Domingo",
+        "D": "Kingstown",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Panama?",
+        "A": "Kingstown",
+        "B": "Gustavia",
+        "C": "Panama City",
+        "D": "Oranjestad",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Costa Rica?",
+        "A": "Oranjestad",
+        "B": "Santo Domingo",
+        "C": "Gustavia",
+        "D": "San Jos\u00e9",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Puerto Rico?",
+        "A": "Gustavia",
+        "B": "Oranjestad",
+        "C": "San Juan",
+        "D": "Santo Domingo",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Bolivia?",
+        "A": "Sucre",
+        "B": "Kingstown",
+        "C": "Oranjestad",
+        "D": "Gustavia",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Bahamas?",
+        "A": "Gustavia",
+        "B": "Santo Domingo",
+        "C": "Kingstown",
+        "D": "Nassau",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Suriname?",
+        "A": "Kingstown",
+        "B": "Santo Domingo",
+        "C": "Gustavia",
+        "D": "Paramaribo",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of El Salvador?",
+        "A": "San Salvador",
+        "B": "Kingstown",
+        "C": "Oranjestad",
+        "D": "Gustavia",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Trinidad and Tobago?",
+        "A": "Kingstown",
+        "B": "Oranjestad",
+        "C": "Gustavia",
+        "D": "Port-of-Spain",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Curacao?",
+        "A": "Willemstad",
+        "B": "Oranjestad",
+        "C": "Gustavia",
+        "D": "Santo Domingo",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Guyana?",
+        "A": "Oranjestad",
+        "B": "Georgetown",
+        "C": "Kingstown",
+        "D": "Gustavia",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Barbados?",
+        "A": "Bridgetown",
+        "B": "Gustavia",
+        "C": "Santo Domingo",
+        "D": "Oranjestad",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Martinique?",
+        "A": "Santo Domingo",
+        "B": "Fort-de-France",
+        "C": "Gustavia",
+        "D": "Kingstown",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Antigua and Barbuda?",
+        "A": "Gustavia",
+        "B": "Saint John\u2019s",
+        "C": "Kingstown",
+        "D": "Santo Domingo",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Saint Lucia?",
+        "A": "Oranjestad",
+        "B": "Castries",
+        "C": "Santo Domingo",
+        "D": "Gustavia",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of French Guiana?",
+        "A": "Gustavia",
+        "B": "Oranjestad",
+        "C": "Kingstown",
+        "D": "Cayenne",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Aruba?",
+        "A": "Santo Domingo",
+        "B": "Oranjestad",
+        "C": "Oranjestad",
+        "D": "Gustavia",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Grenada?",
+        "A": "Saint George\u2019s",
+        "B": "Santo Domingo",
+        "C": "Kingstown",
+        "D": "Gustavia",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Cayman Islands?",
+        "A": "George Town",
+        "B": "Santo Domingo",
+        "C": "Kingstown",
+        "D": "Gustavia",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Virgin Islands?",
+        "A": "Kingstown",
+        "B": "Oranjestad",
+        "C": "Gustavia",
+        "D": "Charlotte Amalie",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Greenland?",
+        "A": "Santo Domingo",
+        "B": "Oranjestad",
+        "C": "Nuuk",
+        "D": "Gustavia",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Dominica?",
+        "A": "Oranjestad",
+        "B": "Kingstown",
+        "C": "Gustavia",
+        "D": "Roseau",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Saint Vincent and the Grenadines?",
+        "A": "Gustavia",
+        "B": "Kingstown",
+        "C": "Santo Domingo",
+        "D": "Oranjestad",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Belize?",
+        "A": "Kingstown",
+        "B": "Gustavia",
+        "C": "Belmopan",
+        "D": "Santo Domingo",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Saint Kitts and Nevis?",
+        "A": "Oranjestad",
+        "B": "Gustavia",
+        "C": "Kingstown",
+        "D": "Basseterre",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of British Virgin Islands?",
+        "A": "Road Town",
+        "B": "Gustavia",
+        "C": "Oranjestad",
+        "D": "Kingstown",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Guadeloupe?",
+        "A": "Santo Domingo",
+        "B": "Basse-Terre",
+        "C": "Oranjestad",
+        "D": "Gustavia",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Saint Martin?",
+        "A": "Gustavia",
+        "B": "Kingstown",
+        "C": "Oranjestad",
+        "D": "Marigot",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Saint Pierre and Miquelon?",
+        "A": "Santo Domingo",
+        "B": "Oranjestad",
+        "C": "Saint-Pierre",
+        "D": "Gustavia",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Turks and Caicos Islands?",
+        "A": "Cockburn Town",
+        "B": "Gustavia",
+        "C": "Oranjestad",
+        "D": "Kingstown",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Anguilla?",
+        "A": "Santo Domingo",
+        "B": "Gustavia",
+        "C": "Kingstown",
+        "D": "The Valley",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Saint Barthelemy?",
+        "A": "Santo Domingo",
+        "B": "Gustavia",
+        "C": "Gustavia",
+        "D": "Kingstown",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Falkland Islands?",
+        "A": "Kingstown",
+        "B": "Oranjestad",
+        "C": "Stanley",
+        "D": "Gustavia",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Sint Maarten?",
+        "A": "Santo Domingo",
+        "B": "Philipsburg",
+        "C": "Kingstown",
+        "D": "Gustavia",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Bermuda?",
+        "A": "Santo Domingo",
+        "B": "Oranjestad",
+        "C": "Hamilton",
+        "D": "Gustavia",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Montserrat?",
+        "A": "Kingstown",
+        "B": "Oranjestad",
+        "C": "Brades",
+        "D": "Gustavia",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of South Georgia and South Sandwich Islands?",
+        "A": "Gustavia",
+        "B": "King Edward Point",
+        "C": "Kingstown",
+        "D": "Santo Domingo",
+        "answer": "B"
+    }
+]

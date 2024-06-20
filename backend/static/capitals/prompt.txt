@@ -1,0 +1,106 @@
+
+export type Options = 'A' | 'B' | 'C' | 'D';
+
+export interface MCQ {
+question: string,
+A: string,
+B: string,
+C: string,
+D: string,
+answer: Options;
+}
+
+can you create a json file containing all the guess the Capital MCQs in the format specified above from the data given below? shuffle the options properly
+
+
+Capitals of Australian/ Oceania Countries
+
+    Australia – Canberra
+    New Zealand – Wellington
+    Christmas Island – Flying Fish Cove
+    Norfolk Island – Kingston
+    Cocos (Keeling) Islands – West Island
+    Papua New Guinea – Port Moresby
+    New Caledonia – Nouméa
+    Fiji – Suva
+    Solomon Islands – Honiara
+    Kiribati – Tarawa
+    Northern Mariana Islands – Saipan
+    Vanuatu – Port-Vila
+    Samoa – Apia
+    Tonga – Nuku‘alofa
+    Marshall Islands – Majuro
+    French Polynesia – Papeete
+    Tuvalu – Funafuti
+    Cook Islands – Avarua
+    American Samoa – Pago Pago
+    Wallis and Futuna – Mata-Utu
+    Guam – Hagåtña
+    Nauru – Yaren
+    Niue – Alofi
+    Pitcairn Islands – Adamstown
+    
+can you do the same for these too, shuffle the options properly
+
+Capitals of African Countries
+
+    Democratic Republic of the Congo – Kinshasa
+    Egypt – Cairo
+    Kenya – Nairobi
+    Ethiopia – Addis Ababa
+    Zimbabwe – Harare
+    Cameroon – Yaoundé
+    Nigeria – Abuja
+    Mali – Bamako
+    Algeria – Algiers
+    Angola – Luanda
+    Ghana – Accra
+    Burkina Faso – Ouagadougou
+    Somalia – Mogadishu
+    Republic of the Congo – Brazzaville
+    Zambia – Lusaka
+    Guinea – Conakry
+    Uganda – Kampala
+    Madagascar – Antananarivo
+    Senegal – Dakar
+    Libya – Tripoli
+    Chad – N’Djamena
+    Mozambique – Maputo
+    Tunisia – Tunis
+    Sierra Leone – Freetown
+    Niger – Niamey
+    Liberia – Monrovia
+    Malawi – Lilongwe
+    Eritrea – Asmara
+    Mauritania – Nouakchott
+    Central African Republic – Bangui
+    Togo – Lomé
+    Rwanda – Kigali
+    South Africa – Pretoria
+    Gabon – Libreville
+    Sudan – Khartoum
+    Morocco – Rabat
+    Burundi – Bujumbura
+    South Sudan – Juba
+    Guinea-Bissau – Bissau
+    Lesotho – Maseru
+    Namibia – Windhoek
+    Ivory Coast – Yamoussoukro
+    Benin – Porto-Novo
+    Botswana – Gaborone
+    Djibouti – Djibouti
+    Tanzania – Dodoma
+    Western Sahara – El Aaiún or Laâyoune 
+    Equatorial Guinea – Malabo
+    Reunion – Saint-Denis
+    Mauritius – Port Louis
+    Cape Verde – Praia
+    Eswatini – Mbabane
+    Mayotte – Mamoudzou
+    Sao Tome and Principe – São Tomé
+    Comoros – Moroni
+    Gambia – Banjul
+    Seychelles – Victoria
+    Saint Helena, Ascension and Tristan da Cunha – Jamestown
+
+
