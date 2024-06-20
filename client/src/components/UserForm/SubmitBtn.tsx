@@ -10,12 +10,12 @@ const SubmitBtn = () => {
         if (!formData)
             return;
 
-        if ((formData.timer || formData.mcqCount) && formData.category)
+        if ((formData.timer || formData.mcqCount) && formData.categoryKey)
             setDisabled(false);
         else
             setDisabled(true);
 
-    }, [formData?.timer, formData?.requestMode, formData?.category, formData?.mcqCount]);
+    }, [formData?.timer, formData?.requestMode, formData?.categoryKey, formData?.mcqCount]);
 
     return (
         <Button

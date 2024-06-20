@@ -10,8 +10,8 @@ const ChooseButtons = () => {
     const [disabled, setDisabled] = useState(true);
 
     useEffect(() => {
-        formData?.category ? setDisabled(false) : setDisabled(true);
-    }, [formData?.category])
+        formData?.categoryKey ? setDisabled(false) : setDisabled(true);
+    }, [formData?.categoryKey])
 
     const setMcqCountBtnClickHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault();

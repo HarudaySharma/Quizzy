@@ -8,7 +8,7 @@ import ChooseButtons from './ChooseButtons';
 import SetTimerField from './SetTimerField';
 
 export interface UserFormData {
-    category?: Categories;
+    categoryKey?: keyof typeof Categories;
     mcqCount?: number;
     requestMode?: RequestModes;
     timer?: number;
@@ -33,12 +33,12 @@ const UserForm = ({
         console.log({ formData });
         if (!formData)
             return;
-        if (!formData.category || !formData.requestMode || (!formData.timer && !formData.mcqCount)) {
+        if (!formData.categoryKey || !formData.requestMode || (!formData.timer && !formData.mcqCount)) {
             return;
         }
 
         onSubmit({
-            category: formData.category,
+            categoryKey: formData.categoryKey,
             requestMode: formData.requestMode,
             timer: formData.timer,
             mcqCount: formData.mcqCount,
@@ -46,11 +46,11 @@ const UserForm = ({
     }
 
     useEffect(() => {
-        if (!formData?.category) {
+        if (!formData?.categoryKey) {
             // reset formData
             setFormData(undefined);
         }
-    }, [formData?.category])
+    }, [formData?.categoryKey])
 
     return (
         <div

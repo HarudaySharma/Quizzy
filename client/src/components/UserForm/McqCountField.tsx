@@ -11,13 +11,13 @@ const McqCountField = () => {
     const [disabled, setDisabled] = useState(true);
 
     useEffect(() => {
-        if (!formData?.category) {
+        if (!formData?.categoryKey) {
             setMcqCount("");
         }
 
-        formData?.category ? setDisabled(false) : setDisabled(true);
+        formData?.categoryKey ? setDisabled(false) : setDisabled(true);
 
-    }, [formData?.category])
+    }, [formData?.categoryKey])
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (disabled) {

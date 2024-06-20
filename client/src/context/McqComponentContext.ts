@@ -2,12 +2,12 @@ import { useContext, createContext } from "react";
 import { Categories, MCQ, MarkedQuestion, VARIANT } from "../types";
 
 
-type CompoundMcqContextType = {
+export type CompoundMcqContextType = {
     mcq: MCQ;
     correctCount: number;
     inCorrectCount: number;
     attemptedCount?: number;
-    category: Categories;
+    categoryKey: keyof typeof Categories;
     totalMcqs: number;
     markedAnswers: MarkedQuestion[];
     timer: number | null;
@@ -35,6 +35,6 @@ export const useMcqComponentContext = () => {
         timer: context.timer,
         setTimer: context.setTimer,
         variant: context.variant,
-        category: context.category,
+        categoryKey: context.categoryKey,
     }
 }

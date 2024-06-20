@@ -1,0 +1,194 @@
+[
+    {
+        "question": "What is the capital of Australia?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Kingston",
+        "D": "West Island",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of New Zealand?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Kingston",
+        "D": "West Island",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Christmas Island?",
+        "A": "Flying Fish Cove",
+        "B": "Apia",
+        "C": "Nuku‘alofa",
+        "D": "Alofi",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Norfolk Island?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Kingston",
+        "D": "West Island",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Cocos (Keeling) Islands?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "West Island",
+        "D": "Kingston",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Papua New Guinea?",
+        "A": "Canberra",
+        "B": "Port Moresby",
+        "C": "Kingston",
+        "D": "West Island",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of New Caledonia?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Kingston",
+        "D": "Nouméa",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Fiji?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Suva",
+        "D": "West Island",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Solomon Islands?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Honiara",
+        "D": "West Island",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Kiribati?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Kingston",
+        "D": "Tarawa",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Northern Mariana Islands?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Saipan",
+        "D": "West Island",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Vanuatu?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Port-Vila",
+        "D": "West Island",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Samoa?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Apia",
+        "D": "West Island",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Tonga?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Nuku‘alofa",
+        "D": "West Island",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Marshall Islands?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Kingston",
+        "D": "Majuro",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of French Polynesia?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Kingston",
+        "D": "Papeete",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Tuvalu?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Funafuti",
+        "D": "West Island",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Cook Islands?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Avarua",
+        "D": "West Island",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of American Samoa?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Pago Pago",
+        "D": "West Island",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Wallis and Futuna?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Mata-Utu",
+        "D": "West Island",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Guam?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Hagåtña",
+        "D": "West Island",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Nauru?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Kingston",
+        "D": "Yaren",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Niue?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Alofi",
+        "D": "West Island",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Pitcairn Islands?",
+        "A": "Canberra",
+        "B": "Wellington",
+        "C": "Kingston",
+        "D": "Adamstown",
+        "answer": "D"
+    }
+]

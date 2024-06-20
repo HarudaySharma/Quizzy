@@ -1,0 +1,419 @@
+[
+    {
+        "question": "What is the capital of Russia?",
+        "A": "Moscow",
+        "B": "Berlin",
+        "C": "Madrid",
+        "D": "Paris",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of United Kingdom?",
+        "A": "Vienna",
+        "B": "London",
+        "C": "Prague",
+        "D": "Brussels",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Germany?",
+        "A": "Berlin",
+        "B": "Budapest",
+        "C": "Warsaw",
+        "D": "Athens",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Spain?",
+        "A": "Bucharest",
+        "B": "Copenhagen",
+        "C": "Madrid",
+        "D": "Dublin",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Ukraine?",
+        "A": "Vilnius",
+        "B": "Kiev",
+        "C": "Riga",
+        "D": "Oslo",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Italy?",
+        "A": "Lisbon",
+        "B": "Rome",
+        "C": "Stockholm",
+        "D": "Zagreb",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of France?",
+        "A": "Helsinki",
+        "B": "Tallinn",
+        "C": "Paris",
+        "D": "Warsaw",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Belarus?",
+        "A": "Minsk",
+        "B": "Athens",
+        "C": "Dublin",
+        "D": "Ljubljana",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Austria?",
+        "A": "Skopje",
+        "B": "Vienna",
+        "C": "Bern",
+        "D": "Reykjavík",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Romania?",
+        "A": "Bratislava",
+        "B": "San Marino",
+        "C": "Bucharest",
+        "D": "Sarajevo",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Poland?",
+        "A": "Minsk",
+        "B": "Oslo",
+        "C": "Warsaw",
+        "D": "Helsinki",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Hungary?",
+        "A": "Budapest",
+        "B": "Kiev",
+        "C": "Athens",
+        "D": "Brussels",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Serbia?",
+        "A": "Zagreb",
+        "B": "Prague",
+        "C": "Sofia",
+        "D": "Belgrade",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Czechia?",
+        "A": "Prague",
+        "B": "Dublin",
+        "C": "Luxembourg",
+        "D": "Sarajevo",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Bulgaria?",
+        "A": "Copenhagen",
+        "B": "Sofia",
+        "C": "Podgorica",
+        "D": "Tallinn",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Belgium?",
+        "A": "Brussels",
+        "B": "Bern",
+        "C": "Vaduz",
+        "D": "Reykjavík",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Sweden?",
+        "A": "Vienna",
+        "B": "Stockholm",
+        "C": "Lisbon",
+        "D": "Ljubljana",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Netherlands?",
+        "A": "Amsterdam",
+        "B": "Helsinki",
+        "C": "Belgrade",
+        "D": "Bucharest",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Croatia?",
+        "A": "Zagreb",
+        "B": "Sarajevo",
+        "C": "Pristina",
+        "D": "Podgorica",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Norway?",
+        "A": "Oslo",
+        "B": "Vilnius",
+        "C": "Athens",
+        "D": "Luxembourg",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Greece?",
+        "A": "Dublin",
+        "B": "Athens",
+        "C": "Vienna",
+        "D": "Prague",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Finland?",
+        "A": "Tirana",
+        "B": "Città del Vaticano",
+        "C": "Helsinki",
+        "D": "Mariehamn",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Latvia?",
+        "A": "Skopje",
+        "B": "Riga",
+        "C": "Chisinau",
+        "D": "Vaduz",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Denmark?",
+        "A": "Copenhagen",
+        "B": "Bratislava",
+        "C": "Douglas",
+        "D": "San Marino",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Ireland?",
+        "A": "Paris",
+        "B": "Luxembourg",
+        "C": "Dublin",
+        "D": "Ljubljana",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of North Macedonia?",
+        "A": "Podgorica",
+        "B": "Belgrade",
+        "C": "Skopje",
+        "D": "Andorra la Vella",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Lithuania?",
+        "A": "Vilnius",
+        "B": "Mariehamn",
+        "C": "Saint Helier",
+        "D": "Tallinn",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Portugal?",
+        "A": "Lisbon",
+        "B": "Zagreb",
+        "C": "Tirana",
+        "D": "Gibraltar",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Estonia?",
+        "A": "San Marino",
+        "B": "Valletta",
+        "C": "Tallinn",
+        "D": "Sarajevo",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Slovakia?",
+        "A": "Longyearbyen",
+        "B": "Bratislava",
+        "C": "Pristina",
+        "D": "Andorra la Vella",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Albania?",
+        "A": "Sofia",
+        "B": "Skopje",
+        "C": "Tirana",
+        "D": "Bern",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Moldova?",
+        "A": "Belgrade",
+        "B": "Chisinau",
+        "C": "Copenhagen",
+        "D": "Dublin",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Slovenia?",
+        "A": "Tallinn",
+        "B": "Bratislava",
+        "C": "Ljubljana",
+        "D": "Riga",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Bosnia and Herzegovina?",
+        "A": "Sarajevo",
+        "B": "Helsinki",
+        "C": "Reykjavík",
+        "D": "Vaduz",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Kosovo?",
+        "A": "Oslo",
+        "B": "Minsk",
+        "C": "Pristina",
+        "D": "Mariehamn",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Montenegro?",
+        "A": "Douglas",
+        "B": "Skopje",
+        "C": "Podgorica",
+        "D": "Bern",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Switzerland?",
+        "A": "Brussels",
+        "B": "San Marino",
+        "C": "Bern",
+        "D": "Prague",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Iceland?",
+        "A": "Reykjavík",
+        "B": "Gibraltar",
+        "C": "Saint Peter Port",
+        "D": "Longyearbyen",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Luxembourg?",
+        "A": "Luxembourg",
+        "B": "Saint Helier",
+        "C": "Stockholm",
+        "D": "Helsinki",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Principality of Monaco?",
+        "A": "Tirana",
+        "B": "Monaco",
+        "C": "Riga",
+        "D": "Oslo",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Gibraltar?",
+        "A": "Gibraltar",
+        "B": "Vaduz",
+        "C": "Dublin",
+        "D": "Paris",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Jersey?",
+        "A": "Douglas",
+        "B": "Saint Helier",
+        "C": "Luxembourg",
+        "D": "Bern",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Isle of Man?",
+        "A": "Douglas",
+        "B": "Podgorica",
+        "C": "Amsterdam",
+        "D": "Oslo",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Andorra?",
+        "A": "Pristina",
+        "B": "Andorra la Vella",
+        "C": "Bratislava",
+        "D": "Mariehamn",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Guernsey?",
+        "A": "Saint Peter Port",
+        "B": "Ljubljana",
+        "C": "Warsaw",
+        "D": "Bern",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Faroe Islands?",
+        "A": "Copenhagen",
+        "B": "Skopje",
+        "C": "Tórshavn",
+        "D": "Paris",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Åland Islands?",
+        "A": "Mariehamn",
+        "B": "Prague",
+        "C": "Stockholm",
+        "D": "Tirana",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Malta?",
+        "A": "Tallinn",
+        "B": "Budapest",
+        "C": "Belgrade",
+        "D": "Valletta",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Liechtenstein?",
+        "A": "San Marino",
+        "B": "Vaduz",
+        "C": "Riga",
+        "D": "Tirana",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of San Marino?",
+        "A": "Skopje",
+        "B": "Reykjavík",
+        "C": "San Marino",
+        "D": "Zagreb",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Svalbard?",
+        "A": "Longyearbyen",
+        "B": "Sarajevo",
+        "C": "Warsaw",
+        "D": "Prague",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Vatican City?",
+        "A": "Brussels",
+        "B": "Vaduz",
+        "C": "Città del Vaticano",
+        "D": "Pristina",
+        "answer": "C"
+    }
+]
+

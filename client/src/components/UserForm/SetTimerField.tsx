@@ -12,14 +12,14 @@ const SetTimerField = () => {
     const [disabled, setDisabled] = useState(true);
 
     useEffect(() => {
-        if (!formData?.category) {
+        if (!formData?.categoryKey) {
             setSeconds('');
             setMinutes('');
         }
 
-        formData?.category ? setDisabled(false) : setDisabled(true);
+        formData?.categoryKey ? setDisabled(false) : setDisabled(true);
 
-    }, [formData?.category])
+    }, [formData?.categoryKey])
 
     useEffect(() => {
         const time = Number(minutes) * 60 + Number(seconds)

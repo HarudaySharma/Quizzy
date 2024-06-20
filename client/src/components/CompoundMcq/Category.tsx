@@ -3,7 +3,7 @@ import { useMcqComponentContext } from "../../context/McqComponentContext";
 
 const Category = () => {
 
-    const { category } = useMcqComponentContext();
+    const { categoryKey } = useMcqComponentContext();
 
     return (
         <div
@@ -23,7 +23,7 @@ const Category = () => {
             title='Category'
         >
             <BiCategory size={24} className='inline-block' />
-            <span>{category.toLocaleLowerCase()}</span>
+            <span>{categoryKey.toLocaleLowerCase()}</span>
         </div>
     )
 }

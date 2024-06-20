@@ -41,7 +41,7 @@ export interface MarkedQuestion {
 }
 
 export type handleFormSubmitParams = {
-    category: Categories;
+    categoryKey: keyof typeof Categories,
     mcqCount?: number;
     requestMode: RequestModes;
     timer?: number;
@@ -56,5 +56,11 @@ export enum Categories {
     Politics = "POLITICS",
     Sports = "SPORTS",
     Flags = "FLAGS",
+    "Capitals" = "CAPITALS_ALL",
+    "Asian Countries Capital" = "CAPITALS_ASIAN",
+    "European Countries Capital" = "CAPITALS_EURPOEAN",
+    "Austrailan Oceania Countries Capital" = "CAPITALS_AUSTRALIAN_OCEANIA",
+    "American Countries Capital" = "CAPITALS_AMERICAN",
+    "African Countries Capital" = "CAPITALS_AFRICAN",
 }
 

@@ -1,0 +1,410 @@
+[
+    {
+        "question": "What is the capital of China?",
+        "A": "Beijing",
+        "B": "Kabul",
+        "C": "Bangkok",
+        "D": "New Delhi",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Japan?",
+        "A": "Concelho de Macau",
+        "B": "Dhaka",
+        "C": "Tokyo",
+        "D": "Thimphu",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Indonesia?",
+        "A": "Ashgabat",
+        "B": "Mal\u00e9",
+        "C": "Concelho de Macau",
+        "D": "Jakarta",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Thailand?",
+        "A": "Tashkent",
+        "B": "Bangkok",
+        "C": "Concelho de Macau",
+        "D": "Jerusalem",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of South Korea?",
+        "A": "Seoul",
+        "B": "Damascus",
+        "C": "Tbilisi",
+        "D": "Kathmandu",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Bangladesh?",
+        "A": "Bandar Seri Begawan",
+        "B": "Dhaka",
+        "C": "Hanoi",
+        "D": "Baghdad",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Iran?",
+        "A": "Phnom Penh",
+        "B": "Tehran",
+        "C": "Concelho de Macau",
+        "D": "Bangkok",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Iraq?",
+        "A": "Baghdad",
+        "B": "Taipei",
+        "C": "Abu Dhabi",
+        "D": "Kuala Lumpur",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Saudi Arabia?",
+        "A": "Taipei",
+        "B": "Tehran",
+        "C": "Riyadh",
+        "D": "Hong Kong",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Hong Kong?",
+        "A": "Baku",
+        "B": "Bandar Seri Begawan",
+        "C": "Sanaa",
+        "D": "Hong Kong",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Singapore?",
+        "A": "Singapore",
+        "B": "Pyongyang",
+        "C": "Dushanbe",
+        "D": "Nay Pyi Taw",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Turkey?",
+        "A": "Ankara",
+        "B": "Dhaka",
+        "C": "Hong Kong",
+        "D": "Kuwait City",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Vietnam?",
+        "A": "Ulaanbaatar",
+        "B": "Yerevan",
+        "C": "Ramallah",
+        "D": "Hanoi",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Afghanistan?",
+        "A": "Yerevan",
+        "B": "Ashgabat",
+        "C": "Sanaa",
+        "D": "Kabul",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Jordan?",
+        "A": "Nursultan",
+        "B": "Ramallah",
+        "C": "Sanaa",
+        "D": "Amman",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of North Korea?",
+        "A": "Pyongyang",
+        "B": "Tokyo",
+        "C": "Islamabad",
+        "D": "Ankara",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Kuwait?",
+        "A": "Dili",
+        "B": "Kabul",
+        "C": "Kuwait City",
+        "D": "Mal\u00e9",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Taiwan?",
+        "A": "Ashgabat",
+        "B": "Taipei",
+        "C": "Tbilisi",
+        "D": "Kuala Lumpur",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Uzbekistan?",
+        "A": "Jakarta",
+        "B": "Damascus",
+        "C": "Tashkent",
+        "D": "Hong Kong",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Yemen?",
+        "A": "Kuwait City",
+        "B": "Sanaa",
+        "C": "Concelho de Macau",
+        "D": "Tehran",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Syria?",
+        "A": "Kuwait City",
+        "B": "Damascus",
+        "C": "Kuala Lumpur",
+        "D": "Bishkek",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Azerbaijan?",
+        "A": "Baku",
+        "B": "Riyadh",
+        "C": "Tokyo",
+        "D": "Nursultan",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Cambodia?",
+        "A": "Jerusalem",
+        "B": "Phnom Penh",
+        "C": "Jakarta",
+        "D": "Singapore",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Philippines?",
+        "A": "Manila",
+        "B": "Hong Kong",
+        "C": "Dushanbe",
+        "D": "Dhaka",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Malaysia?",
+        "A": "Nicosia",
+        "B": "Kabul",
+        "C": "Concelho de Macau",
+        "D": "Kuala Lumpur",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Mongolia?",
+        "A": "Tokyo",
+        "B": "Colombo",
+        "C": "Pyongyang",
+        "D": "Ulaanbaatar",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of United Arab Emirates?",
+        "A": "Nay Pyi Taw",
+        "B": "Dili",
+        "C": "Abu Dhabi",
+        "D": "Ramallah",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Georgia?",
+        "A": "Doha",
+        "B": "Tokyo",
+        "C": "Tbilisi",
+        "D": "Baku",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Armenia?",
+        "A": "Yerevan",
+        "B": "Concelho de Macau",
+        "C": "Kabul",
+        "D": "Seoul",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Turkmenistan?",
+        "A": "Beijing",
+        "B": "Ashgabat",
+        "C": "Riyadh",
+        "D": "Jerusalem",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Kazakhstan?",
+        "A": "Baghdad",
+        "B": "Nursultan",
+        "C": "Bishkek",
+        "D": "Beirut",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Pakistan?",
+        "A": "Islamabad",
+        "B": "Mal\u00e9",
+        "C": "Concelho de Macau",
+        "D": "Abu Dhabi",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Kyrgyzstan?",
+        "A": "Seoul",
+        "B": "Ankara",
+        "C": "Bishkek",
+        "D": "Taipei",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Nepal?",
+        "A": "Kuala Lumpur",
+        "B": "Tehran",
+        "C": "Kathmandu",
+        "D": "Riyadh",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Burma?",
+        "A": "Kathmandu",
+        "B": "Nay Pyi Taw",
+        "C": "Nicosia",
+        "D": "Jakarta",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Israel?",
+        "A": "Jakarta",
+        "B": "Tehran",
+        "C": "Nicosia",
+        "D": "Jerusalem",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Laos?",
+        "A": "Vientiane",
+        "B": "Ankara",
+        "C": "Manila",
+        "D": "Taipei",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Tajikistan?",
+        "A": "Manila",
+        "B": "Dushanbe",
+        "C": "Beirut",
+        "D": "Dhaka",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Sri Lanka?",
+        "A": "Colombo",
+        "B": "Vientiane",
+        "C": "New Delhi",
+        "D": "Jerusalem",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Oman?",
+        "A": "Kabul",
+        "B": "Muscat",
+        "C": "Concelho de Macau",
+        "D": "Singapore",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Qatar?",
+        "A": "Bandar Seri Begawan",
+        "B": "Doha",
+        "C": "Tbilisi",
+        "D": "Baghdad",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Macao?",
+        "A": "Concelho de Macau",
+        "B": "Sanaa",
+        "C": "Bangkok",
+        "D": "Singapore",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Lebanon?",
+        "A": "Bandar Seri Begawan",
+        "B": "Beirut",
+        "C": "Thimphu",
+        "D": "Kuala Lumpur",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of India?",
+        "A": "Kuala Lumpur",
+        "B": "Sanaa",
+        "C": "New Delhi",
+        "D": "Dili",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of East Timor?",
+        "A": "Islamabad",
+        "B": "Kathmandu",
+        "C": "Manama",
+        "D": "Dili",
+        "answer": "D"
+    },
+    {
+        "question": "What is the capital of Maldives?",
+        "A": "Mal\u00e9",
+        "B": "Manila",
+        "C": "Kathmandu",
+        "D": "Ulaanbaatar",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Bahrain?",
+        "A": "Beijing",
+        "B": "Manama",
+        "C": "Riyadh",
+        "D": "Tbilisi",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Cyprus?",
+        "A": "Bandar Seri Begawan",
+        "B": "New Delhi",
+        "C": "Nicosia",
+        "D": "Tashkent",
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Bhutan?",
+        "A": "Tashkent",
+        "B": "Thimphu",
+        "C": "Beijing",
+        "D": "Riyadh",
+        "answer": "B"
+    },
+    {
+        "question": "What is the capital of Brunei?",
+        "A": "Bandar Seri Begawan",
+        "B": "Beirut",
+        "C": "Yerevan",
+        "D": "Mal\u00e9",
+        "answer": "A"
+    },
+    {
+        "question": "What is the capital of Palestine?",
+        "A": "Baghdad",
+        "B": "Ramallah",
+        "C": "Abu Dhabi",
+        "D": "Jerusalem",
+        "answer": "B"
+    }
+]
