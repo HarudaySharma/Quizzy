@@ -25,8 +25,10 @@ const QuizPage = () => {
         variant,
         setVariant,
         isFetching,
+        setIsFetching,
         timedRequests: {
-            fetchTimedQuestions
+            fetchTimedQuestions,
+            timerReqAbortRef,
         } } = useQuizQuestions({});
 
     const [renderComponent, setRenderComponent] = useState<ReactNode>()
@@ -62,6 +64,10 @@ const QuizPage = () => {
     // after the quiz has ended 
     // and user want's to retry with same questions
     const handleRetry = () => {
+        if(variant === 'TIMER') {
+            setIsFetching(false);
+        }
+
         setRenderComponent(
             <CompoundMcq
                 mcqList={mcqList}
@@ -115,6 +121,10 @@ const QuizPage = () => {
     // shows the result and reset any state that need to be reset
     const onQuizOver = (result: any) => {
         //setInitialRequest(true);
+
+        if (timerReqAbortRef.current) {
+            timerReqAbortRef.current?.abort();
+        }
 
         setPageHeight('');
 

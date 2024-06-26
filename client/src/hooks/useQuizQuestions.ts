@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Categories, MCQ, RequestModes } from "../types";
 import toast from "react-hot-toast";
 
@@ -26,7 +26,7 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
     const [initialRequest, setInitialRequest] = useState<boolean>(true);
 
     const [isFetching, setIsFetching] = useState<boolean>(false);
-
+    const timerReqAbortRef = useRef<AbortController | null>(null);
 
     const fetchQuestions = useCallback(async () => {
         if (!category || !mcqCount) {
@@ -74,15 +74,22 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
             return;
         }
 
-        if (isFetching) {
+        if (isFetching || timerReqAbortRef.current) {
             return;
         }
 
         console.log('fetching timed questions');
+
+        timerReqAbortRef.current = new AbortController();
+        const signal = timerReqAbortRef.current.signal;
+
+        let isAborted = false;
+
         try {
             setIsFetching(true);
             const res = await fetch(`${API_URL}/api/quiz/questions/timer`, {
                 method: 'POST',
+                signal: signal,
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -109,10 +116,19 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         }
         catch (err) {
             console.log(err);
+            if (err.name === 'AbortError') {
+                isAborted = true;
+                return;
+            }
             notify(`error getting questions \n please try again`);
             setVariant(undefined);
         }
         finally {
+            if (isAborted) {
+                timerReqAbortRef.current = null;
+                return;
+            }
+            timerReqAbortRef.current = null;
             setIsFetching(false);
         }
     }, [variant, category, initialRequest])
@@ -122,6 +138,7 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         if (variant === undefined) {
             setInitialRequest(true);
             setMcqList([]);
+            setIsFetching(false);
         }
         if (variant === 'NO-TIMER')
             fetchQuestions();
@@ -137,8 +154,10 @@ const useQuizQuestions = ({ defaultCategoryValue, defaultMCQCount, defaultVarian
         variant,
         setVariant,
         isFetching,
+        setIsFetching,
         timedRequests: {
             fetchTimedQuestions,
+            timerReqAbortRef,
         }
     };
 }
