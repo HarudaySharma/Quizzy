@@ -31,9 +31,11 @@ const TestPage = () => {
         category,
         variant,
         isFetching,
+        setIsFetching,
         setVariant,
         WithTimer: {
             fetchTimedQuestions,
+            timerReqAbortRef,
         }
     } = useTestQuestions({})
 
@@ -66,6 +68,10 @@ const TestPage = () => {
 
 
     const handleRetry = () => {
+        if (variant === 'TIMER') {
+            setIsFetching(false);
+        }
+
         setRenderComponent(
             <CompoundMcq
                 mcqList={mcqList}
@@ -128,8 +134,13 @@ const TestPage = () => {
         if (!category)
             return;
 
+        if (timerReqAbortRef.current) {
+            timerReqAbortRef.current?.abort();
+        }
+
         const toastId = toast.loading("generating result...")
         setPageHeight('');
+
 
         let checkedQuestions: CheckedQuestion[];
 
