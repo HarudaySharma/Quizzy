@@ -21,7 +21,7 @@ const Footer = () => {
                 </p>
                 <hr className="w-full border-black" />
                 <p className="mx-auto" >
-                    Created by Haruday
+                    Created by Himanshu
                 </p>
             </div>
         </footer>
